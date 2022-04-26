@@ -83,12 +83,12 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 - **Ürün Durumu**: Ekran görüntüleri:
 
 - **Sprint Review**: 
-Alınan kararlar: Veritabanı oluşturması email ile toplanacak veriler için gerekli görülmüştür. Fakat bir yandan da veritabanı form sayfası için gerekli olmamıştır. O sebeple PBI bir sonraki sprint'e aktarılmıştır. Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir. Sprint Review katılımcıları: Ayyüce Atay, Mert Balkan, Setenay Emül, Furkan Kaya, Emre Yoldaş
+Alınan kararlar: Oyunun Development kısmı için görev dağılımları yapıldı ayrıca oyunun mantığının önemli bazı temelleri atıldı. Aynı şekilde bazı mekanikler üzerine konuşuldu ve tartışıldı. Sprint Review katılımcıları: Ayyüce Atay, Mert Balkan, Setenay Emül, Furkan Kaya, Emre Yoldaş
 
 - **Sprint Retrospective:**
   - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır
   - Tahmin puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer'lar tarafından verildiğine emin olunmalı
-  - Unit test'ler için ayrılan efor/saat arttırılmalı 
+  - Projenin geliştirilmesine başlandı ve bazı önemli kararlar alındı
 
 -**Diğer Notlar**:
 - N/A
