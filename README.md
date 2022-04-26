@@ -16,26 +16,20 @@ Takım 69
 
 ## Ürün İsmi
 
---Game--
+--Oyun--
 
 ## Ürün Açıklaması
 
-- A guy who stayed in home alone and troubles that comes in his head 
+- Evde tek başına kalan bir çocuğun başına gelen olaylar
 
 ## Ürün Özellikleri
 
-- Filmleri türüne göre ayırma
-- Filmlerin yönetmen, aktör, aktris vb. bilgilerini posteriyle birlikte gösterme
-- IMDB ve Rotten Tomatoes puanlarını gösterme
-- Netflix'te ve Prime'da bulunurluğunu gösterme
 
 ## Hedef Kitle
 
-- Netflix kullanıcıları
-- Prime kullanıcıları
-- Sinema severler
-- Dizi severler
-- 15 - 65 yaş arası kullanıcılar
+- Bilgisayar oyunu oynamayı seven kullanıcılar
+- Bağımsız yapım denemeyi seven kullanıcılar
+- 13 - 45 yaş arası kullanıcılar
 
 ## Product Backlog URL
 
