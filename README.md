@@ -2,96 +2,104 @@
 
 # **Takım İsmi**
 
-Takım 69
+Google Oyun ve Uygulama akademisi Bootcamp takım #69
 
 # Ürün İle İlgili Bilgiler
 
+
+
 ## Takım Elemanları
 
-- Ayyüce Atay: Product Owner
-- Mert Balkan: Scrum Master
-- Setenay Emül: Team Member/Developer
-- Furkan Kaya: Team Member/Developer
-- Emre Yoldaş: Team Member/Developer
+- Ayyüce Atay: Product Owner & Level Designer
+- Mert Balkan: Scrum Master & Game Developer
+- Setenay Emül: 3D Artist & Game Developer
+- Furkan Kaya: UI/UX Designer & Game Developer
+- Emre Yoldaş: Game Developer & Level Designer
 
 ## Ürün İsmi
 
---Oyun--
+xxxx
 
 ## Ürün Açıklaması
 
-- Evde tek başına kalan bir çocuğun başına gelen olaylar
+- Evde tek başına kalmış 13 yaşındaki hacker bir çocuğun yaşadığı macerayı yansıtan indie bir 3D isometric Puzzle Adventure oyunu
 
 ## Ürün Özellikleri
 
+![image](https://user-images.githubusercontent.com/95376425/165622665-d451b272-bb72-4da3-8d8c-50adeaf01349.png)
 
 ## Hedef Kitle
 
-- Bilgisayar oyunu oynamayı seven kullanıcılar
-- Bağımsız yapım denemeyi seven kullanıcılar
-- 13 - 45 yaş arası kullanıcılar
+13-35 yaş arası kadın ve erkek indie oyunlara ilgi gösteren steam kullanıcıları
+
 
 ## Product Backlog URL
 
-[Miro Backlog Board](https://miro.com/app/board/uXjVOSSCpsI=/)
+https://glorious-profit-4c1.notion.site/Google-Bootcamp-b5b50202df36401e9b1df5053ac15d22 
 
 ---
 
 # Sprint 1
 
-adventure puzzle crafting oyunu
 
-Evde tek başına prodigy bir beyaz hacker çocuk mafyaya bulaşmış, -hırsızlar-polis mafyayı satın almış seni kurtaramayacaklar- 
-
-görevleri tamamlayabilmek için gerekli olan itemleri toplayabilmek için bazı challengeları tamamlaması gerekir örn. bodrum katından korkuyordur bodrum katından bir item alması gerekir ve o itemi alabilmek için oraya özgü bir boss ile savaşır bossu yenmesi koşulunda itemi collectler ve bu itemleri kendi başına ya da başka şeylerle kombine ederek çeşitli trapler oluşturabilir (item : çivi : çivileri yere dökebilir ya da bomba craftlayabilir
-
-cam ve kapılara barikat kurabilir
-
-Highscore mekaniği : max x sürede (daha kısa sürede yaparsa ekstra puan) craft seviyesine ve etkisiz hale getirdiği düşman sayısına göre
-
-~~?yayıncı modu singlep modu : hırsızları izleyiciler yön~~
-
-~~kapalı devre kamera sistemi~~
-
-komşular gelip 5 10 sn zaman kazandırıcak hırsızlar saklanıcak 
-
-polis sirenleri
-
-ilk bölümde sadece kendi yatak odası ve tuvalet açık , 2. levelda key kazanıyosun ve bölümlerde diğer odalar açılıyor her bölümde daha fazla oda ve dolayısıyla source açılır.
-
-ilk levelda sadece level 1 iteme erişimin var fakat level 2 de 1. level item kullanamıyorsun. 
-
-level 3 düşmanlar level 2 trapi elimine edebiliyor
-
-her trap koyduğumzda kamera yerleştirmiş gibi olur, her düşman dmg yediğinde o kameranın görüntüsü
+## 25.04.22 Updates : 
 
 
-- **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
+* Discord üzerinden Game Design toplantısı yapıldı, oyun hikaye ve mekanikleri geliştirildi.
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
+* Konsept olarak isometric bakış açılı bir adventure/puzzle/crafting oyunu yapılmaya karar verildi.
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. 4 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
+>*Ailesi kendisini bırakıp hafta sonu için tatile çıkan çocuk evde tek başına kalmıştır. Kendi çabalarıyla 13 yaşında dahilik seviyesinde kodlama bilgisi edinmiş fakat anonim olarak hackerlık yapmasının başını belaya sokacağının bilincinde değildir. Farkında olmadan burnunu soktuğu işler yolunun büyük bir mafya çetesiyle kesişmesini sağlar. Ailesinin evden gittiği ilk gece tuhaf şeyler olmaya başladığını fark eder.*
 
-- **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
+* Takım branşlara bölündü 
 
-Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+* ilgili bilgilerin tamamını içeren bir notion workspace kurulup tüm branşlara ve onlar da kendi içinde takım üyelerine bölünerek görev dağılımı yapıldı, timeline içinde önceliklendirildi.
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/DailyScrumMeetingNotesSprint1.docx?raw=true)
 
-- **Sprint board update**: Sprint board screenshotları: 
+![image](https://user-images.githubusercontent.com/95376425/165620643-a4aaedca-0ebe-44e1-8678-f726e8bf0dd2.png)
 
-- **Ürün Durumu**: Ekran görüntüleri:
+![image](https://user-images.githubusercontent.com/95376425/165620750-b47ce1ed-1076-424b-b656-fe38c28b8a42.png)
+
+
+* Görevler de kendi içerisinde takibin kolaylaştırılması açısından in queue, in process, competed şeklinde taglere bölündü.
+
+![image](https://user-images.githubusercontent.com/95376425/165623174-30797fda-1923-455d-8e5d-79837505488a.png)
+
+
+* Takım üyelerinin final haftaları ve çalışamayacakları günler bildirildi diğer üyelerin haberdar olması için timelinea eklendi.
+
+* Development için görev dağılımı yapıldı, repository açıldı ve github çalışma stratejisi belirlenip developmenta başlandı.
+
+* İlk sprintte yapılması önceliklenen görevler 1st sprint goals olarak belirlendi.
+
+* Levellerde kullanılacak itemlerın craft mekanikleri kullanılabilecek sourcelar hakkında fikir fırtınası yapıldı. 3 farkı seviye craftable item olmasına karar verildi.
+
+* Karar verilen itemlardan daha sonrasında da geliştirilmek üzere bir liste oluşturulup ilgili assetleri üretecek olan 3D modellera assign edildi.
+
+* Levellar arasındaki mekanik farkları ile ilgili fikir fırtınası yapıldı. Her level için enemy ve obstaclelar, bunlara karşı savunma oluşturabilinecek trapler düşünüldü.
+
+* Enemylerin traplerle olan interactionları hakkında fikir fırtınası yapıldı her levelde summon olan enemynin sadece ilgili leveldeki crafted itemla alaşağı edilmesine karar verildi.
+
+
+
+___________________________________________________________________________________________________
+
+
+- **Ürün Durumu**:
+
+xxxx
 
 - **Sprint Review**: 
-Alınan kararlar: Oyunun Development kısmı için görev dağılımları yapıldı ayrıca oyunun mantığının önemli bazı temelleri atıldı. Aynı şekilde bazı mekanikler üzerine konuşuldu ve tartışıldı. Sprint Review katılımcıları: Ayyüce Atay, Mert Balkan, Setenay Emül, Furkan Kaya, Emre Yoldaş
+
+xxxx
 
 - **Sprint Retrospective:**
-  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır
-  - Tahmin puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer'lar tarafından verildiğine emin olunmalı
-  - Projenin geliştirilmesine başlandı ve bazı önemli kararlar alındı
+
+xxxx
 
 -**Diğer Notlar**:
-- N/A
+
+xxxx
 
 ---
 
