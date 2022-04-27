@@ -17,7 +17,7 @@ namespace AcademyProject.DataEditorWindow
             editorWidth = 200;
         }
 
-        [MenuItem("Tools/Data Editor Tool")]
+        [MenuItem("Academy Project Tools/Data Editor Tool")]
         public static void OpenWindow()
         {
             DataEditorWindow window = (DataEditorWindow)GetWindow(typeof(DataEditorWindow));
