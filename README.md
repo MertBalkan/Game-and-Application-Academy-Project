@@ -63,7 +63,7 @@ https://glorious-profit-4c1.notion.site/Google-Bootcamp-b5b50202df36401e9b1df505
 
 * Görevler de kendi içerisinde takibin kolaylaştırılması açısından in queue, in process, competed şeklinde taglere bölündü.
 
-* [image](https://user-images.githubusercontent.com/95376425/165621396-3a6ecfd3-f841-44ac-bd68-da2bf12377a9.png)
+![image](https://user-images.githubusercontent.com/95376425/165623174-30797fda-1923-455d-8e5d-79837505488a.png)
 
 
 * Takım üyelerinin final haftaları ve çalışamayacakları günler bildirildi diğer üyelerin haberdar olması için timelinea eklendi.
@@ -81,6 +81,8 @@ https://glorious-profit-4c1.notion.site/Google-Bootcamp-b5b50202df36401e9b1df505
 * Enemylerin traplerle olan interactionları hakkında fikir fırtınası yapıldı her levelde summon olan enemynin sadece ilgili leveldeki crafted itemla alaşağı edilmesine karar verildi.
 
 
+
+___________________________________________________________________________________________________
 
 
 - **Ürün Durumu**:
