@@ -18,6 +18,7 @@ namespace AcademyProject.Controllers
             {
                 this.transform.position = FindObjectOfType<PlayerHand>().transform.position;
             }
+
         }
     }
 }
