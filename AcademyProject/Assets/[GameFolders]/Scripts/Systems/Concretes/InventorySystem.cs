@@ -18,5 +18,12 @@ namespace AcademyProject.Systems
             _items.Add(item);
             Debug.Log(item.name);
         }
+
+        public void RemoveItem(GameObject removedItem)
+        {
+            foreach (var item in _items)
+                if (removedItem.Equals(item))
+                    _items.Remove(removedItem);
+        }
     }
 }
