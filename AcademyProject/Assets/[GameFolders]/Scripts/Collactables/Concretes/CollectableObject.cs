@@ -14,7 +14,7 @@ namespace AcademyProject.Collectables
         {
             _inventory = FindObjectOfType<InventorySystem>();
         }
-
+        
         private void OnCollisionEnter(Collision other)
         {
             CollectOther(other);
