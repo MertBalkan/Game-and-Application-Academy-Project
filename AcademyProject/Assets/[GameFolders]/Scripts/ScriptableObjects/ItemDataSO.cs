@@ -13,6 +13,9 @@ namespace AcademyProject.ScriptableObjects
         [Space(35)]
         
         public string itemName;
+        [TextArea] public string itemDescription;
         public GameObject itemObject;
+
+        public bool isDamageable;
     }
 }
