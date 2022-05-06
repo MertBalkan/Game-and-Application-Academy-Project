@@ -42,8 +42,11 @@ namespace AcademyProject.Systems
         /// <param name="item"></param>
         public void AddItem(BaseItemController item)
         {
-            items.Add(item);
-            item.isInInventory = true;
+            if (!item.Equals(null))
+            {
+                items.Add(item);
+                item.isInInventory = true;
+            }
         }
 
         /// <summary>
