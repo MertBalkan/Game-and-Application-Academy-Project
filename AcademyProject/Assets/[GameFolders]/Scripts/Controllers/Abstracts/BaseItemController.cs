@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using AcademyProject.ScriptableObjects;
@@ -8,5 +9,14 @@ namespace AcademyProject.Controllers
     public abstract class BaseItemController : MonoBehaviour
     {
         [SerializeField] private ItemDataSO itemDataSO;
+        public bool isInInventory;
+
+        private void Update()
+        {
+            if (isInInventory)
+            {
+                this.transform.position = FindObjectOfType<PlayerHand>().transform.position;
+            }
+        }
     }
 }

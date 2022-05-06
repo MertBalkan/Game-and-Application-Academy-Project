@@ -19,7 +19,7 @@ namespace AcademyProject.Controllers
         {
             if (_input.DropItem && !InventorySystem.Instance.IsEmpty)
             {
-                InventorySystem.Instance.RemoveItem(( InventorySystem.Instance.Items[InventorySystem.Instance.Items.Count - 1]));
+                InventorySystem.Instance.RemoveItem((InventorySystem.Instance.Items[InventorySystem.Instance.Items.Count - 1]));
             }
         }
     }
