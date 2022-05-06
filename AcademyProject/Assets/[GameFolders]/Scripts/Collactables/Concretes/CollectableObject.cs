@@ -5,18 +5,18 @@ using UnityEngine;
 
 namespace AcademyProject.Collectables
 {
-    public class CollectObject : MonoBehaviour, ICollect
+    public class CollectableObject : MonoBehaviour, ICollect
     {
-        private void OnTriggerEnter(Collider other)
+        private void OnCollisionEnter(Collision other)
         {
             CollectOther(other);
         }
 
-        public void CollectOther(Collider other)
+        public void CollectOther(Collision other)
         { 
-            if (other.gameObject.CompareTag("Item"))
+            if (other.gameObject.CompareTag("Player"))
             {
-                Destroy(other);
+                Destroy(this.gameObject);
                 // add item to inventory
             }
         }
