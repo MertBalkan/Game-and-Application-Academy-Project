@@ -12,6 +12,9 @@ namespace AcademyProject.Systems
     /// </summary>
     public class InventorySystem : SingletonMonoBehaviour<InventorySystem>
     {
+        [Header("\t\tINVENTORY SYSTEM")]
+        [Header("-----------------------------------------------------------")]
+        [Space(35)]
         [SerializeField] private int maxCapacity;
         [SerializeField] private List<BaseItemController> items;
         [SerializeField] private PlayerCharacterController player;

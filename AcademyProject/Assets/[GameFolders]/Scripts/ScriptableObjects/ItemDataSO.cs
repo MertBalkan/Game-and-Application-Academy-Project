@@ -10,12 +10,14 @@ namespace AcademyProject.ScriptableObjects
     public class ItemDataSO : ScriptableObject
     {
         [Header("\t\tITEM INFORMATIONS")]
+        [Header("-----------------------------------------------------------")]
         [Space(35)]
         
         public string itemName;
         [TextArea] public string itemDescription;
         public GameObject itemObject;
-
+        
+        // Here will be change...
         public bool isDamageable;
     }
 }
