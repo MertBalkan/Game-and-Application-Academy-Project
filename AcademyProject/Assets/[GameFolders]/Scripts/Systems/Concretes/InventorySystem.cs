@@ -12,7 +12,9 @@ namespace AcademyProject.Systems
         //capacity of pack
         //current items in the pack
         [SerializeField] private List<GameObject> _items;
-        
+
+        public List<GameObject> Items => _items;
+
         public void AddItem(GameObject item)
         {
             _items.Add(item);
@@ -21,9 +23,8 @@ namespace AcademyProject.Systems
 
         public void RemoveItem(GameObject removedItem)
         {
-            foreach (var item in _items)
-                if (removedItem.Equals(item))
-                    _items.Remove(removedItem);
+            if (!removedItem.Equals(null))
+                _items.Remove(removedItem);
         }
     }
 }
