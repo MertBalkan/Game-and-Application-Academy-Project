@@ -7,6 +7,6 @@ namespace AcademyProject.Controllers
 {
     public abstract class BaseItemController : MonoBehaviour
     {
-        [SerializeField] private ItemDataSO itemDataSo;
+        [SerializeField] private ItemDataSO itemDataSO;
     }
 }

@@ -8,13 +8,6 @@ namespace AcademyProject.Collectables
 {
     public class CollectableObject : MonoBehaviour, ICollect
     {
-        private InventorySystem _inventory;
-
-        private void Awake()
-        {
-            _inventory = FindObjectOfType<InventorySystem>();
-        }
-        
         private void OnCollisionEnter(Collision other)
         {
             CollectOther(other);
@@ -22,9 +15,9 @@ namespace AcademyProject.Collectables
 
         public void CollectOther(Collision other)
         { 
-            if (other.gameObject.CompareTag("Player") && !_inventory.IsOverMaxCapacity)
+            if (other.gameObject.CompareTag("Player") && !InventorySystem.Instance.IsOverMaxCapacity)
             {
-                _inventory.AddItem(gameObject);
+                InventorySystem.Instance.AddItem(gameObject);
                 gameObject.SetActive(false);
             }
         }

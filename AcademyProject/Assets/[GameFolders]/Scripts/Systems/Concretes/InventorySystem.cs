@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using AcademyProject.Managers;
 using UnityEngine;
 
 namespace AcademyProject.Systems
@@ -7,7 +9,7 @@ namespace AcademyProject.Systems
     /// <summary>
     /// Item system, holds current items and helps user, about adjusting items.
     /// </summary>
-    public class InventorySystem : MonoBehaviour
+    public class InventorySystem : SingletonMonoBehaviour<InventorySystem>
     {
         [SerializeField] private int maxCapacity;
         [SerializeField] private List<GameObject> _items;
@@ -23,6 +25,11 @@ namespace AcademyProject.Systems
         public bool IsOverMaxCapacity => _items.Count >= maxCapacity;
 
         public List<GameObject> Items => _items;
+
+        private void Awake()
+        {
+            ApplySingleton(this);
+        }
 
         /// <summary>
         /// This function adds items to inventory.
