@@ -13,6 +13,7 @@ namespace AcademyProject.Controllers
 
         private void Update()
         {
+            //Here will be change
             if (isInInventory)
             {
                 this.transform.position = FindObjectOfType<PlayerHand>().transform.position;
