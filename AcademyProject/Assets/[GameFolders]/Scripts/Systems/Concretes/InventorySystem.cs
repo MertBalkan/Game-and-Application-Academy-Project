@@ -5,24 +5,38 @@ using UnityEngine;
 namespace AcademyProject.Systems
 {
     /// <summary>
-    /// Item system, holds current items and helps user, about adjusting items
+    /// Item system, holds current items and helps user, about adjusting items.
     /// </summary>
     public class InventorySystem : MonoBehaviour
     {
-        //capacity of pack
-        //current items in the pack
-        [SerializeField] private List<GameObject> _items;
         [SerializeField] private int maxCapacity;
+        [SerializeField] private List<GameObject> _items;
+        
+        /// <summary>
+        /// Is inventory empty?
+        /// </summary>
         public bool IsEmpty => _items.Count == 0;
+        
+        /// <summary>
+        /// For checking max capacity.
+        /// </summary>
         public bool IsOverMaxCapacity => _items.Count >= maxCapacity;
 
         public List<GameObject> Items => _items;
 
+        /// <summary>
+        /// This function adds items to inventory.
+        /// </summary>
+        /// <param name="item"></param>
         public void AddItem(GameObject item)
         {
             _items.Add(item);
         }
 
+        /// <summary>
+        /// Removing items from inventory.
+        /// </summary>
+        /// <param name="removedItem"></param>
         public void RemoveItem(GameObject removedItem)
         {
             if (!removedItem.Equals(null))
