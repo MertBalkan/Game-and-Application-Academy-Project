@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec82e55a2f572a49a75c089b5b4218f, type: 3}
   m_Name: FastenerItemData
   m_EditorClassIdentifier: 
-  itemName: Fastener
-  itemDescription: MORE FESTENER MORE KILL!
+  itemName: Fa
+  itemDescription: MORE FASTENER MORE KILL!
   itemObject: {fileID: 0}
-  isDamageable: 0

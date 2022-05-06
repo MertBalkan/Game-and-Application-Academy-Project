@@ -15,4 +15,3 @@ MonoBehaviour:
   itemName: Nail
   itemDescription: NAIL MAKES THEM NAILED!
   itemObject: {fileID: 0}
-  isDamageable: 0
