@@ -19,7 +19,7 @@ namespace AcademyProject.Controllers
 
         private void Update()
         {
-            if (_input.DropItem)
+            if (_input.DropItem && !_inventory.IsEmpty)
             {
                 _inventory.RemoveItem((_inventory.Items[_inventory.Items.Count - 1]));
             }

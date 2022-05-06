@@ -12,6 +12,7 @@ namespace AcademyProject.Systems
         //capacity of pack
         //current items in the pack
         [SerializeField] private List<GameObject> _items;
+        public bool IsEmpty => _items.Count == 0;
 
         public List<GameObject> Items => _items;
 
