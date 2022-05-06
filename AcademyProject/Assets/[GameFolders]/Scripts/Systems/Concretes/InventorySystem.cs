@@ -12,14 +12,15 @@ namespace AcademyProject.Systems
         //capacity of pack
         //current items in the pack
         [SerializeField] private List<GameObject> _items;
+        [SerializeField] private int maxCapacity;
         public bool IsEmpty => _items.Count == 0;
+        public bool IsOverMaxCapacity => _items.Count >= maxCapacity;
 
         public List<GameObject> Items => _items;
 
         public void AddItem(GameObject item)
         {
             _items.Add(item);
-            Debug.Log(item.name);
         }
 
         public void RemoveItem(GameObject removedItem)

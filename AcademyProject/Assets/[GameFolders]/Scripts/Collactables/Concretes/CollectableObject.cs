@@ -22,7 +22,7 @@ namespace AcademyProject.Collectables
 
         public void CollectOther(Collision other)
         { 
-            if (other.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag("Player") && !_inventory.IsOverMaxCapacity)
             {
                 _inventory.AddItem(gameObject);
                 gameObject.SetActive(false);
