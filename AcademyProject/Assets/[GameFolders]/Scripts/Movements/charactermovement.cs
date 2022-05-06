@@ -5,7 +5,7 @@ using UnityEngine;
 public class charactermovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody _rigibody;
-    [SerializeField] private float _movespeed = 5;//hýz
+    [SerializeField] private float _movespeed = 5;//hï¿½z
     [SerializeField] private float _turnspeed = 360;
     private Vector3 _input;
     void Update()
@@ -37,7 +37,7 @@ public class charactermovement : MonoBehaviour
 }
 public static class Helpers
 {
-    private static Matrix4x4 _isoMatrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
+    private static Matrix4x4 _isoMatrix = Matrix4x4.Rotate(Quaternion.Euler(0, 0, 0));
     public static Vector3 ToIso(this Vector3 input) => _isoMatrix.MultiplyPoint3x4(input);
 }
 
