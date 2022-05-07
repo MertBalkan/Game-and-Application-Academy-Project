@@ -20,7 +20,7 @@ namespace AcademyProject.Combats
                 var enemyHealth = collision.transform.GetComponent<CharacterHealth>();
                 if(enemyHealth.Equals(null)) return;
                 
-                enemyHealth.TakeDamage(20);
+                enemyHealth.TakeDamage(damageDataSO.damageHitCount);
                 Debug.Log(enemyHealth.CurrentHealth);
             }
         }
