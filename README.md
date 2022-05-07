@@ -104,6 +104,12 @@ https://user-images.githubusercontent.com/43827959/167273363-2dfc4f54-12e7-4352-
 
 https://user-images.githubusercontent.com/43827959/167273526-3dbccd73-e794-4ae3-8f7c-5eda479d2184.mp4
 
+> Damage sisteminin mantığı yazılmaya başlandı
+
+
+
+https://user-images.githubusercontent.com/43827959/167273681-69f205d6-8e3c-4889-8c4e-900e5622d26e.mp4
+
 
 
 
