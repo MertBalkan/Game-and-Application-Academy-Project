@@ -4,7 +4,11 @@ using UnityEngine;
 
 namespace AcademyProject.Managers
 {
-    public class SingletonMonoBehaviour<T> : MonoBehaviour where T : Component
+    /// <summary>
+    /// Abstract class template for "Singleton Pattern"
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public abstract class SingletonMonoBehaviour<T> : MonoBehaviour where T : Component
     {
         public static T Instance { get; private set; }
 
