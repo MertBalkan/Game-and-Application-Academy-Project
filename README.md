@@ -87,6 +87,7 @@ ________________________________________________________________________________
 
 - **Ürün Durumu**:
 <h1>KOD KISMI</h1>
+
 > Bazı sistemler entegre edilmeye başlandı. Ayrıca dataları daha kolay oluşturmak için "Academy Tool Editor" yazılmaya başlandı. 
 
 
