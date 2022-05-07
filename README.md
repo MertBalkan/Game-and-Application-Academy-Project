@@ -86,7 +86,8 @@ ________________________________________________________________________________
 
 
 - **Ürün Durumu**:
-Kod kısmında bazı sistemler entegre edilmeye başlandı. Ayrıca dataları daha kolay oluşturmak için "Academy Tool Editor" yazılmaya başlandı. 
+<h1>KOD KISMI</h1>
+> TBazı sistemler entegre edilmeye başlandı. Ayrıca dataları daha kolay oluşturmak için "Academy Tool Editor" yazılmaya başlandı. 
 
 
 https://user-images.githubusercontent.com/43827959/167273363-2dfc4f54-12e7-4352-9d73-23ea75efd378.mp4
