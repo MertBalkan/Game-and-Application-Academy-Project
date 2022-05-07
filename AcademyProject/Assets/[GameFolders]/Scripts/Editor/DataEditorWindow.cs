@@ -1,11 +1,12 @@
-using System;
 using AcademyProject.ScriptableObjects;
 using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 namespace AcademyProject.DataEditorWindow
 {
+    /// <summary>
+    /// Academy tool, this tool is still on Development. 
+    /// </summary>
     public class DataEditorWindow : EditorWindow
     {
         private static float editorHeight;

@@ -1,9 +1,6 @@
-using System;
-using AcademyProject.Controllers;
 using AcademyProject.Inputs;
 using AcademyProject.Movements;
 using AcademyProject.Systems;
-using UnityEngine;
 
 namespace AcademyProject.Controllers
 {

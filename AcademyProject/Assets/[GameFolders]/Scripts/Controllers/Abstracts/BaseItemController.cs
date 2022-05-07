@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using AcademyProject.ScriptableObjects;
 using UnityEngine;
 
@@ -15,7 +12,7 @@ namespace AcademyProject.Controllers
         [SerializeField] private ItemDataSO itemDataSO;
         
         public bool isInInventory;
-        
+
         private void OnEnable()
         {
             transform.SetParent(null);
@@ -30,14 +27,13 @@ namespace AcademyProject.Controllers
         {
             transform.SetParent(FindObjectOfType<PlayerHand>().transform);
         }
-
+        
         private void ToThePlayerInventory()
         {
-            if (isInInventory && !this.gameObject.activeSelf)
-            {
-                this.transform.position = FindObjectOfType<PlayerHand>().transform.position;
-                Invoke("ReAttachParent", 0.1f);
-            }
+            if (!isInInventory || this.gameObject.activeSelf) return;
+            
+            this.transform.position = FindObjectOfType<PlayerHand>().transform.position;
+            Invoke(nameof(ReAttachParent), 0.1f);
         }
     }
 }

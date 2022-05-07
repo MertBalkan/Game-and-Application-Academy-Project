@@ -1,10 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace AcademyProject.Controllers
 {
-    public class BaseCharacterController : MonoBehaviour, IEntityController
+    /// <summary>
+    /// Abstract Base Character Controller, template for other character controllers
+    /// </summary>
+    [RequireComponent(typeof(Rigidbody), typeof(Collider))]
+    public abstract class BaseCharacterController : MonoBehaviour, IEntityController
     {
         [SerializeField] private float _movespeed = default;
         [SerializeField] private float _turnspeed = default;
