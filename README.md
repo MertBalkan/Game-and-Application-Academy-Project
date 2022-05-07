@@ -90,6 +90,8 @@ Kod kısmında bazı sistemler entegre edilmeye başlandı. Ayrıca dataları da
 
 
 https://user-images.githubusercontent.com/43827959/167273363-2dfc4f54-12e7-4352-9d73-23ea75efd378.mp4
+![image](https://user-images.githubusercontent.com/43827959/167273401-2b7224ad-60f3-4072-81a8-63da3f544e36.png)
+
 
 
 
