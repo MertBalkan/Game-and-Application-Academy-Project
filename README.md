@@ -86,8 +86,7 @@ ________________________________________________________________________________
 
 
 - **Ürün Durumu**:
-
-xxxx
+Kod kısmında bazı sistemler entegre edilmeye başlandı. Ayrıca dataları daha kolay oluşturmak için "Academy Tool Editor" yazılmaya başlandı. 
 
 - **Sprint Review**: 
 
