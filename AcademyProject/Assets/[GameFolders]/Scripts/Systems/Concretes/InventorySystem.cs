@@ -59,6 +59,8 @@ namespace AcademyProject.Systems
             {
                 items.Remove(removedItem);
                 removedItem.isInInventory = false;
+                
+                removedItem.gameObject.SetActive(true);
             }
         }
 

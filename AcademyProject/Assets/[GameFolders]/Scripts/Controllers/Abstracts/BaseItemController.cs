@@ -6,19 +6,34 @@ using UnityEngine;
 
 namespace AcademyProject.Controllers
 {
+    [RequireComponent(typeof(Rigidbody))]
     public abstract class BaseItemController : MonoBehaviour
     {
         [SerializeField] private ItemDataSO itemDataSO;
         public bool isInInventory;
-
-        private void Update()
+        
+        private void OnEnable()
         {
-            //Here will be change
-            if (isInInventory)
+            transform.SetParent(null);
+        }
+
+        private void OnDisable()
+        { 
+            ToThePlayerInventory();
+        }
+
+        void ReAttachParent()
+        {
+            transform.SetParent(FindObjectOfType<PlayerHand>().transform);
+        }
+
+        private void ToThePlayerInventory()
+        {
+            if (isInInventory && !this.gameObject.activeSelf)
             {
                 this.transform.position = FindObjectOfType<PlayerHand>().transform.position;
+                Invoke("ReAttachParent", 0.1f);
             }
-
         }
     }
 }
