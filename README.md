@@ -63,7 +63,7 @@ https://glorious-profit-4c1.notion.site/Google-Bootcamp-b5b50202df36401e9b1df505
 
 * Görevler de kendi içerisinde takibin kolaylaştırılması açısından in queue, in process, competed şeklinde taglere bölündü.
 
-![image](https://user-images.githubusercontent.com/95376425/165623174-30797fda-1923-455d-8e5d-79837505488a.png)
+![image](https://user-images.githubusercontent.com/43827959/167273853-9a554876-866e-4daa-9db4-72414b9937b7.png)
 
 
 * Takım üyelerinin final haftaları ve çalışamayacakları günler bildirildi diğer üyelerin haberdar olması için timelinea eklendi.
