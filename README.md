@@ -58,7 +58,7 @@ https://glorious-profit-4c1.notion.site/Google-Bootcamp-b5b50202df36401e9b1df505
 
 ![image](https://user-images.githubusercontent.com/95376425/165620643-a4aaedca-0ebe-44e1-8678-f726e8bf0dd2.png)
 
-![image](https://user-images.githubusercontent.com/95376425/165620750-b47ce1ed-1076-424b-b656-fe38c28b8a42.png)
+![image](https://user-images.githubusercontent.com/43827959/167273838-e1453285-f775-497a-9ac7-5f42eff9abcb.png)
 
 
 * Görevler de kendi içerisinde takibin kolaylaştırılması açısından in queue, in process, competed şeklinde taglere bölündü.
