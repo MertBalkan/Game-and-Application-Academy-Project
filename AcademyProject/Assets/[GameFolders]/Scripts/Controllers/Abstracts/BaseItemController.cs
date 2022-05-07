@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace AcademyProject.Controllers
 {
+    /// <summary>
+    /// Abstract Base Item Controller. 
+    /// </summary>
     [RequireComponent(typeof(Rigidbody))]
     public abstract class BaseItemController : MonoBehaviour
     {
