@@ -88,10 +88,9 @@ ________________________________________________________________________________
 - **Ürün Durumu**:
 Kod kısmında bazı sistemler entegre edilmeye başlandı. Ayrıca dataları daha kolay oluşturmak için "Academy Tool Editor" yazılmaya başlandı. 
 
-![image](https://user-images.githubusercontent.com/43827959/167273326-2f51f12d-ef57-4def-ae9f-005e8af5e22f.png)
-![image](https://user-images.githubusercontent.com/43827959/167273331-942935ff-0f51-4dad-9605-22ccbfe26ad3.png)
-![image](https://user-images.githubusercontent.com/43827959/167273346-1607d55f-e337-48ef-9128-57521380d7c9.png)
-![image](https://user-images.githubusercontent.com/43827959/167273351-8253e71f-77c6-481e-a6f8-bd2c239a447b.png)
+
+https://user-images.githubusercontent.com/43827959/167273363-2dfc4f54-12e7-4352-9d73-23ea75efd378.mp4
+
 
 
 
