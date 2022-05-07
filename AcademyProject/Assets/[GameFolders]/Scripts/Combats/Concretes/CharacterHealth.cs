@@ -4,7 +4,7 @@ namespace AcademyProject.Combats
 {
     public class CharacterHealth : MonoBehaviour, IHealth
     {
-        private float _currentHealth;
+        [SerializeField] private float _currentHealth;
         public bool IsDead => _currentHealth <= 0.0f;
         public float CurrentHealth => _currentHealth;
 
