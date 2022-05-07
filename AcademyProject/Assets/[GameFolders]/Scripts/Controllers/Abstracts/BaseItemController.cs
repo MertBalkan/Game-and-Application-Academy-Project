@@ -22,7 +22,7 @@ namespace AcademyProject.Controllers
             ToThePlayerInventory();
         }
 
-        void ReAttachParent()
+        private void ReAttachParent()
         {
             transform.SetParent(FindObjectOfType<PlayerHand>().transform);
         }
