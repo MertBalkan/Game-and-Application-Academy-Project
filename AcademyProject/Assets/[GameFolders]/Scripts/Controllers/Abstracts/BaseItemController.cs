@@ -13,6 +13,7 @@ namespace AcademyProject.Controllers
     public abstract class BaseItemController : MonoBehaviour
     {
         [SerializeField] private ItemDataSO itemDataSO;
+        
         public bool isInInventory;
         
         private void OnEnable()
