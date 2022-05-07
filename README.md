@@ -87,7 +87,7 @@ ________________________________________________________________________________
 
 - **Ürün Durumu**:
 <h1>KOD KISMI</h1>
-> TBazı sistemler entegre edilmeye başlandı. Ayrıca dataları daha kolay oluşturmak için "Academy Tool Editor" yazılmaya başlandı. 
+> Bazı sistemler entegre edilmeye başlandı. Ayrıca dataları daha kolay oluşturmak için "Academy Tool Editor" yazılmaya başlandı. 
 
 
 https://user-images.githubusercontent.com/43827959/167273363-2dfc4f54-12e7-4352-9d73-23ea75efd378.mp4
@@ -98,6 +98,10 @@ https://user-images.githubusercontent.com/43827959/167273363-2dfc4f54-12e7-4352-
 ![image](https://user-images.githubusercontent.com/43827959/167273401-2b7224ad-60f3-4072-81a8-63da3f544e36.png)
 
 
+
+> Envanter sisteminin mantığı yazılmaya başlandı
+
+https://user-images.githubusercontent.com/43827959/167273526-3dbccd73-e794-4ae3-8f7c-5eda479d2184.mp4
 
 
 
