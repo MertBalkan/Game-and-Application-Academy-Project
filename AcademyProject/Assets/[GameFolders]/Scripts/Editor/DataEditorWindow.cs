@@ -1,11 +1,12 @@
-using System;
 using AcademyProject.ScriptableObjects;
 using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 namespace AcademyProject.DataEditorWindow
 {
+    /// <summary>
+    /// Academy tool, this tool is still on Development. 
+    /// </summary>
     public class DataEditorWindow : EditorWindow
     {
         private static float editorHeight;
@@ -29,6 +30,7 @@ namespace AcademyProject.DataEditorWindow
         private void OnGUI()
         {
             ItemDataCreator();
+            DamageDataCreator();
         }
 
         private void ItemDataCreator()
@@ -39,7 +41,7 @@ namespace AcademyProject.DataEditorWindow
             {  
                 ItemDataSO asset = ScriptableObject.CreateInstance<ItemDataSO>();
 
-                string name = UnityEditor.AssetDatabase.GenerateUniqueAssetPath("Assets/[GameFolders]/ScriptableData/NewScriptableObject.asset");
+                string name = UnityEditor.AssetDatabase.GenerateUniqueAssetPath("Assets/[GameFolders]/ScriptableData/ItemData/NewScriptableObject.asset");
                 AssetDatabase.CreateAsset(asset, name);
                 AssetDatabase.SaveAssets();
 
@@ -48,6 +50,25 @@ namespace AcademyProject.DataEditorWindow
                 Selection.activeObject = asset;
             }
             
+        }
+
+        private void DamageDataCreator()
+        {
+            GUILayout.Label("Damageable Data Scriptable Object");
+               
+            if (GUILayout.Button("Create New Damageable Data", GUILayout.Width(200)))
+            {  
+                DamageDataSO asset = ScriptableObject.CreateInstance<DamageDataSO>();
+
+                string name = UnityEditor.AssetDatabase.GenerateUniqueAssetPath("Assets/[GameFolders]/ScriptableData/DamageableData/NewScriptableObject.asset");
+                AssetDatabase.CreateAsset(asset, name);
+                AssetDatabase.SaveAssets();
+
+                EditorUtility.FocusProjectWindow();
+
+                Selection.activeObject = asset;
+            }
+
         }
     }
     

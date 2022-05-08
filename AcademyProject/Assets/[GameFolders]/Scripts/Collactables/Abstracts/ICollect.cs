@@ -4,6 +4,6 @@ namespace AcademyProject.Collectables
 {
     public interface ICollect
     {
-        void CollectOther(Collider other);
+        void CollectOther(Collision other);
     }
 }
