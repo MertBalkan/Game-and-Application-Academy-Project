@@ -5,5 +5,6 @@ namespace AcademyProject.Inputs
         float HorizontalMovement { get; }
         float VerticalMovement{ get; }
         bool DropItem { get; }
+        bool CollectItem { get; }
     }
 }
