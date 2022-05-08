@@ -153,7 +153,7 @@ https://user-images.githubusercontent.com/43827959/167273681-69f205d6-8e3c-4889-
 
 - **Sprint Review**: 
 
-Yaptığımız sprint toplantılarında yapacağımız oyunun game designını birlikte oluşturduk. Tüm ekip üyeleri ilgilendikleri branşlara bölündüler, birlikte düzenli çalışabilmek adına bir timeline oluşturup bu timeline üzerinden görev dağılımı yaptık, herkes kendi görevini pushlamak için oluşturduğumuz Unity projesinde kendilerine birer branch açtılar ve üstlendikleri görevler üzerinde çalışmaya başladılar. Düzenli olarak çalışmalarımızı synclemek için tekrar toplandık ve yenilikleri diğer ekip üyeleriyle paylaştık. Bunun dışında oluşturduğumuz Notion workspacede de diğer ekip üyelerinin yeniliklerden haberdar olması için üstümüze aldığımız görevlerin başlıklarının altında gerekli bilgileri updateledik. Level designı düzenli oluşturabilmek adına mindboard 
+Yaptığımız sprint toplantılarında yapacağımız oyunun game designını birlikte oluşturduk. Tüm ekip üyeleri ilgilendikleri branşlara bölündüler, birlikte düzenli çalışabilmek adına bir timeline oluşturup bu timeline üzerinden görev dağılımı yaptık, herkes kendi görevini pushlamak için oluşturduğumuz Unity projesinde kendilerine birer branch açtılar ve üstlendikleri görevler üzerinde çalışmaya başladılar. Düzenli olarak çalışmalarımızı synclemek için tekrar toplandık ve yenilikleri diğer ekip üyeleriyle paylaştık. Bunun dışında oluşturduğumuz Notion workspacede de diğer ekip üyelerinin yeniliklerden haberdar olması için üstümüze aldığımız görevlerin başlıklarının altında gerekli bilgileri updateledik. Level designı düzenli oluşturabilmek adına mindboard olarak kullanılmak üzere milanote isimli bir browser tool keşfedildi ve level designları bu şekilde yapmak kararlaştırıldı. Level design combat mekanikleri ve envanter üzerine fikirsel olarak büyük bir yol katedildi ve üretilmeye başlandı.
 
 - **Sprint Retrospective:**
 
@@ -161,11 +161,11 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 > Yol haritası oluşturuldu, branchlere ayrılındı ve herkesin görev tanımları belirlendi
 
-*
+> Level design combat mekanikleri ve envanter üzerine fikirsel olarak büyük bir yol katedildi ve üretilmeye başlandı.
 
 -**Diğer Notlar**:
 
-xxxx
+> Tamamlanamayan görevler 2nd Sprint görevlerine taşındı
 
 ---
 
