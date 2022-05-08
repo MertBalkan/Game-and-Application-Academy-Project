@@ -150,6 +150,9 @@ https://user-images.githubusercontent.com/43827959/167273681-69f205d6-8e3c-4889-
 
 > UI Design hazırlanmaya başlandı
 
+![image](https://user-images.githubusercontent.com/95376425/167307462-8ba4c4d1-6741-4a18-ada7-5dc00844083f.png)
+
+
 
 - **Sprint Review**: 
 
