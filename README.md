@@ -6,7 +6,7 @@ Google Oyun ve Uygulama akademisi Bootcamp takım #69
 
 # Ürün İle İlgili Bilgiler
 
-
+Google Oyun ve Uygulama Akademisi Bootcamp kapsamında 69 nolu takım tarafından yapılacak olan "Grey Hat : Home Alone" isimli single player izometrik action adventure puzzle oyunu 
 
 ## Takım Elemanları
 
@@ -18,11 +18,11 @@ Google Oyun ve Uygulama akademisi Bootcamp takım #69
 
 ## Ürün İsmi
 
-xxxx
+Grey Hat : Home Alone
 
 ## Ürün Açıklaması
 
-- Evde tek başına kalmış 13 yaşındaki hacker bir çocuğun yaşadığı macerayı yansıtan indie bir 3D isometric Puzzle Adventure oyunu
+- Evde tek başına kalmış 13 yaşındaki hacker bir çocuğun yaşadığı macerayı yansıtan indie, single player bir 3D isometric Puzzle Adventure oyunu
 
 ## Ürün Özellikleri
 
@@ -80,15 +80,39 @@ https://glorious-profit-4c1.notion.site/Google-Bootcamp-b5b50202df36401e9b1df505
 
 * Enemylerin traplerle olan interactionları hakkında fikir fırtınası yapıldı her levelde summon olan enemynin sadece ilgili leveldeki crafted itemla alaşağı edilmesine karar verildi.
 
+## 06.05.22 Updates : 
+
+![image](https://user-images.githubusercontent.com/95376425/167304268-0eae215d-3dc3-4327-be8b-e2a69b740d3a.png)
+
+*  [Data editor tool](https://www.notion.so/Scriptable-Object-For-Game-Data-0524a9e61f2f41dcb0410fb1b367360c) : Her level item için kullanılmak için item , damage buff ve craft infosunu içeren bir tool yazıldı
+
+* [Inventory sistem mekaniği](https://www.notion.so/Inventory-System-60fde99aa11c41c781dea0cad17c8d4a) ve inventory ve crafting ui kararlaştırıldı
+
+* [Sapan ve kombat mekaniği](https://www.notion.so/Combat-System-dcdaa23f5179443798351db24a069f0f) netleştirildi ilgili kişiye assign edildi
+
+* İlk iki levelın tüm collectable sistemi belirlendi
+
+* Collectablelar için yapılacak olan shaderlara karar verildi
+
+* Vfx yapılacak olan objectler modelleme sıralamasında önceliklendirildi
+
+* Level senaryoları oturtulacak
+
+![image](https://user-images.githubusercontent.com/95376425/167304285-e57d7648-9b5f-4572-973b-4630d7794945.png)
+
 
 
 ___________________________________________________________________________________________________
 
 
 - **Ürün Durumu**:
-<h1>KOD KISMI</h1>
 
-> Bazı sistemler entegre edilmeye başlandı. Ayrıca dataları daha kolay oluşturmak için "Academy Tool Editor" yazılmaya başlandı. 
+> Bazı sistemler entegre edilmeye başlandı. 
+
+> Dataları daha kolay oluşturmak için "Academy Tool Editor" yazılmaya başlandı. 
+
+> Karakter movement ve envanter sistemi yazılmaya başlandı
+
 
 
 https://user-images.githubusercontent.com/43827959/167273363-2dfc4f54-12e7-4352-9d73-23ea75efd378.mp4
@@ -102,6 +126,7 @@ https://user-images.githubusercontent.com/43827959/167273363-2dfc4f54-12e7-4352-
 
 > Envanter sisteminin mantığı yazılmaya başlandı
 
+
 https://user-images.githubusercontent.com/43827959/167273526-3dbccd73-e794-4ae3-8f7c-5eda479d2184.mp4
 
 > Damage sisteminin mantığı yazılmaya başlandı
@@ -110,7 +135,16 @@ https://user-images.githubusercontent.com/43827959/167273526-3dbccd73-e794-4ae3-
 
 https://user-images.githubusercontent.com/43827959/167273681-69f205d6-8e3c-4889-8c4e-900e5622d26e.mp4
 
+> 3D Environment design yapılmaya başlandı
 
+![image](https://user-images.githubusercontent.com/95376425/167304489-d62bc6b7-cfec-45e6-b6ea-d4c1259832a2.png)
+
+
+![image](https://user-images.githubusercontent.com/95376425/167304508-6112876b-3b06-49bb-81ca-5b2a96ddd726.png)
+
+
+
+> UI Design hazırlanmaya başlandı
 
 
 - **Sprint Review**: 
@@ -119,7 +153,11 @@ xxxx
 
 - **Sprint Retrospective:**
 
-xxxx
+* Game Design neredeyse tamamlandı, geriye sadece detaylandırma ve objectiveleri doğru levellere yerleştirme ve level designı oturtmak kaldı
+
+* Yol haritası oluşturuldu, branchlere ayrılındı ve herkesin görev tanımları belirlendi
+
+*
 
 -**Diğer Notlar**:
 
