@@ -546,7 +546,7 @@ GameObject:
   m_Layer: 0
   m_Name: P_Player
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 4930fb372e423b542805605cb51c83c5, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -833,6 +833,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 948707309835609141, guid: b9674325f7a315645a8df3cfee43e187,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2800000, guid: ab48f29a06627b24fb9863ed9d947b97, type: 3}
+    - target: {fileID: 948707309835609141, guid: b9674325f7a315645a8df3cfee43e187,
+        type: 3}
       propertyPath: m_Name
       value: P_Nail
       objectReference: {fileID: 0}
@@ -905,7 +910,7 @@ GameObject:
   m_Layer: 0
   m_Name: P_Enemy
   m_TagString: Enemy
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: e94d7e19ee4ce1a438232f04d68f748c, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -917,8 +922,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738146356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.89, y: 13.4, z: -7.664}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.89, y: 0.47, z: -4.55}
+  m_LocalScale: {x: 0.51984, y: 1, z: 0.33248}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 310287681}
@@ -1072,6 +1077,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 117387423}
     m_Modifications:
+    - target: {fileID: 851508971013264592, guid: 2557be77011b8d648a6120be48bbb4c8,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2800000, guid: ab48f29a06627b24fb9863ed9d947b97, type: 3}
     - target: {fileID: 851508971013264592, guid: 2557be77011b8d648a6120be48bbb4c8,
         type: 3}
       propertyPath: m_Name
