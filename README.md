@@ -143,19 +143,24 @@ https://user-images.githubusercontent.com/43827959/167273681-69f205d6-8e3c-4889-
 ![image](https://user-images.githubusercontent.com/95376425/167304508-6112876b-3b06-49bb-81ca-5b2a96ddd726.png)
 
 
+![image](https://user-images.githubusercontent.com/95376425/167304884-f2d09a62-536b-42fe-837e-302ec83baf93.png)
+
+
+![image](https://user-images.githubusercontent.com/95376425/167304893-b12e292b-a4b2-4251-bf7b-28bdffec5f4a.png)
+
 
 > UI Design hazırlanmaya başlandı
 
 
 - **Sprint Review**: 
 
-xxxx
+Yaptığımız sprint toplantılarında yapacağımız oyunun game designını birlikte oluşturduk. Tüm ekip üyeleri ilgilendikleri branşlara bölündüler, birlikte düzenli çalışabilmek adına bir timeline oluşturup bu timeline üzerinden görev dağılımı yaptık, herkes kendi görevini pushlamak için oluşturduğumuz Unity projesinde kendilerine birer branch açtılar ve üstlendikleri görevler üzerinde çalışmaya başladılar. Düzenli olarak çalışmalarımızı synclemek için tekrar toplandık ve yenilikleri diğer ekip üyeleriyle paylaştık. Bunun dışında oluşturduğumuz Notion workspacede de diğer ekip üyelerinin yeniliklerden haberdar olması için üstümüze aldığımız görevlerin başlıklarının altında gerekli bilgileri updateledik. Level designı düzenli oluşturabilmek adına mindboard 
 
 - **Sprint Retrospective:**
 
-* Game Design neredeyse tamamlandı, geriye sadece detaylandırma ve objectiveleri doğru levellere yerleştirme ve level designı oturtmak kaldı
+> Game Design neredeyse tamamlandı, geriye sadece detaylandırma ve objectiveleri doğru levellere yerleştirme ve level designı oturtmak kaldı
 
-* Yol haritası oluşturuldu, branchlere ayrılındı ve herkesin görev tanımları belirlendi
+> Yol haritası oluşturuldu, branchlere ayrılındı ve herkesin görev tanımları belirlendi
 
 *
 
