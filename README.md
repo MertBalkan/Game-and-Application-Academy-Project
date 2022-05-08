@@ -163,7 +163,7 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 > Level design combat mekanikleri ve envanter üzerine fikirsel olarak büyük bir yol katedildi ve üretilmeye başlandı.
 
--**Diğer Notlar**:
+- **Diğer Notlar**:
 
 > Tamamlanamayan görevler 2nd Sprint görevlerine taşındı
 
