@@ -6,7 +6,6 @@ Google Oyun ve Uygulama akademisi Bootcamp takım #69
 
 # Ürün İle İlgili Bilgiler
 
-Google Oyun ve Uygulama Akademisi Bootcamp kapsamında 69 nolu takım tarafından yapılacak olan "Grey Hat : Home Alone" isimli single player izometrik action adventure puzzle oyunu 
 
 ## Takım Elemanları
 
@@ -22,7 +21,7 @@ Grey Hat : Home Alone
 
 ## Ürün Açıklaması
 
-- Evde tek başına kalmış 13 yaşındaki hacker bir çocuğun yaşadığı macerayı yansıtan indie, single player bir 3D isometric Puzzle Adventure oyunu
+- Google Oyun ve Uygulama Akademisi Bootcamp kapsamında 69 nolu takım tarafından yapılacak, evde tek başına kalmış 13 yaşındaki hacker bir çocuğun yaşadığı macerayı yansıtan "Grey Hat : Home Alone" isimli indie, single player bir 3D isometric Puzzle Adventure oyunu
 
 ## Ürün Özellikleri
 
