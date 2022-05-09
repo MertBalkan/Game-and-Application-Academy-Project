@@ -6,7 +6,14 @@ Google Oyun ve Uygulama akademisi Bootcamp takım #69
 
 # Ürün İle İlgili Bilgiler
 
-
+| Takımdaki kişinin ismi  | Rolü |
+| ------------- | ------------- |
+|  Ayyüce Atay| Product Owner & Level Designer|
+|  Mert Balkan| Scrum Master & Game Developer|
+|  Setenay Emül| 3D Artist & Game Developer|
+|  Furkan Kaya|  UI/UX Designer & Game Developer|
+|  Emre Yoldaş| Game Developer & Level Designer|
+  
 ## Takım Elemanları
 
 - Ayyüce Atay: Product Owner & Level Designer
