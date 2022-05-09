@@ -1,9 +1,13 @@
 using System;
+using AcademyProject.Controllers;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace AcademyProject.UIs
 {
+    /// <summary>
+    /// Every slot in inventory
+    /// </summary>
     public class SlotUI : MonoBehaviour
     {
         public bool isSlotFull = false;
