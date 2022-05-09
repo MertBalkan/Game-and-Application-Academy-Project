@@ -13,7 +13,7 @@ namespace AcademyProject.ScriptableObjects
         [Space(35)]
         
         public string itemName;
-        public Texture2D itemTexture;
+        public Sprite itemTexture;
         [TextArea] public string itemDescription;
 
         // Here will be change...

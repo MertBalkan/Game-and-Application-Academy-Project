@@ -1,9 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using AcademyProject.Controllers;
 using AcademyProject.Inputs;
 using AcademyProject.Systems;
+using AcademyProject.UIs;
 using UnityEngine;
 
 namespace AcademyProject.Collectables
@@ -26,7 +24,12 @@ namespace AcademyProject.Collectables
         {
             if (other.gameObject.CompareTag("Player") && !InventorySystem.Instance.IsOverMaxCapacity && _input.CollectItem)
             {
+                var inventoryUI = FindObjectOfType<InventoryUI>();
+                if(inventoryUI == null) return;
+                
                 InventorySystem.Instance.AddItem(gameObject.GetComponent<BaseItemController>());
+                
+                inventoryUI.AddItemToSlot(gameObject.GetComponent<BaseItemController>());
                 gameObject.SetActive(false);
             }
         }

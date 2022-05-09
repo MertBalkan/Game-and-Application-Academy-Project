@@ -1,6 +1,6 @@
 using AcademyProject.Inputs;
 using AcademyProject.Movements;
-using AcademyProject.Systems;
+using AcademyProject.UIs;
 
 namespace AcademyProject.Controllers
 {
@@ -8,30 +8,27 @@ namespace AcademyProject.Controllers
     {
         private IInputService _input;
         private IMovementService _movement;
-        
+
+        private InventoryController _inventory;
+
         private void Awake()
         {
             _input = new PcInput();
             _movement = new MovementRigidBody(this, _input);
+            
+            _inventory = gameObject.AddComponent<InventoryController>();
+            _inventory.inventoryUI = FindObjectOfType<InventoryUI>();
         }
 
         private void Update()
         {
             _movement.TurnAround();
-            DropItem();
+            _inventory.DropItem(_input);
         }
 
         private void FixedUpdate()
         {
             _movement.ApplyMovement();
-        }
-
-        private void DropItem()
-        {
-            if (_input.DropItem && !InventorySystem.Instance.IsEmpty)
-            {
-                InventorySystem.Instance.RemoveItem((InventorySystem.Instance.Items[InventorySystem.Instance.Items.Count - 1]));
-            }
         }
     }
 }

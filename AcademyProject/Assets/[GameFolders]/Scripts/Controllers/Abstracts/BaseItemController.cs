@@ -9,8 +9,7 @@ namespace AcademyProject.Controllers
     [RequireComponent(typeof(Rigidbody))]
     public abstract class BaseItemController : MonoBehaviour
     {
-        [SerializeField] private ItemDataSO itemDataSO;
-
+        public ItemDataSO itemDataSO;
         public bool isInInventory;
 
         private void OnEnable()
