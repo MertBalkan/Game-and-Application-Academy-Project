@@ -13,11 +13,11 @@ namespace AcademyProject.ScriptableObjects
         [Space(35)]
         
         public string itemName;
+        public Texture2D itemTexture;
         [TextArea] public string itemDescription;
-        public GameObject itemObject;
-        
+
         // Here will be change...
-        
+
         /*
         public bool isDamageable;
         public DamageDataSO damageData;
