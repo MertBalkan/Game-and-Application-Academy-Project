@@ -5,6 +5,8 @@
 Google Oyun ve Uygulama akademisi Bootcamp takım #69
 
 # Ürün İle İlgili Bilgiler
+  
+## Takım Elemanları
 
 | Takımdaki kişinin ismi  | Rolü |
 | ------------- | ------------- |
@@ -13,14 +15,6 @@ Google Oyun ve Uygulama akademisi Bootcamp takım #69
 |  Setenay Emül| 3D Artist & Game Developer|
 |  Furkan Kaya|  UI/UX Designer & Game Developer|
 |  Emre Yoldaş| Game Developer & Level Designer|
-  
-## Takım Elemanları
-
-- Ayyüce Atay: Product Owner & Level Designer
-- Mert Balkan: Scrum Master & Game Developer
-- Setenay Emül: 3D Artist & Game Developer
-- Furkan Kaya: UI/UX Designer & Game Developer
-- Emre Yoldaş: Game Developer & Level Designer
 
 ## Ürün İsmi
 
