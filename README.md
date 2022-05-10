@@ -51,7 +51,7 @@ https://glorious-profit-4c1.notion.site/Google-Bootcamp-b5b50202df36401e9b1df505
 
 * Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 
-* Daily Scrum: Günlük olarak Discord veya WhatsApp üzerinden konuşuldu. 
+* <a href = "https://docs.google.com/document/d/1-YL_gxEn41rRx2XT2yHJaFkE5n3s698cRqE6_lMDz8s/edit?usp=sharing">Daily Scrum</a>
 
  * <a href = "https://docs.google.com/document/d/1DNTSnRsbarsP6R8FLp0kq5bD4ZkfKmlVKgvg4bsShbA/edit?usp=sharing">Sprint 1 Dokümantasyonu</a>
 
