@@ -38,7 +38,7 @@ namespace AcademyProject.UIs
         /// </summary>
         public void RemoveItemFromSlot()
         {
-            if(slots[0].SlotImage.sprite.Equals(null)) return; // if first index is already empty, just return.
+            // if(slots[0].SlotImage.sprite.Equals(null)) return; // if first index is already empty, just return.
 
             foreach (var slotUI in slots.Reverse()) // reverse travelling
             {
