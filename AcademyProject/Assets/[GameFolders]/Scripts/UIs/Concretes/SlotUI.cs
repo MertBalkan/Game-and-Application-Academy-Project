@@ -11,6 +11,8 @@ namespace AcademyProject.UIs
     public class SlotUI : MonoBehaviour
     {
         public bool isSlotFull = false;
+        public bool imSelected = false;
+        
         private Image _slotImage;
         public Image SlotImage => _slotImage;
 

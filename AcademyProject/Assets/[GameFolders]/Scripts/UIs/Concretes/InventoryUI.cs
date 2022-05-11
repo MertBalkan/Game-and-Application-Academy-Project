@@ -9,7 +9,7 @@ namespace AcademyProject.UIs
     /// </summary>
     public sealed class InventoryUI : MonoBehaviour
     {
-        [SerializeField] private SlotUI[] slots;
+        public SlotUI[] slots;
         
         private void Awake()
         {
@@ -42,7 +42,7 @@ namespace AcademyProject.UIs
 
             foreach (var slotUI in slots.Reverse()) // reverse travelling
             {
-                if (slotUI.isSlotFull)
+                if (slotUI.isSlotFull && slotUI.imSelected)
                 {
                     slotUI.isSlotFull = false;
                     slotUI.SlotImage.sprite = null;

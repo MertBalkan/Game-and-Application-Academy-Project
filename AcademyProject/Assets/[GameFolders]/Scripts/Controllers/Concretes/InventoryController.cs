@@ -13,11 +13,17 @@ namespace AcademyProject.Controllers
         public InventoryUI inventoryUI;
         
         public void DropItem(IInputService input)
-        { 
-            if (input.DropItem && !InventorySystem.Instance.IsEmpty)
+        {
+            for (var i = 0; i < inventoryUI.slots.Length; i++)
             {
-                inventoryUI.RemoveItemFromSlot();
-                InventorySystem.Instance.RemoveItem((InventorySystem.Instance.Items[InventorySystem.Instance.Items.Count - 1]));
+                var slot = inventoryUI.slots[i];
+                
+                if (input.DropItem && !InventorySystem.Instance.IsEmpty && slot.imSelected)
+                {
+                    inventoryUI.RemoveItemFromSlot();
+                    InventorySystem.Instance.RemoveItem(
+                        (InventorySystem.Instance.Items[i]));
+                }
             }
         }
     }

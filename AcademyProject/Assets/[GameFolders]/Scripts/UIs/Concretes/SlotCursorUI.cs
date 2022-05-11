@@ -12,7 +12,6 @@ namespace AcademyProject.UIs
     public class SlotCursorUI : MonoBehaviour
     {
         [SerializeField] private SlotUI[] slots;
-        public GameObject slotCursor;
 
         private IInputService _input;
 
@@ -31,9 +30,18 @@ namespace AcademyProject.UIs
             for (int i = 0; i < slots.Length; i++)
             {
                 if (_input.Slots[i])
-                    slotCursor.transform.position = slots[i].gameObject.transform.position + new Vector3(0, 50, 0);
+                {
+                    transform.position = slots[i].gameObject.transform.position + new Vector3(0, 50, 0);
+                   
+                    foreach (var s in slots)
+                    {
+                        s.imSelected = false;
+                    }
+                    
+                    slots[i].imSelected = true;
+                }
                 else if(i == slots.Length) 
-                    slotCursor.transform.position = slots[5].gameObject.transform.position + new Vector3(-65, 50, 0);
+                    transform.position = slots[5].gameObject.transform.position + new Vector3(-65, 50, 0);
             }
         }
     }

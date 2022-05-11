@@ -1,26 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
     public Transform top, namlu,mermi,nokta;
     Transform klon;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    public float _slingTime;
+    private float _maxSlingTime = 2.0f;
+    public float _currentSlingForce = 0;
+    private float _maxSlingForce = 1000;
+    
     void Update()
     {
         top.Rotate(0, Input.GetAxis("Horizontal"), 0);
-        namlu.Rotate(Input.GetAxis("Vertical"),0, 0);
-        if (Input.GetKeyDown(KeyCode.Space))
+        namlu.Rotate(0,0, Input.GetAxis("Vertical"));
+
+        if (Input.GetKey(KeyCode.Space))
         {
-            klon=Instantiate(mermi, nokta.position, namlu.rotation);
-            klon.GetComponent<Rigidbody>().AddForce(klon.forward * 1000f);
+            _slingTime += Time.deltaTime;
+            _currentSlingForce += _slingTime * 5.0f;
+            
+            if (_slingTime >= _maxSlingTime)
+            {
+                _slingTime = _maxSlingTime;
+            }
+
+            if (_currentSlingForce >= _maxSlingForce)
+            {
+                _currentSlingForce = _maxSlingForce;
+            }
+        }
+
+        Debug.Log("CURRENT SLING TIME: " + _slingTime);
+        Debug.Log("CURRENT SLING FORCE: " + _currentSlingForce);
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            klon = Instantiate(mermi, nokta.position, namlu.rotation);
+            klon.GetComponent<Rigidbody>().AddForce(klon.up * _currentSlingForce * -1);
+            _currentSlingForce = 0.0f;
+            _slingTime = 0.0f;
         }
     }
 }
