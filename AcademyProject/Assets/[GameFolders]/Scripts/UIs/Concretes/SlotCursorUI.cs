@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using AcademyProject.Inputs;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +7,8 @@ namespace AcademyProject.UIs
     public class SlotCursorUI : MonoBehaviour
     {
         [SerializeField] private SlotUI[] slots;
-
+        public SlotUI[] Slots => slots;
+        
         private IInputService _input;
 
         private void Awake()
