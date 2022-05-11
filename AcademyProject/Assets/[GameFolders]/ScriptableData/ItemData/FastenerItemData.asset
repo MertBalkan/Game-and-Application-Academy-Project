@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec82e55a2f572a49a75c089b5b4218f, type: 3}
   m_Name: FastenerItemData
   m_EditorClassIdentifier: 
-  itemName: Fa
+  itemName: Fastaner
+  itemTexture: {fileID: 21300000, guid: 5d8a62b5a2a7b384f851bee7afdfcebd, type: 3}
   itemDescription: MORE FASTENER MORE KILL!
-  itemObject: {fileID: 0}
