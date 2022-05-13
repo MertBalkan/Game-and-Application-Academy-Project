@@ -77,14 +77,6 @@ namespace AcademyProject.Systems
             removedItem.gameObject.SetActive(true);
             _totalItems--;
         }
-
-        /// <summary>
-        /// Text about item description.
-        /// </summary>
-        public void ShowItemDescription()
-        {
-            
-        }
         
     }
 }

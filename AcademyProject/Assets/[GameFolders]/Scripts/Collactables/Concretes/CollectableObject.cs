@@ -34,11 +34,17 @@ namespace AcademyProject.Collectables
                 inventoryUI.AddItemToSlot(gameObject.GetComponent<BaseItemController>());
                 gameObject.SetActive(false);
 
-                foreach (var slot in _slotCursorUI.Slots)
+                for (var index = 0; index < _slotCursorUI.Slots.Length; index++)
                 {
-                    if (slot.isSlotFull)
+                    var slot = _slotCursorUI.Slots[index];
+                    
+                    if(index == _slotCursorUI.Slots.Length - 1) return;
+                    var nextSlot = _slotCursorUI.Slots[index + 1];
+                    
+                    if ((!nextSlot.isSlotFull) || (!slot.isSlotFull && nextSlot.isSlotFull))
                     {
-                        slot.ItemCountText.text = GetComponent<BaseItemController>().itemDataSO.stackCount.ToString();
+                        slot.ItemCountText.text = "x" + GetComponent<BaseItemController>().itemDataSO.stackCount.ToString();
+                        break;
                     }
                 }
             }

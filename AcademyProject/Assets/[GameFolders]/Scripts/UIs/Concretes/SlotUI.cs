@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 namespace AcademyProject.UIs
 {
@@ -22,6 +24,15 @@ namespace AcademyProject.UIs
         {
             _slotImage = GetComponent<Image>();
             itemCountText = GetComponentInChildren<TextMeshProUGUI>();
-        }
+        } 
+
+        /// <summary>
+        /// Text about item description.
+        /// </summary>
+        // public void ShowItemDescription()
+        // {
+        //     Vector3 mousePos = Input.mousePosition;
+        //     itemCountText.transform.position = mousePos; //+ new Vector3(-0.09f, -0.09f, 0.0f);
+        // }
     }
 }

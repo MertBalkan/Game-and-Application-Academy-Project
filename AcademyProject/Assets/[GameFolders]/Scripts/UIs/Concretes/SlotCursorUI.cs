@@ -21,7 +21,7 @@ namespace AcademyProject.UIs
             SlotControl();
         }
 
-        public void SlotControl()
+        private void SlotControl()
         {
             for (int i = 0; i < slots.Length; i++)
             {
@@ -30,9 +30,7 @@ namespace AcademyProject.UIs
                     transform.position = slots[i].gameObject.transform.position + new Vector3(0, 50, 0);
                    
                     foreach (var s in slots)
-                    {
                         s.imSelected = false;
-                    }
                     
                     slots[i].imSelected = true;
                 }

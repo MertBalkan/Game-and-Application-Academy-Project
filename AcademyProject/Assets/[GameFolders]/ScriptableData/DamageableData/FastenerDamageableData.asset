@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b584d0a514a44f64caefcb7449c840c4, type: 3}
   m_Name: FastenerDamageableData
   m_EditorClassIdentifier: 
-  damageHitCount: 25
+  damageHitCount: 50
   gainedPoints: 100
