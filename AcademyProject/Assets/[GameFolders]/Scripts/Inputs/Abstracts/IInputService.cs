@@ -7,6 +7,7 @@ namespace AcademyProject.Inputs
         bool DropItem { get; }
         bool CollectItem { get; }
         bool[] Slots { get; }
+        bool ChangeWeapon { get; }
 
     }
 }

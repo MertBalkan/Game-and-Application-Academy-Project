@@ -16,6 +16,7 @@ namespace AcademyProject.ScriptableObjects
         public Sprite itemTexture;
         public int stackCount;
         [TextArea] public string itemDescription;
+        public bool isWeapon;
 
         // Here will be change...
 

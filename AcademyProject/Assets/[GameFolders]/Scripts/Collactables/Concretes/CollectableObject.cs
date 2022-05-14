@@ -1,3 +1,5 @@
+using System;
+using AcademyProject.Combats;
 using AcademyProject.Controllers;
 using AcademyProject.Inputs;
 using AcademyProject.Systems;
@@ -11,10 +13,23 @@ namespace AcademyProject.Collectables
         private IInputService _input;
         private SlotCursorUI _slotCursorUI;
 
+        private bool _isWeaponPickedUp;
+
         private void Awake()
         {
             _input = new PcInput();
             _slotCursorUI = FindObjectOfType<SlotCursorUI>();
+        }
+
+        private void Update()
+        {
+            if (_isWeaponPickedUp)
+            {
+                var playerHand = FindObjectOfType<PlayerHand>();
+                if(playerHand.Equals(null)) return;
+                    
+                gameObject.transform.position = playerHand.gameObject.transform.position;
+            }
         }
 
         private void OnCollisionStay(Collision other)
@@ -32,7 +47,15 @@ namespace AcademyProject.Collectables
                 InventorySystem.Instance.AddItem(gameObject.GetComponent<BaseItemController>());
                 
                 inventoryUI.AddItemToSlot(gameObject.GetComponent<BaseItemController>());
-                gameObject.SetActive(false);
+
+                if (!gameObject.GetComponent<BaseItemController>().itemDataSO.isWeapon) // if item that we picked up is not a weapon
+                {
+                    gameObject.SetActive(false);
+                }
+                else
+                {
+                    _isWeaponPickedUp = true;
+                }
 
                 for (var index = 0; index < _slotCursorUI.Slots.Length; index++)
                 {

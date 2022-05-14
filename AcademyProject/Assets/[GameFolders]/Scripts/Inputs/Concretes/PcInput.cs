@@ -1,3 +1,4 @@
+using AcademyProject.Systems;
 using UnityEngine;
 
 namespace AcademyProject.Inputs
@@ -17,5 +18,7 @@ namespace AcademyProject.Inputs
             Input.GetKeyDown(KeyCode.Alpha5),
             Input.GetKeyDown(KeyCode.Alpha6),
         };
+
+        public bool ChangeWeapon => Input.GetKeyDown(KeyCode.Tab);
     }
 }

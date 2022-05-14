@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using AcademyProject.Combats;
 using AcademyProject.Controllers;
 using AcademyProject.Managers;
 using UnityEngine;
@@ -77,6 +78,25 @@ namespace AcademyProject.Systems
             removedItem.gameObject.SetActive(true);
             _totalItems--;
         }
-        
+
+        // public bool HasBulletInInventory()
+        // {
+        //     foreach (var bullet in items)
+        //     {
+        //         if (!bullet.GetComponent<IBulletable>().Equals(null))
+        //         {
+        //             return true;
+        //         }
+        //     }
+        //     return false;
+        // }
+        //
+        // public BaseItemController Bullet()
+        // {
+        //     if (HasBulletInInventory())
+        //     {
+        //         
+        //     }
+        // }
     }
 }

@@ -1,3 +1,5 @@
+using System;
+using AcademyProject.Combats;
 using AcademyProject.ScriptableObjects;
 using UnityEngine;
 
@@ -14,14 +16,16 @@ namespace AcademyProject.Controllers
 
         private void OnEnable()
         {
+            if(itemDataSO.isWeapon) return;
             transform.SetParent(null);
         }
 
         private void OnDisable()
-        { 
+        {
+            if(itemDataSO.isWeapon) return;
             ToThePlayerInventory();
         }
-
+        
         private void ReAttachParent()
         {
             transform.SetParent(FindObjectOfType<PlayerHand>().transform);
