@@ -21,6 +21,8 @@ namespace AcademyProject.Controllers
                 if (input.DropItem && !InventorySystem.Instance.IsEmpty && slot.imSelected)
                 {
                     inventoryUI.RemoveItemFromSlot();
+                    if (!slot.isSlotFull) slot.ItemCountText.text = "x99";
+                    
                     InventorySystem.Instance.RemoveItem(
                         (InventorySystem.Instance.Items[i]));
                 }

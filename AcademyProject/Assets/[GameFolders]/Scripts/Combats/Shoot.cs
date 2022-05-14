@@ -9,14 +9,24 @@ public class Shoot : MonoBehaviour
     private float _maxSlingTime = 2.0f;
     public float _currentSlingForce = 0;
     private float _maxSlingForce = 1000;
-    
+
     void Update()
     {
-        top.Rotate(0, Input.GetAxis("Horizontal"), 0);
-        namlu.Rotate(0,0, Input.GetAxis("Vertical"));
-
-        if (Input.GetKey(KeyCode.Space))
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        
+        if (Input.GetMouseButton(0))
         {
+            if (Physics.Raycast(ray, out hit, 600))
+            {
+                var worldPosition = hit.point;
+                worldPosition.y = 0;
+                
+                // transform.LookAt(worldPosition);
+                Quaternion rotation = Quaternion.LookRotation(worldPosition, Vector3.up);
+                transform.rotation = rotation;
+            }
+            
             _slingTime += Time.deltaTime;
             _currentSlingForce += _slingTime * 5.0f;
             
@@ -30,14 +40,11 @@ public class Shoot : MonoBehaviour
                 _currentSlingForce = _maxSlingForce;
             }
         }
-
-        Debug.Log("CURRENT SLING TIME: " + _slingTime);
-        Debug.Log("CURRENT SLING FORCE: " + _currentSlingForce);
-
-        if (Input.GetKeyUp(KeyCode.Space))
+        
+        if (Input.GetMouseButtonUp(0))
         {
             klon = Instantiate(mermi, nokta.position, namlu.rotation);
-            klon.GetComponent<Rigidbody>().AddForce(klon.up * _currentSlingForce * -1);
+            klon.GetComponent<Rigidbody>().AddForce(klon.up * _currentSlingForce);
             _currentSlingForce = 0.0f;
             _slingTime = 0.0f;
         }

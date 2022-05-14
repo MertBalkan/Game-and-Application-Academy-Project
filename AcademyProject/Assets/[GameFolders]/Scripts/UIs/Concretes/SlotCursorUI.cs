@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using AcademyProject.Inputs;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +7,8 @@ namespace AcademyProject.UIs
     public class SlotCursorUI : MonoBehaviour
     {
         [SerializeField] private SlotUI[] slots;
-
+        public SlotUI[] Slots => slots;
+        
         private IInputService _input;
 
         private void Awake()
@@ -25,7 +21,7 @@ namespace AcademyProject.UIs
             SlotControl();
         }
 
-        public void SlotControl()
+        private void SlotControl()
         {
             for (int i = 0; i < slots.Length; i++)
             {
@@ -34,9 +30,7 @@ namespace AcademyProject.UIs
                     transform.position = slots[i].gameObject.transform.position + new Vector3(0, 50, 0);
                    
                     foreach (var s in slots)
-                    {
                         s.imSelected = false;
-                    }
                     
                     slots[i].imSelected = true;
                 }

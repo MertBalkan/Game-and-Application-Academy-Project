@@ -14,6 +14,7 @@ namespace AcademyProject.ScriptableObjects
         
         public string itemName;
         public Sprite itemTexture;
+        public int stackCount;
         [TextArea] public string itemDescription;
 
         // Here will be change...

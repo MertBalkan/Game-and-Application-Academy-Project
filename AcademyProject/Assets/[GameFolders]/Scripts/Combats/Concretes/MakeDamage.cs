@@ -21,6 +21,7 @@ namespace AcademyProject.Combats
                 if(enemyHealth.Equals(null)) return;
                 
                 enemyHealth.TakeDamage(damageDataSO.damageHitCount);
+                if(enemyHealth.IsDead) Destroy(enemyHealth.gameObject);
                 Debug.Log(enemyHealth.CurrentHealth);
             }
         }
