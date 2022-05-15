@@ -90,6 +90,8 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 - Oyunun motionları geliştirildi, mixamodan kullanılacak olan animasyonlar kararlaştırıldı ve indirilerek proje içine import edildi.
 
+![image](https://user-images.githubusercontent.com/95376425/168487359-20a0297e-2dcd-4ab3-836b-b6142ecb19ea.png)
+
 - Oyunun sfxlerinin sprint 3te yapılmasına karar verildi.
 
 - Vfxlerin sprint 2 de yapılmasına karar verildi.
