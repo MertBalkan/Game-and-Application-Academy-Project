@@ -75,6 +75,26 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 # Sprint 2
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dcf04621-949f-46ae-863a-41cf9d69974c/Untitled.png)
+Stack bugları konuşuldu
+
+Oyunun scobunu küçültmenin gerekebileceği senaryosunda nelerin eleneceğine karar verildi.
+
+Nerf Gun mekanikleri tamamlandı
+
+![image](https://user-images.githubusercontent.com/95376425/168487061-17aa282d-0c5a-4f3f-ad92-82f5096f6175.png)
+
+Oyunun motionları geliştirildi, mixamodan kullanılacak olan animasyonlar kararlaştırıldı ve indirilerek proje içine import edildi.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dcf04621-949f-46ae-863a-41cf9d69974c/Untitled.png)
+
+Oyunun sfxlerinin sprint 3te yapılmasına karar verildi.
+
+Vfxlerin sprint 2 de yapılmasına karar verildi.
+
+Envanter UI’ı ve Crafting sisteminin sprint 2 de yapılmasına karar verildi.
+
+
 
 ---
 
