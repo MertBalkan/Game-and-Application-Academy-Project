@@ -88,13 +88,13 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 ![image](https://user-images.githubusercontent.com/95376425/168487061-17aa282d-0c5a-4f3f-ad92-82f5096f6175.png)
 
-- Oyunun motionları geliştirildi, mixamodan kullanılacak olan animasyonlar kararlaştırıldı ve indirilerek proje içine import edildi.
+- Oyunun motionları geliştirildi, mixamodan kullanılacak olan animasyonlar kararlaştırıldı ve indirilerek proje içine import edildi. (Sprint içinde alınması plananlanan puan : 100/20 pts)
 
 ![image](https://user-images.githubusercontent.com/95376425/168487359-20a0297e-2dcd-4ab3-836b-b6142ecb19ea.png)
 
 - Oyunun sfxlerinin sprint 3te yapılmasına karar verildi.
 
-- Vfxlerin sprint 2 de yapılmasına karar verildi.
+- Vfxlerin sprint 2 ve 3e bölünerek yapılmasına karar verildi. (Bu Sprint içinde alınması plananlanan puan : 100/20 pts)
 
 - Envanter UI’ı ve Crafting sisteminin sprint 2 de yapılmasına karar verildi.
 
