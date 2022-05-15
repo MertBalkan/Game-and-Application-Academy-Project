@@ -2,12 +2,31 @@ namespace AcademyProject.Inputs
 {
     public interface IInputService
     {
-        float HorizontalMovement { get; }
-        float VerticalMovement { get; }
-        bool DropItem { get; }
-        bool CollectItem { get; }
-        bool[] Slots { get; }
-        bool ChangeWeapon { get; }
-
+        #region Movement Inputs
+        
+            float HorizontalMovement { get; }
+            float VerticalMovement { get; }
+        
+        #endregion
+        
+        #region Inventory UI Inputs
+            
+            bool[] Slots { get; }
+        
+        #endregion
+        
+        #region Item Inputs
+        
+            bool DropItem { get; }
+            bool CollectItem { get; }
+        
+        #endregion
+        
+        #region Weapon Inputs
+        
+            bool ChangeWeapon { get; }
+            bool Fire { get; }
+        
+            #endregion
     }
 }
