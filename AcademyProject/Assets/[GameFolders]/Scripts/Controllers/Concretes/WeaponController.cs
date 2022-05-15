@@ -29,7 +29,5 @@ namespace AcademyProject.Controllers
 
             if (_weaponIndex >= 3) _weaponIndex = 0; // CHANGE HERE LATER
         }
-
-        
     }   
 }
