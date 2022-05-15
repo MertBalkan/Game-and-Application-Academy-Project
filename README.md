@@ -100,6 +100,18 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 
 
+- **Sprint Review**: 
+
+
+
+- **Sprint Retrospective:**
+
+
+
+- **Diğer Notlar**:
+
+
+
 ---
 
 # Sprint 3
