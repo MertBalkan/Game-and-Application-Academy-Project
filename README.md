@@ -99,13 +99,11 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 - Envanter UI’ı ve Crafting sisteminin sprint 2 de yapılmasına karar verildi.
 
 
-
+---
 - **Sprint Review**: 
 
 
-
 - **Sprint Retrospective:**
-
 
 
 - **Diğer Notlar**:
