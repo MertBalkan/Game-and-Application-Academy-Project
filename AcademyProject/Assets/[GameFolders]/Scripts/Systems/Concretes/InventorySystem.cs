@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using AcademyProject.Combats;
 using AcademyProject.Controllers;
 using AcademyProject.Managers;
 using UnityEngine;
@@ -53,7 +51,7 @@ namespace AcademyProject.Systems
                 if (i == null)
                 {
                     var index = items.IndexOf(i);
-
+                   
                     items[index] = item;
                     item.isInInventory = true;
                     
@@ -76,6 +74,7 @@ namespace AcademyProject.Systems
 
             removedItem.isInInventory = false;
             removedItem.gameObject.SetActive(true);
+            
             _totalItems--;
         }
 

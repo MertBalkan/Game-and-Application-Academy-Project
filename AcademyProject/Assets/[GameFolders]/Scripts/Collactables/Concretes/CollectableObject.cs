@@ -1,5 +1,3 @@
-using System;
-using AcademyProject.Combats;
 using AcademyProject.Controllers;
 using AcademyProject.Inputs;
 using AcademyProject.Systems;
@@ -45,8 +43,7 @@ namespace AcademyProject.Collectables
                 if(inventoryUI == null) return;
                 
                 InventorySystem.Instance.AddItem(gameObject.GetComponent<BaseItemController>());
-                
-                inventoryUI.AddItemToSlot(gameObject.GetComponent<BaseItemController>());
+                inventoryUI.AddItemToSlot(gameObject.GetComponent<BaseItemController>(), gameObject.GetComponent<BaseItemController>().itemDataSO.stackCount);
 
                 if (!gameObject.GetComponent<BaseItemController>().itemDataSO.isWeapon) // if item that we picked up is not a weapon
                 {
@@ -55,20 +52,6 @@ namespace AcademyProject.Collectables
                 else
                 {
                     _isWeaponPickedUp = true;
-                }
-
-                for (var index = 0; index < _slotCursorUI.Slots.Length; index++)
-                {
-                    var slot = _slotCursorUI.Slots[index];
-                    
-                    if(index == _slotCursorUI.Slots.Length - 1) return;
-                    var nextSlot = _slotCursorUI.Slots[index + 1];
-                    
-                    if ((!nextSlot.isSlotFull) || (!slot.isSlotFull && nextSlot.isSlotFull))
-                    {
-                        slot.ItemCountText.text = "x" + GetComponent<BaseItemController>().itemDataSO.stackCount.ToString();
-                        break;
-                    }
                 }
             }
         }

@@ -20,7 +20,7 @@ namespace AcademyProject.UIs
         /// Adds item to empty inventory slot
         /// </summary>
         /// <param name="item"></param>
-        public void AddItemToSlot(BaseItemController item)
+        public void AddItemToSlot(BaseItemController item, int stackCount)
         {
             foreach (var slotUI in slots)
             {
@@ -28,6 +28,7 @@ namespace AcademyProject.UIs
                 {
                     slotUI.SlotImage.sprite = item.itemDataSO.itemTexture;
                     slotUI.isSlotFull = true;
+                    slotUI.ItemCountText.text = stackCount.ToString();
                     break;
                 }
             }

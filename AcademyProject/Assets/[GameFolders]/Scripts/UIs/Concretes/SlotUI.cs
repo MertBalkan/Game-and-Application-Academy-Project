@@ -15,7 +15,11 @@ namespace AcademyProject.UIs
         public bool imSelected = false;
         
         private TextMeshProUGUI itemCountText;
-        public TextMeshProUGUI ItemCountText => itemCountText;
+        public TextMeshProUGUI ItemCountText
+        {
+            get { return itemCountText;}
+            set { value = itemCountText; }
+        }
 
         private Image _slotImage;
         public Image SlotImage => _slotImage;
