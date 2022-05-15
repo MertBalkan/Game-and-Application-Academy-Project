@@ -39,6 +39,14 @@ namespace AcademyProject.Collectables
         {
             if (other.gameObject.CompareTag("Player") && !InventorySystem.Instance.IsOverMaxCapacity && _input.CollectItem)
             {
+                if (gameObject.GetComponent<BaseItemController>().itemDataSO
+                        .isWeapon) 
+                {
+                    // weapon ui, add weapon
+                    gameObject.SetActive(true);
+                    return;
+                }
+
                 var inventoryUI = FindObjectOfType<InventoryUI>();
                 if(inventoryUI == null) return;
                 
