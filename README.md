@@ -96,7 +96,11 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 - Vfxlerin sprint 2 ve 3e bölünerek yapılmasına karar verildi. (Bu Sprint içinde alınması plananlanan puan : 100/20 pts)
 
+- Weapon system ui ile envanter ui birbirinden ayrılacak. 
+
 - Envanter UI’ı ve Crafting sisteminin sprint 2 de yapılmasına karar verildi.
+
+- Daha önce düşünüllen camlı vantilatör trapini hazırlanan nerf gun mekaniği kullanılarak itemler azaltıldığı için vantilatör + dart oklarıyla kullanılacak.
 
 
 ---
