@@ -11,7 +11,7 @@ namespace AcademyProject.Collectables
         private IInputService _input;
         private SlotCursorUI _slotCursorUI;
 
-        private bool _isWeaponPickedUp;
+        private bool _isWeaponPicked = false;
 
         private void Awake()
         {
@@ -21,12 +21,12 @@ namespace AcademyProject.Collectables
 
         private void Update()
         {
-            if (_isWeaponPickedUp)
+            if (_isWeaponPicked)
             {
                 var playerHand = FindObjectOfType<PlayerHand>();
                 if(playerHand.Equals(null)) return;
-                    
-                gameObject.transform.position = playerHand.gameObject.transform.position;
+
+                transform.position = playerHand.transform.position;
             }
         }
 
@@ -39,29 +39,37 @@ namespace AcademyProject.Collectables
         {
             if (other.gameObject.CompareTag("Player") && !InventorySystem.Instance.IsOverMaxCapacity && _input.CollectItem)
             {
-                if (gameObject.GetComponent<BaseItemController>().itemDataSO
-                        .isWeapon) 
-                {
-                    // weapon ui, add weapon
-                    gameObject.SetActive(true);
-                    return;
-                }
-
-                var inventoryUI = FindObjectOfType<InventoryUI>();
                 if(inventoryUI == null) return;
-                
-                InventorySystem.Instance.AddItem(gameObject.GetComponent<BaseItemController>());
-                inventoryUI.AddItemToSlot(gameObject.GetComponent<BaseItemController>(), gameObject.GetComponent<BaseItemController>().itemDataSO.stackCount);
+                var item = gameObject.GetComponent<BaseItemController>();
+                var weapon = gameObject.GetComponent<BaseWeaponController>();
 
-                if (!gameObject.GetComponent<BaseItemController>().itemDataSO.isWeapon) // if item that we picked up is not a weapon
-                {
-                    gameObject.SetActive(false);
-                }
+                if (weapon == null) // Is weapon collected?
+                    GrabItem(item, FindObjectOfType<InventoryUI>());
                 else
-                {
-                    _isWeaponPickedUp = true;
-                }
+                    GrabWeapon(weapon, FindObjectOfType<WeaponUI>());
             }
         }
+        
+        private void GrabItem(BaseItemController item, InventoryUI inventoryUI)
+        {
+            if(inventoryUI == null) return;
+
+            InventorySystem.Instance.AddItem(item);
+            inventoryUI.AddItemToSlot(item, item.itemDataSO.stackCount);
+            gameObject.SetActive(false);   
+        }
+
+        private void GrabWeapon(BaseWeaponController weapon, WeaponUI weaponUI)
+        {
+            if(weaponUI == null) return;
+            
+            weapon.GetComponent<BoxCollider>().isTrigger = true; // temporarily
+            
+            InventorySystem.Instance.AddWeapon(weapon);
+            weaponUI.AddWeaponToSlot(weapon);
+            _isWeaponPicked = true;
+            
+        }
+        
     }
 }

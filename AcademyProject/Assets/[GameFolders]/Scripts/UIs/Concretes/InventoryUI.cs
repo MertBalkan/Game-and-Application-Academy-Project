@@ -9,11 +9,11 @@ namespace AcademyProject.UIs
     /// </summary>
     public sealed class InventoryUI : MonoBehaviour
     {
-        public SlotUI[] slots;
+        public InventorySlotUI[] inventorySlots;
         
         private void Awake()
         {
-            slots = GetComponentsInChildren<SlotUI>();
+            inventorySlots = GetComponentsInChildren<InventorySlotUI>();
         }
 
         /// <summary>
@@ -22,7 +22,7 @@ namespace AcademyProject.UIs
         /// <param name="item"></param>
         public void AddItemToSlot(BaseItemController item, int stackCount)
         {
-            foreach (var slotUI in slots)
+            foreach (var slotUI in inventorySlots)
             {
                 if (!slotUI.isSlotFull)
                 {
@@ -41,7 +41,7 @@ namespace AcademyProject.UIs
         {
             // if(slots[0].SlotImage.sprite.Equals(null)) return; // if first index is already empty, just return.
 
-            foreach (var slotUI in slots.Reverse()) // reverse travelling
+            foreach (var slotUI in inventorySlots.Reverse()) // reverse travelling
             {
                 if (slotUI.isSlotFull && slotUI.imSelected)
                 {

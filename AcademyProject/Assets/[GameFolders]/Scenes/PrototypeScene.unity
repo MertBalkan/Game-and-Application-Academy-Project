@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 5910564}
   - component: {fileID: 5910563}
   - component: {fileID: 5910562}
+  - component: {fileID: 5910565}
   m_Layer: 5
   m_Name: WeaponSlot
   m_TagString: Untagged
@@ -244,6 +245,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5910560}
   m_CullTransparentMesh: 1
+--- !u!114 &5910565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5910560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aaccac1264fbfe42bb6ee72f0e3c78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &27434747
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +329,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
+  m_LookAt: {fileID: 543450652409281555}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
@@ -327,7 +340,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 0.88920456, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -343,8 +356,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51339645}
-  m_LocalRotation: {x: 0.3493975, y: 0.0063261027, z: -0.002359063, w: 0.93695027}
-  m_LocalPosition: {x: -0.07, y: 12.85, z: -13.54}
+  m_LocalRotation: {x: 0.35312226, y: -0.008720058, z: 0.0032914437, w: 0.9355308}
+  m_LocalPosition: {x: 0.48, y: 14.65, z: -15.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -400,7 +413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 131409680}
   m_Layer: 0
-  m_Name: Canvases
+  m_Name: UICanvases
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1205,8 +1218,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.3493975, y: 0.0063261027, z: -0.002359063, w: 0.93695027}
-  m_LocalPosition: {x: -0.07, y: 12.85, z: -13.54}
+  m_LocalRotation: {x: 0.35312226, y: -0.008720058, z: 0.0032914437, w: 0.9355308}
+  m_LocalPosition: {x: 0.48, y: 14.65, z: -15.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1793,8 +1806,9 @@ GameObject:
   - component: {fileID: 531938454}
   - component: {fileID: 531938453}
   - component: {fileID: 531938452}
+  - component: {fileID: 531938455}
   m_Layer: 5
-  m_Name: WeaponCanvas
+  m_Name: WeaponUICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1882,6 +1896,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &531938455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531938450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe28b6fccf8fbd14c901ca109680aade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSlot: {fileID: 5910565}
 --- !u!1001 &609373171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2892,7 +2919,7 @@ GameObject:
   - component: {fileID: 962702652}
   - component: {fileID: 962702651}
   m_Layer: 5
-  m_Name: WeaponsPanel
+  m_Name: WeaponsSlotPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2981,14 +3008,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042279061}
-  m_LocalRotation: {x: 0.00000004470348, y: 0.000000088771316, z: -0.0000000316455,
-    w: 1}
-  m_LocalPosition: {x: 0.5047114, y: 1.1477147, z: 0.33}
+  m_LocalRotation: {x: 0.4862012, y: 0.512045, z: -0.49123487, w: -0.51000655}
+  m_LocalPosition: {x: -0.33995953, y: -0.010739621, z: -0.083376385}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 543450652409281555}
-  m_RootOrder: 1
+  m_Father: {fileID: 1852576805418542128}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1042279063
 MonoBehaviour:
@@ -3254,7 +3280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ea146402a3291478fbf4201c340c51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots: []
+  inventorySlots:
+  - {fileID: 2123789171}
+  - {fileID: 257720372}
+  - {fileID: 306640783}
+  - {fileID: 1681427166}
+  - {fileID: 1824706002}
+  - {fileID: 1785890326}
 --- !u!1 &1201144817
 GameObject:
   m_ObjectHideFlags: 0
@@ -3286,7 +3318,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCapacity: 6
   items: []
-  player: {fileID: 0}
+  weapons:
+  - {fileID: 0}
 --- !u!4 &1201144819
 Transform:
   m_ObjectHideFlags: 0
@@ -3343,7 +3376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263492034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.102, y: 0, z: 0}
+  m_LocalPosition: {x: 0.102, y: -0.478, z: -0.374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3513,13 +3546,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345186942}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.18, y: 0.99218184, z: 0.22699995}
+  m_LocalPosition: {x: -0.0115, y: 0.99218184, z: 0.22699995}
   m_LocalScale: {x: 0.097361475, y: 0.09736146, z: 0.09736146}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 762739781}
   m_Father: {fileID: 543450652409281555}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1460120607
 GameObject:
@@ -5431,7 +5464,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7992580011516329570}
-  - {fileID: 1042279062}
   - {fileID: 5465940245524601991}
   - {fileID: 1345186943}
   m_Father: {fileID: 310287681}
@@ -5847,6 +5879,7 @@ Transform:
   - {fileID: 1189529852143260560}
   - {fileID: 9118793901083032820}
   - {fileID: 8447082968134733574}
+  - {fileID: 1042279062}
   m_Father: {fileID: 2563496968769908304}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6695,7 +6728,7 @@ Transform:
   - {fileID: 8169382869964352440}
   - {fileID: 5742672706622140180}
   m_Father: {fileID: 543450652409281555}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5477181765235004706
 Transform:
