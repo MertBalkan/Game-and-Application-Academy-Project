@@ -1,6 +1,7 @@
 using AcademyProject.Inputs;
 using AcademyProject.Movements;
 using AcademyProject.UIs;
+using UnityEngine;
 
 namespace AcademyProject.Controllers
 {
@@ -10,6 +11,14 @@ namespace AcademyProject.Controllers
         private IMovementService _movement;
 
         private InventoryController _inventory;
+
+        [SerializeField] private Transform muzzle, bullet, point;
+        
+        public Transform Muzzle => muzzle;
+        public Transform Bullet => bullet;
+        public Transform Point => point;
+        
+        public IInputService Input => _input;
 
         private void Awake()
         {

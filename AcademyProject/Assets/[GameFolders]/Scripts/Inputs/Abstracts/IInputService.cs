@@ -3,30 +3,30 @@ namespace AcademyProject.Inputs
     public interface IInputService
     {
         #region Movement Inputs
-        
-            float HorizontalMovement { get; }
-            float VerticalMovement { get; }
-        
+
+        float HorizontalMovement { get; }
+        float VerticalMovement { get; }
+
         #endregion
-        
+
         #region Inventory UI Inputs
-            
-            bool[] Slots { get; }
-        
+
+        bool[] Slots { get; }
+
         #endregion
-        
+
         #region Item Inputs
-        
-            bool DropItem { get; }
-            bool CollectItem { get; }
-        
+
+        bool DropItem { get; }
+        bool CollectItem { get; }
+
         #endregion
-        
+
         #region Weapon Inputs
-        
-            bool ChangeWeapon { get; }
-            bool Fire { get; }
-        
-            #endregion
+
+        bool Fire { get; }
+        bool IncreaseSlingForce { get; }
+
+        #endregion
     }
 }

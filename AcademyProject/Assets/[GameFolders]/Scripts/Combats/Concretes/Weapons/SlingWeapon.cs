@@ -1,60 +1,67 @@
-using System;
 using AcademyProject.Controllers;
 using UnityEngine;
 
 namespace AcademyProject.Combats
 {
-    public class SlingWeapon : BaseItemController, IWeaponType
+    public class SlingWeapon : BaseWeaponController, IWeaponType
     {
         private float _slingTime;
+        private float _slingForce = 0;
         private float _maxSlingTime = 2.0f;
-        private float _currentSlingForce = 0;
         private float _maxSlingForce = 1000;
+
+        private PlayerCharacterController _player;
         
-        public Transform namlu, mermi, nokta;
-       
+        private void Awake()
+        {
+            _player = FindObjectOfType<PlayerCharacterController>();
+        }
+
         private void Update()
         {
-            if (isInInventory)
-            {
+            if (IsSlingInInventory())
                 ApplyWeaponType();
-            }
         }
 
         public void ApplyWeaponType()
         {
-            if (Input.GetMouseButton(0))
-            {
-                _slingTime += Time.deltaTime;
-                _currentSlingForce += _slingTime * 5.0f;
+            if (_player.Input.IncreaseSlingForce)
+                SlingForceSpeed();
             
-                if (_slingTime >= _maxSlingTime)
-                    _slingTime = _maxSlingTime;
-
-                if (_currentSlingForce >= _maxSlingForce)
-                    _currentSlingForce = _maxSlingForce;
-            }
-            InstantiateBullet();
+            SlingShot();
         }
         
-        private void InstantiateBullet()
+        private void SlingShot()
         {
-            if (Input.GetMouseButtonUp(0))
+            if (_player.Input.Fire)
             {
-                var klon = Instantiate(mermi, nokta.position, namlu.rotation);
-                klon.GetComponent<Rigidbody>().AddForce(klon.up * _currentSlingForce);
+                var clone = InstantiateBullet();
+                clone.GetComponent<Rigidbody>().AddForce(clone.up * _slingForce);
                 
-                _currentSlingForce = 0.0f;
-                _slingTime = 0.0f;
+                ResetSlingForce();
             }
         }
 
-        // public BaseItemController Bullet()
-        // {
-        //     if (InventorySystem.Instance.HasBulletInInventory())
-        //     {
-        //         
-        //     }
-        // }
+        private Transform InstantiateBullet()
+        {
+            return Instantiate(_player.Bullet, _player.Point.position, _player.Muzzle.rotation);
+        }
+
+        private void SlingForceSpeed()
+        {
+            _slingTime += Time.deltaTime;
+            _slingForce += _slingTime * 5.0f;
+            
+            _slingTime = _slingTime >= _maxSlingTime ? _slingTime = _maxSlingForce : _slingTime ;
+            _slingForce = _slingForce >= _maxSlingForce ? _slingForce = _maxSlingForce : _slingForce;
+        }
+
+        private void ResetSlingForce()
+        {
+            _slingForce = 0.0f;
+            _slingTime = 0.0f;
+        }
+
+        private bool IsSlingInInventory() => isInInventory;
     }   
 }

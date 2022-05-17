@@ -340,7 +340,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.88920456, y: 1}
+    m_SensorSize: {x: 0.89914775, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -356,7 +356,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51339645}
-  m_LocalRotation: {x: 0.35312226, y: -0.008720058, z: 0.0032914437, w: 0.9355308}
+  m_LocalRotation: {x: 0.35312226, y: -0.008720053, z: 0.003291442, w: 0.9355308}
   m_LocalPosition: {x: 0.48, y: 14.65, z: -15.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1218,7 +1218,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.35312226, y: -0.008720058, z: 0.0032914437, w: 0.9355308}
+  m_LocalRotation: {x: 0.35312226, y: -0.008720053, z: 0.003291442, w: 0.9355308}
   m_LocalPosition: {x: 0.48, y: 14.65, z: -15.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1417,6 +1417,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movespeed: 5
   _turnspeed: 360
+  muzzle: {fileID: 1345186943}
+  bullet: {fileID: 8631630180081560220, guid: 5a19cd2c430d7b649aeadbd5be9f7084, type: 3}
+  point: {fileID: 27434748}
 --- !u!54 &356637365
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3401,9 +3404,6 @@ MonoBehaviour:
   itemDataSO: {fileID: 11400000, guid: 476148d0a8336e8489fc0057184b02c3, type: 2}
   isInInventory: 0
   stackQuantity: 0
-  namlu: {fileID: 1345186943}
-  mermi: {fileID: 8631630180081560220, guid: 5a19cd2c430d7b649aeadbd5be9f7084, type: 3}
-  nokta: {fileID: 27434748}
 --- !u!114 &1263492038
 MonoBehaviour:
   m_ObjectHideFlags: 0
