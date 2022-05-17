@@ -9,14 +9,12 @@ namespace AcademyProject.Collectables
     public class CollectableObject : MonoBehaviour, ICollect
     {
         private IInputService _input;
-        private SlotCursorUI _slotCursorUI;
 
         private bool _isWeaponPicked = false;
 
         private void Awake()
         {
             _input = new PcInput();
-            _slotCursorUI = FindObjectOfType<SlotCursorUI>();
         }
 
         private void Update()
