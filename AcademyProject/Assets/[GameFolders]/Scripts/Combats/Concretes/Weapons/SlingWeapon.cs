@@ -38,6 +38,7 @@ namespace AcademyProject.Combats
                 var clone = InstantiateBullet();
                 clone.GetComponent<Rigidbody>().AddForce(clone.up * _slingForce);
                 
+                _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, false);
                 ResetSlingForce();
             }
         }
@@ -52,8 +53,11 @@ namespace AcademyProject.Combats
             _slingTime += Time.deltaTime;
             _slingForce += _slingTime * 5.0f;
             
-            _slingTime = _slingTime >= _maxSlingTime ? _slingTime = _maxSlingForce : _slingTime ;
+            _slingTime = _slingTime >= _maxSlingTime ? _slingTime = _maxSlingTime : _slingTime ;
             _slingForce = _slingForce >= _maxSlingForce ? _slingForce = _maxSlingForce : _slingForce;
+
+            Debug.Log("SLING TIME: " + _slingTime);
+            _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, true);
         }
 
         private void ResetSlingForce()

@@ -6,5 +6,6 @@ namespace AcademyProject.Animations
     {
         void MovementAnimation(float speed);
         void CollectAnimation();
+        void SlingWeaponAnimation(float slingTime, bool readyFire);
     }   
 }
