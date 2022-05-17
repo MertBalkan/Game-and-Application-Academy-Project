@@ -23,5 +23,11 @@ namespace AcademyProject.Animations
         {
             _playerAnimator.SetTrigger("collect");
         }
+
+        public void SlingWeaponAnimation(float slingTime, bool readyFire)
+        {
+            _playerAnimator.SetFloat("slingTime", slingTime);
+            _playerAnimator.SetBool("readyFire", readyFire);
+        }
     }
 }
