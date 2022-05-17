@@ -1,3 +1,4 @@
+using System;
 using AcademyProject.Controllers;
 using AcademyProject.Inputs;
 using AcademyProject.Systems;
@@ -6,15 +7,14 @@ using UnityEngine;
 
 namespace AcademyProject.Collectables
 {
-    public class CollectableObject : MonoBehaviour, ICollect
+    public class CollectWeapon : MonoBehaviour, ICollect
     {
-        private IInputService _input;
-
-        private bool _isWeaponPicked = false;
+        private bool _isWeaponPicked = false;   
+        public IInputService PlayerInput { get; set; }
 
         private void Awake()
         {
-            _input = new PcInput();
+            PlayerInput = new PcInput();
         }
 
         private void Update()
@@ -28,35 +28,20 @@ namespace AcademyProject.Collectables
             }
         }
 
-        private void OnCollisionStay(Collision other)
+        private void OnCollisionStay(Collision collisionInfo)
         {
-            CollectOther(other);
+            CollectOther(collisionInfo);
         }
 
         public void CollectOther(Collision other)
         {
-            if (other.gameObject.CompareTag("Player") && !InventorySystem.Instance.IsOverMaxCapacity && _input.CollectItem)
+            if (other.gameObject.CompareTag("Player") && PlayerInput.CollectItem)
             {
-                var item = gameObject.GetComponent<BaseItemController>();
                 var weapon = gameObject.GetComponent<BaseWeaponController>();
-
-                if (weapon == null) // Is weapon collected?
-                    GrabItem(item, FindObjectOfType<InventoryUI>());
-                else
-                    GrabWeapon(weapon, FindObjectOfType<WeaponUI>());
+                GrabWeapon(weapon, FindObjectOfType<WeaponUI>());
             }
         }
         
-        private void GrabItem(BaseItemController item, InventoryUI inventoryUI)
-        {
-            if(inventoryUI == null) return;
-            
-            FindObjectOfType<PlayerCharacterController>().CharacterAnimation.CollectAnimation();
-            InventorySystem.Instance.AddItem(item);
-            inventoryUI.AddItemToSlot(item, item.itemDataSO.stackCount);
-            gameObject.SetActive(false);   
-        }
-
         private void GrabWeapon(BaseWeaponController weapon, WeaponUI weaponUI)
         {
             if(weaponUI == null) return;
