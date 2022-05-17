@@ -6,15 +6,22 @@ namespace AcademyProject.Animations
     public class PlayerAnimation : ICharacterAnimation
     {
         private PlayerCharacterController _player;
+        private Animator _playerAnimator;
         
         public PlayerAnimation(PlayerCharacterController player)
         {
             _player = player;
+            _playerAnimator = _player.GetComponent<Animator>();
         }
         
         public void MovementAnimation(float speed)
         {
-            _player.GetComponent<Animator>().SetFloat("speed", Mathf.Abs(speed), 0.09f, Time.deltaTime);
+            _playerAnimator.SetFloat("speed", Mathf.Abs(speed), 0.09f, Time.deltaTime);
+        }
+
+        public void CollectAnimation()
+        {
+            _playerAnimator.SetTrigger("collect");
         }
     }
 }

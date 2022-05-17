@@ -5,5 +5,6 @@ namespace AcademyProject.Animations
     public interface ICharacterAnimation
     {
         void MovementAnimation(float speed);
+        void CollectAnimation();
     }   
 }

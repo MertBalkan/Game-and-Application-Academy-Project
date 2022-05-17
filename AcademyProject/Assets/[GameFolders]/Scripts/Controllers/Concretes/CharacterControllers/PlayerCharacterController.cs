@@ -21,6 +21,7 @@ namespace AcademyProject.Controllers
         public Transform Point => point;
         
         public IInputService Input => _input;
+        public ICharacterAnimation CharacterAnimation => _animation;
 
         private void Awake()
         {
