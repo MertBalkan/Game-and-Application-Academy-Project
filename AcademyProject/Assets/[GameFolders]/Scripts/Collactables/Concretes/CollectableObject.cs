@@ -50,7 +50,8 @@ namespace AcademyProject.Collectables
         private void GrabItem(BaseItemController item, InventoryUI inventoryUI)
         {
             if(inventoryUI == null) return;
-
+            
+            FindObjectOfType<PlayerCharacterController>().CharacterAnimation.CollectAnimation();
             InventorySystem.Instance.AddItem(item);
             inventoryUI.AddItemToSlot(item, item.itemDataSO.stackCount);
             gameObject.SetActive(false);   
@@ -60,13 +61,11 @@ namespace AcademyProject.Collectables
         {
             if(weaponUI == null) return;
             
+            FindObjectOfType<PlayerCharacterController>().CharacterAnimation.CollectAnimation();
             weapon.GetComponent<BoxCollider>().isTrigger = true; // temporarily
-            
             InventorySystem.Instance.AddWeapon(weapon);
             weaponUI.AddWeaponToSlot(weapon);
             _isWeaponPicked = true;
-            
         }
-        
     }
 }
