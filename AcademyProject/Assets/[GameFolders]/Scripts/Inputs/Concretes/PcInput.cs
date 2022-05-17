@@ -15,7 +15,9 @@ namespace AcademyProject.Inputs
             Input.GetKeyDown(KeyCode.Alpha3),
             Input.GetKeyDown(KeyCode.Alpha4),
             Input.GetKeyDown(KeyCode.Alpha5),
-            Input.GetKeyDown(KeyCode.Alpha6),
+            Input.GetKeyDown(KeyCode.Alpha6), 
         };
+        public bool Fire => Input.GetMouseButtonUp(0);
+        public bool IncreaseSlingForce => Input.GetMouseButton(0);
     }
 }

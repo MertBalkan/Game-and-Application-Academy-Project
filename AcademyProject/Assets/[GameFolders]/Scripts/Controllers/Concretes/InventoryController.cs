@@ -14,9 +14,9 @@ namespace AcademyProject.Controllers
         
         public void DropItem(IInputService input)
         {
-            for (var i = 0; i < inventoryUI.slots.Length; i++)
+            for (var i = 0; i < inventoryUI.inventorySlots.Length; i++)
             {
-                var slot = inventoryUI.slots[i];
+                var slot = inventoryUI.inventorySlots[i];
                 
                 if (input.DropItem && !InventorySystem.Instance.IsEmpty && slot.imSelected)
                 {

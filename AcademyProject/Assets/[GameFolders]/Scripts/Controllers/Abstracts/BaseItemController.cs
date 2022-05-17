@@ -1,3 +1,4 @@
+using System;
 using AcademyProject.ScriptableObjects;
 using UnityEngine;
 
@@ -7,10 +8,13 @@ namespace AcademyProject.Controllers
     /// Abstract Base Item Controller. 
     /// </summary>
     [RequireComponent(typeof(Rigidbody))]
-    public abstract class BaseItemController : MonoBehaviour
+    public abstract class BaseItemController : BaseBehaviourController
     {
-        public ItemDataSO itemDataSO;
-        public bool isInInventory;
+        private void Awake()
+        {
+            itemDataSO = Instantiate(itemDataSO);
+            itemDataSO.stackCount = stackQuantity;
+        }
 
         private void OnEnable()
         {
@@ -18,10 +22,10 @@ namespace AcademyProject.Controllers
         }
 
         private void OnDisable()
-        { 
+        {
             ToThePlayerInventory();
         }
-
+        
         private void ReAttachParent()
         {
             transform.SetParent(FindObjectOfType<PlayerHand>().transform);
@@ -30,7 +34,7 @@ namespace AcademyProject.Controllers
         private void ToThePlayerInventory()
         {
             if (!isInInventory || this.gameObject.activeSelf) return;
-            
+
             this.transform.position = FindObjectOfType<PlayerHand>().transform.position;
             Invoke(nameof(ReAttachParent), 0.1f);
         }

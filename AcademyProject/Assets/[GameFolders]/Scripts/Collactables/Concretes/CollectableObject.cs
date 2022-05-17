@@ -11,10 +11,23 @@ namespace AcademyProject.Collectables
         private IInputService _input;
         private SlotCursorUI _slotCursorUI;
 
+        private bool _isWeaponPicked = false;
+
         private void Awake()
         {
             _input = new PcInput();
             _slotCursorUI = FindObjectOfType<SlotCursorUI>();
+        }
+
+        private void Update()
+        {
+            if (_isWeaponPicked)
+            {
+                var playerHand = FindObjectOfType<PlayerHand>();
+                if(playerHand.Equals(null)) return;
+
+                transform.position = playerHand.transform.position;
+            }
         }
 
         private void OnCollisionStay(Collision other)
@@ -26,28 +39,36 @@ namespace AcademyProject.Collectables
         {
             if (other.gameObject.CompareTag("Player") && !InventorySystem.Instance.IsOverMaxCapacity && _input.CollectItem)
             {
-                var inventoryUI = FindObjectOfType<InventoryUI>();
-                if(inventoryUI == null) return;
-                
-                InventorySystem.Instance.AddItem(gameObject.GetComponent<BaseItemController>());
-                
-                inventoryUI.AddItemToSlot(gameObject.GetComponent<BaseItemController>());
-                gameObject.SetActive(false);
+                var item = gameObject.GetComponent<BaseItemController>();
+                var weapon = gameObject.GetComponent<BaseWeaponController>();
 
-                for (var index = 0; index < _slotCursorUI.Slots.Length; index++)
-                {
-                    var slot = _slotCursorUI.Slots[index];
-                    
-                    if(index == _slotCursorUI.Slots.Length - 1) return;
-                    var nextSlot = _slotCursorUI.Slots[index + 1];
-                    
-                    if ((!nextSlot.isSlotFull) || (!slot.isSlotFull && nextSlot.isSlotFull))
-                    {
-                        slot.ItemCountText.text = "x" + GetComponent<BaseItemController>().itemDataSO.stackCount.ToString();
-                        break;
-                    }
-                }
+                if (weapon == null) // Is weapon collected?
+                    GrabItem(item, FindObjectOfType<InventoryUI>());
+                else
+                    GrabWeapon(weapon, FindObjectOfType<WeaponUI>());
             }
         }
+        
+        private void GrabItem(BaseItemController item, InventoryUI inventoryUI)
+        {
+            if(inventoryUI == null) return;
+
+            InventorySystem.Instance.AddItem(item);
+            inventoryUI.AddItemToSlot(item, item.itemDataSO.stackCount);
+            gameObject.SetActive(false);   
+        }
+
+        private void GrabWeapon(BaseWeaponController weapon, WeaponUI weaponUI)
+        {
+            if(weaponUI == null) return;
+            
+            weapon.GetComponent<BoxCollider>().isTrigger = true; // temporarily
+            
+            InventorySystem.Instance.AddWeapon(weapon);
+            weaponUI.AddWeaponToSlot(weapon);
+            _isWeaponPicked = true;
+            
+        }
+        
     }
 }

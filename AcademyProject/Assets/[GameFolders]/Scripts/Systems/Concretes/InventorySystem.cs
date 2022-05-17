@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using AcademyProject.Combats;
 using AcademyProject.Controllers;
 using AcademyProject.Managers;
 using UnityEngine;
@@ -16,7 +16,8 @@ namespace AcademyProject.Systems
         [Space(35)]
         [SerializeField] private int maxCapacity;
         [SerializeField] private List<BaseItemController> items;
-        [SerializeField] private PlayerCharacterController player;
+        [SerializeField] private List<BaseWeaponController> weapons;
+
         private int _totalItems;
         
         /// <summary>
@@ -52,7 +53,7 @@ namespace AcademyProject.Systems
                 if (i == null)
                 {
                     var index = items.IndexOf(i);
-
+                   
                     items[index] = item;
                     item.isInInventory = true;
                     
@@ -75,8 +76,34 @@ namespace AcademyProject.Systems
 
             removedItem.isInInventory = false;
             removedItem.gameObject.SetActive(true);
+            
             _totalItems--;
         }
-        
+
+        public void AddWeapon(BaseWeaponController weapon)
+        {
+            weapons.Add(weapon);
+            weapon.isInInventory = true;
+        }
+
+        // public bool HasBulletInInventory()
+        // {
+        //     foreach (var bullet in items)
+        //     {
+        //         if (!bullet.GetComponent<IBulletable>().Equals(null))
+        //         {
+        //             return true;
+        //         }
+        //     }
+        //     return false;
+        // }
+        //
+        // public BaseItemController Bullet()
+        // {
+        //     if (HasBulletInInventory())
+        //     {
+        //         
+        //     }
+        // }
     }
 }

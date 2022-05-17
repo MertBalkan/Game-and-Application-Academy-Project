@@ -6,8 +6,8 @@ namespace AcademyProject.UIs
 {
     public class SlotCursorUI : MonoBehaviour
     {
-        [SerializeField] private SlotUI[] slots;
-        public SlotUI[] Slots => slots;
+        [SerializeField] private InventorySlotUI[] slots;
+        public InventorySlotUI[] Slots => slots;
         
         private IInputService _input;
 
