@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemlerBilgi : MonoBehaviour
 {
-    public List<ItemlerBilgisi> Itemlerým;
+    public List<ItemlerBilgisi> Itemlerim;
     public Transform slot;
     public GameObject ItemPrefab;
     private void Start()
@@ -14,10 +14,10 @@ public class ItemlerBilgi : MonoBehaviour
     }
     public void ItemVer()
     {
-        for (int i = 0; i < Itemlerým.Count; i++)
+        for (int i = 0; i < Itemlerim.Count; i++)
         {
             GameObject cogalan = Instantiate(ItemPrefab, slot.transform);
-            cogalan.GetComponent<Image>().sprite = Itemlerým[i].Itemphoto;
+            cogalan.GetComponent<Image>().sprite = Itemlerim[i].Itemphoto;
             cogalan.GetComponent<Tasima>().ItemId = i;
         }
     }
@@ -30,10 +30,10 @@ public class ItemlerBilgisi
     public int itemId;
     public int NeydenOlacak;
 
-    public ItemlerBilgisi(string ýtemName, Sprite ýtemphoto, int itemId, int neydenOlacak)
+    public ItemlerBilgisi(string itemName, Sprite itemphoto, int itemId, int neydenOlacak)
     {
-        ItemName = ýtemName;
-        Itemphoto = ýtemphoto;
+        ItemName = itemName;
+        Itemphoto = itemphoto;
         this.itemId = itemId;
         NeydenOlacak = neydenOlacak;
     }

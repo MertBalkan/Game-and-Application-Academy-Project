@@ -9,18 +9,18 @@ public class Tasima : MonoBehaviour
     public GameObject Canvas;
     private void Start()
     {
-        //Canvasý buluyoruz
+        //Canvasï¿½ buluyoruz
         Canvas = GameObject.Find("Canvases Craft");
         
     }
      public void OnMouseDrag()
     {
-      Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,100));
-        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //mousePos.z = 15;//canvasýn önünde kalmasý için
+        // Vector3 mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        Vector3 mousePos = Camera.main.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,100));
+        //mousePos.z = 15;//canvasï¿½n ï¿½nï¿½nde kalmasï¿½ iï¿½in
         this.transform.position = mousePos;
         this.transform.SetParent(Canvas.transform);
-        //this.transform.parent=Canvas.transform;
+        // this.transform.parent=Canvas.transform;
 
     }
 }

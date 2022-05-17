@@ -22,12 +22,12 @@ public class CraftSystem : MonoBehaviour
                 GelenItem2 = gelenItems;
                  IlkId += GelenItem1.GetComponent<Tasima>().ItemId;
                  IlkId += GelenItem2.GetComponent<Tasima>().ItemId;
-                int countKactane = ItemlerBilgi.GetComponent<ItemlerBilgi>().Itemlerým.Count;
+                int countKactane = ItemlerBilgi.GetComponent<ItemlerBilgi>().Itemlerim.Count;
                 for (int i = 0; i < countKactane; i++)
                 {
-                    if (IlkId == ItemlerBilgi.GetComponent<ItemlerBilgi>().Itemlerým[i].NeydenOlacak.ToString())
+                    if (IlkId == ItemlerBilgi.GetComponent<ItemlerBilgi>().Itemlerim[i].NeydenOlacak.ToString())
                     {
-                        CikanUI.sprite = ItemlerBilgi.GetComponent<ItemlerBilgi>().Itemlerým[i].Itemphoto;
+                        CikanUI.sprite = ItemlerBilgi.GetComponent<ItemlerBilgi>().Itemlerim[i].Itemphoto;
                     }
                 }
 
