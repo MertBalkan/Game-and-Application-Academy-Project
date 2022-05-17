@@ -134,8 +134,8 @@ GameObject:
   - component: {fileID: 5910561}
   - component: {fileID: 5910564}
   - component: {fileID: 5910563}
-  - component: {fileID: 5910562}
   - component: {fileID: 5910565}
+  - component: {fileID: 5910562}
   m_Layer: 5
   m_Name: WeaponSlot
   m_TagString: Untagged
@@ -202,7 +202,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 5910563}
   m_OnClick:
     m_PersistentCalls:
@@ -340,7 +340,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.87784094, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
