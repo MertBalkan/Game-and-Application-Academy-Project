@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using AcademyProject.Combats;
 using AcademyProject.Controllers;
 using AcademyProject.Managers;
 using UnityEngine;
@@ -15,7 +16,9 @@ namespace AcademyProject.Systems
         [Space(35)]
         [SerializeField] private int maxCapacity;
         [SerializeField] private List<BaseItemController> items;
-        [SerializeField] private PlayerCharacterController player;
+        [SerializeField] private List<BaseWeaponController> weapons;
+
+        private int _totalItems;
         
         /// <summary>
         /// Is inventory empty?
@@ -25,25 +28,38 @@ namespace AcademyProject.Systems
         /// <summary>
         /// For checking max capacity.
         /// </summary>
-        public bool IsOverMaxCapacity => items.Count >= maxCapacity;
-
+        public bool IsOverMaxCapacity => _totalItems >= maxCapacity;
+        
         public List<BaseItemController> Items => items;
 
         private void Awake()
         {
             ApplySingleton(this);
-        }
 
+            for (int i = 0; i < maxCapacity; i++)
+            {
+                items.Add(null);
+            }
+        }
+        
         /// <summary>
         /// This function adds items to inventory.
         /// </summary>
         /// <param name="item"></param>
         public void AddItem(BaseItemController item)
         {
-            if (!item.Equals(null))
+            foreach (var i in items)
             {
-                items.Add(item);
-                item.isInInventory = true;
+                if (i == null)
+                {
+                    var index = items.IndexOf(i);
+                   
+                    items[index] = item;
+                    item.isInInventory = true;
+                    
+                    _totalItems++;
+                    break;
+                }
             }
         }
 
@@ -53,22 +69,41 @@ namespace AcademyProject.Systems
         /// <param name="removedItem"></param>
         public void RemoveItem(BaseItemController removedItem)
         {
-            if (!removedItem.Equals(null))
-            {
-                items.Remove(removedItem);
-                removedItem.isInInventory = false;
-                
-                removedItem.gameObject.SetActive(true);
-            }
+            var indexOf = items.IndexOf(removedItem);
+            if (items[indexOf] == null) return;
+            
+            items[indexOf] = null;
+
+            removedItem.isInInventory = false;
+            removedItem.gameObject.SetActive(true);
+            
+            _totalItems--;
         }
 
-        /// <summary>
-        /// Text about item description.
-        /// </summary>
-        public void ShowItemDescription()
+        public void AddWeapon(BaseWeaponController weapon)
         {
-            
+            weapons.Add(weapon);
+            weapon.isInInventory = true;
         }
-        
+
+        // public bool HasBulletInInventory()
+        // {
+        //     foreach (var bullet in items)
+        //     {
+        //         if (!bullet.GetComponent<IBulletable>().Equals(null))
+        //         {
+        //             return true;
+        //         }
+        //     }
+        //     return false;
+        // }
+        //
+        // public BaseItemController Bullet()
+        // {
+        //     if (HasBulletInInventory())
+        //     {
+        //         
+        //     }
+        // }
     }
 }
