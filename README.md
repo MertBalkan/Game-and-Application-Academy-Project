@@ -5,24 +5,24 @@
 Google Oyun ve Uygulama akademisi Bootcamp takım #69
 
 # Ürün İle İlgili Bilgiler
-
-
-
+  
 ## Takım Elemanları
 
-- Ayyüce Atay: Product Owner & Level Designer
-- Mert Balkan: Scrum Master & Game Developer
-- Setenay Emül: 3D Artist & Game Developer
-- Furkan Kaya: UI/UX Designer & Game Developer
-- Emre Yoldaş: Game Developer & Level Designer
+| Takımdaki kişinin ismi  | Rolü |
+| ------------- | ------------- |
+|  Ayyüce Atay| Product Owner & Level Designer|
+|  Mert Balkan| Scrum Master & Game Developer|
+|  Setenay Emül| 3D Artist & Game Developer|
+|  Furkan Kaya|  UI/UX Designer & Game Developer|
+|  Emre Yoldaş| Game Developer & Level Designer|
 
 ## Ürün İsmi
 
-xxxx
+Grey Hat : Home Alone
 
 ## Ürün Açıklaması
 
-- Evde tek başına kalmış 13 yaşındaki hacker bir çocuğun yaşadığı macerayı yansıtan indie bir 3D isometric Puzzle Adventure oyunu
+- Google Oyun ve Uygulama Akademisi Bootcamp kapsamında 69 nolu takım tarafından yapılacak, evde tek başına kalmış 13 yaşındaki hacker bir çocuğun yaşadığı macerayı yansıtan "Grey Hat : Home Alone" isimli indie, single player bir 3D isometric Puzzle Adventure oyunu
 
 ## Ürün Özellikleri
 
@@ -41,69 +41,77 @@ https://glorious-profit-4c1.notion.site/Google-Bootcamp-b5b50202df36401e9b1df505
 
 # Sprint 1
 
+* Sprint Notları: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
-## 25.04.22 Updates : 
+* Sprint içinde tamamlanması tahmin edilen puan: 100 Puan
 
+* Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
 
-* Discord üzerinden Game Design toplantısı yapıldı, oyun hikaye ve mekanikleri geliştirildi.
+* Backlog düzeni ve Story seçimleri: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
 
-* Konsept olarak isometric bakış açılı bir adventure/puzzle/crafting oyunu yapılmaya karar verildi.
+* Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 
->*Ailesi kendisini bırakıp hafta sonu için tatile çıkan çocuk evde tek başına kalmıştır. Kendi çabalarıyla 13 yaşında dahilik seviyesinde kodlama bilgisi edinmiş fakat anonim olarak hackerlık yapmasının başını belaya sokacağının bilincinde değildir. Farkında olmadan burnunu soktuğu işler yolunun büyük bir mafya çetesiyle kesişmesini sağlar. Ailesinin evden gittiği ilk gece tuhaf şeyler olmaya başladığını fark eder.*
+* <a href = "https://docs.google.com/document/d/1-YL_gxEn41rRx2XT2yHJaFkE5n3s698cRqE6_lMDz8s/edit?usp=sharing">Daily Scrum</a>
 
-* Takım branşlara bölündü 
-
-* ilgili bilgilerin tamamını içeren bir notion workspace kurulup tüm branşlara ve onlar da kendi içinde takım üyelerine bölünerek görev dağılımı yapıldı, timeline içinde önceliklendirildi.
-
-
-![image](https://user-images.githubusercontent.com/95376425/165620643-a4aaedca-0ebe-44e1-8678-f726e8bf0dd2.png)
-
-![image](https://user-images.githubusercontent.com/95376425/165620750-b47ce1ed-1076-424b-b656-fe38c28b8a42.png)
-
-
-* Görevler de kendi içerisinde takibin kolaylaştırılması açısından in queue, in process, competed şeklinde taglere bölündü.
-
-![image](https://user-images.githubusercontent.com/95376425/165623174-30797fda-1923-455d-8e5d-79837505488a.png)
-
-
-* Takım üyelerinin final haftaları ve çalışamayacakları günler bildirildi diğer üyelerin haberdar olması için timelinea eklendi.
-
-* Development için görev dağılımı yapıldı, repository açıldı ve github çalışma stratejisi belirlenip developmenta başlandı.
-
-* İlk sprintte yapılması önceliklenen görevler 1st sprint goals olarak belirlendi.
-
-* Levellerde kullanılacak itemlerın craft mekanikleri kullanılabilecek sourcelar hakkında fikir fırtınası yapıldı. 3 farkı seviye craftable item olmasına karar verildi.
-
-* Karar verilen itemlardan daha sonrasında da geliştirilmek üzere bir liste oluşturulup ilgili assetleri üretecek olan 3D modellera assign edildi.
-
-* Levellar arasındaki mekanik farkları ile ilgili fikir fırtınası yapıldı. Her level için enemy ve obstaclelar, bunlara karşı savunma oluşturabilinecek trapler düşünüldü.
-
-* Enemylerin traplerle olan interactionları hakkında fikir fırtınası yapıldı her levelde summon olan enemynin sadece ilgili leveldeki crafted itemla alaşağı edilmesine karar verildi.
-
-
-
-___________________________________________________________________________________________________
-
-
-- **Ürün Durumu**:
-
-xxxx
+ * <a href = "https://docs.google.com/document/d/1DNTSnRsbarsP6R8FLp0kq5bD4ZkfKmlVKgvg4bsShbA/edit?usp=sharing">Sprint 1 Dokümantasyonu</a>
 
 - **Sprint Review**: 
 
-xxxx
+Yaptığımız sprint toplantılarında yapacağımız oyunun game designını birlikte oluşturduk. Tüm ekip üyeleri ilgilendikleri branşlara bölündüler, birlikte düzenli çalışabilmek adına bir timeline oluşturup bu timeline üzerinden görev dağılımı yaptık, herkes kendi görevini pushlamak için oluşturduğumuz Unity projesinde kendilerine birer branch açtılar ve üstlendikleri görevler üzerinde çalışmaya başladılar. Düzenli olarak çalışmalarımızı synclemek için tekrar toplandık ve yenilikleri diğer ekip üyeleriyle paylaştık. Bunun dışında oluşturduğumuz Notion workspacede de diğer ekip üyelerinin yeniliklerden haberdar olması için üstümüze aldığımız görevlerin başlıklarının altında gerekli bilgileri updateledik. Level designı düzenli oluşturabilmek adına mindboard olarak kullanılmak üzere milanote isimli bir browser tool keşfedildi ve level designları bu şekilde yapmak kararlaştırıldı. Level design combat mekanikleri ve envanter üzerine fikirsel olarak büyük bir yol katedildi ve üretilmeye başlandı.
 
 - **Sprint Retrospective:**
 
-xxxx
+> Game Design neredeyse tamamlandı, geriye sadece detaylandırma ve objectiveleri doğru levellere yerleştirme ve level designı oturtmak kaldı
 
--**Diğer Notlar**:
+> Yol haritası oluşturuldu, branchlere ayrılındı ve herkesin görev tanımları belirlendi
 
-xxxx
+> Level design combat mekanikleri ve envanter üzerine fikirsel olarak büyük bir yol katedildi ve üretilmeye başlandı.
+
+- **Diğer Notlar**:
+
+> Tamamlanamayan görevler 2nd Sprint görevlerine taşındı
 
 ---
 
 # Sprint 2
+
+- **<a href = "https://www.notion.so/Scrum-meeting-3-c34e9e2de29a4f89a1f865f78f33051e">15.05.2022 Updates<\a>** 
+
+
+![image](https://user-images.githubusercontent.com/95376425/168487222-73c5f14a-e1b5-4f05-82e7-259e1f1fa836.png)
+
+- Stack bugları konuşuldu
+
+- Oyunun scobunu küçültmenin gerekebileceği senaryosunda nelerin eleneceğine karar verildi.
+
+- Nerf Gun mekanikleri tamamlandı
+
+![image](https://user-images.githubusercontent.com/95376425/168487061-17aa282d-0c5a-4f3f-ad92-82f5096f6175.png)
+
+- Oyunun motionları geliştirildi, mixamodan kullanılacak olan animasyonlar kararlaştırıldı ve indirilerek proje içine import edildi. (Sprint içinde alınması plananlanan puan : 100/20 pts)
+
+![image](https://user-images.githubusercontent.com/95376425/168487359-20a0297e-2dcd-4ab3-836b-b6142ecb19ea.png)
+
+- Oyunun sfxlerinin sprint 3te yapılmasına karar verildi.
+
+- Vfxlerin sprint 2 ve 3e bölünerek yapılmasına karar verildi. (Bu Sprint içinde alınması plananlanan puan : 100/20 pts)
+
+- Weapon system ui ile envanter ui birbirinden ayrılacak. 
+
+- Envanter UI’ı ve Crafting sisteminin sprint 2 de yapılmasına karar verildi.
+
+- Daha önce düşünüllen camlı vantilatör trapini hazırlanan nerf gun mekaniği kullanılarak itemler azaltıldığı için vantilatör + dart oklarıyla kullanılacak.
+
+
+---
+- **Sprint Review**: 
+
+
+- **Sprint Retrospective:**
+
+
+- **Diğer Notlar**:
+
 
 
 ---
