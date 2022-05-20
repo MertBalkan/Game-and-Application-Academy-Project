@@ -35,11 +35,11 @@ namespace AcademyProject.Movements
 
         public void ApplyMovement()
         {
-            // if (CanMove)
-            // {
+            if (CanMove)
+            {
                 GatherInput();
                 _rigidbody.MovePosition(_entity.transform.position + _entity.transform.forward * _inputVector.magnitude * _entity.MoveSpeed * Time.deltaTime);
-            // }
+            }
         }
 
     } 
