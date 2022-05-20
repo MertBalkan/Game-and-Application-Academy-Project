@@ -1,5 +1,8 @@
+using System;
 using System.Linq;
+using AcademyProject.Combats;
 using AcademyProject.Controllers;
+using AcademyProject.Systems;
 using UnityEngine;
 
 namespace AcademyProject.UIs
@@ -16,6 +19,11 @@ namespace AcademyProject.UIs
             inventorySlots = GetComponentsInChildren<InventorySlotUI>();
         }
 
+        private void Start()
+        {
+            InventorySystem.Instance.OnBulletShoot += UpdateSlotItemStackCount;
+        }
+
         /// <summary>
         /// Adds item to empty inventory slot
         /// </summary>
@@ -24,12 +32,16 @@ namespace AcademyProject.UIs
         {
             foreach (var slotUI in inventorySlots)
             {
-                if (!slotUI.isSlotFull)
+                if (!InventorySystem.Instance.IsSame && !slotUI.isSlotFull)
                 {
                     slotUI.SlotImage.sprite = item.itemDataSO.itemTexture;
                     slotUI.isSlotFull = true;
-                    slotUI.ItemCountText.text = stackCount.ToString();
+                    slotUI.ItemCountText.text = InventorySystem.Instance.TotalBulletCount.ToString();
                     break;
+                }
+                else if(InventorySystem.Instance.IsSame && slotUI.isSlotFull)
+                {
+                    slotUI.ItemCountText.text = InventorySystem.Instance.TotalBulletCount.ToString();
                 }
             }
         }
@@ -39,14 +51,31 @@ namespace AcademyProject.UIs
         /// </summary>
         public void RemoveItemFromSlot()
         {
-            // if(slots[0].SlotImage.sprite.Equals(null)) return; // if first index is already empty, just return.
-
             foreach (var slotUI in inventorySlots.Reverse()) // reverse travelling
             {
                 if (slotUI.isSlotFull && slotUI.imSelected)
                 {
                     slotUI.isSlotFull = false;
                     slotUI.SlotImage.sprite = null;
+                    break;
+                }
+            }
+        }
+
+        private void OnDisable()
+        {
+            InventorySystem.Instance.OnBulletShoot -= UpdateSlotItemStackCount;
+        }
+
+        private void UpdateSlotItemStackCount(IBulletable bullet)
+        {
+            if(bullet == null) return;
+            
+            foreach (var slotUI in inventorySlots)
+            {
+                if (slotUI.isSlotFull && slotUI.imSelected)
+                {
+                    slotUI.ItemCountText.text = bullet.ItemDataSO.stackCount.ToString();
                     break;
                 }
             }

@@ -19,6 +19,33 @@ namespace AcademyProject.Systems
         [SerializeField] private List<BaseWeaponController> weapons;
 
         private int _totalItems;
+        private bool _isSame;
+        public bool IsSame => _isSame;
+        public event System.Action<IBulletable> OnBulletShoot;
+
+
+        #region BULLET LOGIC VARIABLES
+
+        
+        //-------------------------------------BULLET LOGIC-------------------------------------
+        private int _totalBulletCount;
+
+        public int TotalBulletCount { get { return _totalBulletCount;} set { _totalBulletCount = value; } }
+        public bool HasBulletInInventory => _totalBulletCount > 0;
+        private int _beforeTotalCount;
+
+        private Transform _bullet;
+        public Transform Bullet => _bullet;
+
+        public int BeforeTotalCount
+        {
+            get { return _beforeTotalCount;}
+            set { _beforeTotalCount = value; }
+        }
+        //-------------------------------------BULLET LOGIC-------------------------------------
+        
+
+        #endregion
         
         /// <summary>
         /// Is inventory empty?
@@ -35,28 +62,49 @@ namespace AcademyProject.Systems
         private void Awake()
         {
             ApplySingleton(this);
+            InitializeItems();
 
-            for (int i = 0; i < maxCapacity; i++)
-            {
-                items.Add(null);
-            }
         }
+
+        private void Update()
+        {
+            Debug.Log("TOTAL BULLET COUNT: " + _totalBulletCount);
+        }   
         
+        /// <summary>
+        /// Initializing Items
+        /// </summary>
+        private void InitializeItems()
+        {
+            for (int i = 0; i < maxCapacity; i++)
+                items.Add(null);
+        }
+
         /// <summary>
         /// This function adds items to inventory.
         /// </summary>
         /// <param name="item"></param>
         public void AddItem(BaseItemController item)
         {
+            _isSame = false;
+            Debug.Log("item: " + item.GetType());
+
             foreach (var i in items)
             {
-                if (i == null)
+                if (i != null )
+                    if(i.GetType() == item.GetType())
+                        _isSame = true;
+            }
+            
+            foreach (var i in items)
+            {
+                if (i == null && !_isSame)
                 {
                     var index = items.IndexOf(i);
-                   
+                
                     items[index] = item;
                     item.isInInventory = true;
-                    
+                
                     _totalItems++;
                     break;
                 }
@@ -74,36 +122,54 @@ namespace AcademyProject.Systems
             
             items[indexOf] = null;
 
+            removedItem.isDropped = true;
             removedItem.isInInventory = false;
             removedItem.gameObject.SetActive(true);
             
             _totalItems--;
         }
-
+        
+        /// <summary>
+        /// Adds weapon to weapon list
+        /// </summary>
+        /// <param name="weapon"></param>
         public void AddWeapon(BaseWeaponController weapon)
         {
             weapons.Add(weapon);
             weapon.isInInventory = true;
         }
+    
+        /// <summary>
+        /// Increases bullet count
+        /// </summary>
+        public void UpdateBulletCount(IBulletable item)
+        {
+            if(item == null) return;
+            
+            if (!item.IsDropped)
+            {
+                _totalBulletCount += item.AmmoCount();
+                _bullet = item.ItemObject.transform;
+            }
+            else
+            {
+                _totalBulletCount += _beforeTotalCount;
+            }
+        }
 
-        // public bool HasBulletInInventory()
-        // {
-        //     foreach (var bullet in items)
-        //     {
-        //         if (!bullet.GetComponent<IBulletable>().Equals(null))
-        //         {
-        //             return true;
-        //         }
-        //     }
-        //     return false;
-        // }
-        //
-        // public BaseItemController Bullet()
-        // {
-        //     if (HasBulletInInventory())
-        //     {
-        //         
-        //     }
-        // }
+        public void DecreaseBulletCount()
+        {
+            _totalBulletCount--;
+            
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (items[i] != null)
+                {
+                    var bullet = items[i].GetComponent<IBulletable>();
+                    bullet.ItemDataSO.stackCount = _totalBulletCount;
+                    OnBulletShoot?.Invoke(bullet);
+                }
+            }
+        }
     }
 }

@@ -15,10 +15,11 @@ namespace AcademyProject.Controllers
         private InventoryController _inventory;
 
         [SerializeField] private Transform muzzle, bullet, point;
+        [SerializeField] private GameObject spine;
         
         public Transform Muzzle => muzzle;
-        public Transform Bullet => bullet;
         public Transform Point => point;
+        public GameObject Spine => spine;
         
         public IInputService Input => _input;
         public ICharacterAnimation CharacterAnimation => _animation;

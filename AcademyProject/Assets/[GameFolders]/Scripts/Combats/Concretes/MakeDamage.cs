@@ -14,7 +14,6 @@ namespace AcademyProject.Combats
 
         private void OnCollisionEnter(Collision collision)
         {
-            // I'LL REFACTOR HERE LATER!!!
             if (collision.gameObject.tag.Equals("Enemy"))
             {
                 var enemyHealth = collision.transform.GetComponent<CharacterHealth>();
@@ -22,7 +21,6 @@ namespace AcademyProject.Combats
                 
                 enemyHealth.TakeDamage(damageDataSO.damageHitCount);
                 if(enemyHealth.IsDead) Destroy(enemyHealth.gameObject);
-                Debug.Log(enemyHealth.CurrentHealth);
             }
         }
     }

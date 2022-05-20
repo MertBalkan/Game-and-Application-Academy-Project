@@ -1,4 +1,5 @@
 using AcademyProject.Controllers;
+using AcademyProject.Systems;
 using UnityEngine;
 
 namespace AcademyProject.Combats
@@ -11,6 +12,7 @@ namespace AcademyProject.Combats
         private float _maxSlingForce = 1000;
 
         private PlayerCharacterController _player;
+        private Quaternion qtO;
         
         private void Awake()
         {
@@ -19,45 +21,56 @@ namespace AcademyProject.Combats
 
         private void Update()
         {
-            if (IsSlingInInventory())
+            if(IsSlingInInventory())
                 ApplyWeaponType();
         }
 
         public void ApplyWeaponType()
         {
             if (_player.Input.IncreaseSlingForce)
+            {
                 SlingForceSpeed();
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit, 1000))
+                {
+                    Vector3 pos = (hit.point - _player.transform.position).normalized;
+                    qtO = Quaternion.LookRotation(pos);
+                    _player.transform.rotation = Quaternion.RotateTowards(_player.transform.rotation, qtO, 200 * Time.deltaTime);
+                }
+            }
             
             SlingShot();
         }
         
         private void SlingShot()
         {
-            if (_player.Input.Fire)
+            if (_player.Input.Fire && InventorySystem.Instance.HasBulletInInventory)
             {
                 var clone = InstantiateBullet();
+                clone.SetParent(null);
+                clone.gameObject.SetActive(true);
                 clone.GetComponent<Rigidbody>().AddForce(clone.up * _slingForce);
                 
                 _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, false);
                 ResetSlingForce();
+
+                InventorySystem.Instance.DecreaseBulletCount();
             }
         }
 
-        private Transform InstantiateBullet()
-        {
-            return Instantiate(_player.Bullet, _player.Point.position, _player.Muzzle.rotation);
-        }
+        private Transform InstantiateBullet() => Instantiate(InventorySystem.Instance.Bullet, _player.Point.position, _player.Muzzle.rotation);
+        
+        private bool IsSlingInInventory() => isInInventory;
 
         private void SlingForceSpeed()
         {
-            _slingTime += Time.deltaTime;
-            _slingForce += _slingTime * 5.0f;
-            
-            _slingTime = _slingTime >= _maxSlingTime ? _slingTime = _maxSlingTime : _slingTime ;
-            _slingForce = _slingForce >= _maxSlingForce ? _slingForce = _maxSlingForce : _slingForce;
-
-            Debug.Log("SLING TIME: " + _slingTime);
-            _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, true);
+            if (InventorySystem.Instance.HasBulletInInventory)
+            {
+                SlingLogic();
+                _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, true);
+            }
         }
 
         private void ResetSlingForce()
@@ -66,6 +79,13 @@ namespace AcademyProject.Combats
             _slingTime = 0.0f;
         }
 
-        private bool IsSlingInInventory() => isInInventory;
+        private void SlingLogic()
+        {
+            _slingTime += Time.deltaTime;
+            _slingForce += _slingTime * 5.0f;
+            
+            _slingTime = _slingTime >= _maxSlingTime ? _slingTime = _maxSlingTime : _slingTime ;
+            _slingForce = _slingForce >= _maxSlingForce ? _slingForce = _maxSlingForce : _slingForce;
+        }
     }   
 }

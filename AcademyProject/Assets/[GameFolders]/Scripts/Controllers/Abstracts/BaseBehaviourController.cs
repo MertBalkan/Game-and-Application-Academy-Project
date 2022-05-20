@@ -8,5 +8,6 @@ namespace AcademyProject.Controllers
         public ItemDataSO itemDataSO;
         public bool isInInventory;
         public int stackQuantity;
+        public bool isDropped;
     }
 }

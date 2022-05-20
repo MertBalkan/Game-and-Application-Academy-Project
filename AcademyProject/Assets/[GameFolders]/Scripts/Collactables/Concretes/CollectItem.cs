@@ -1,4 +1,4 @@
-using System;
+using AcademyProject.Combats;
 using AcademyProject.Controllers;
 using AcademyProject.Inputs;
 using AcademyProject.Systems;
@@ -35,10 +35,12 @@ namespace AcademyProject.Collectables
             if(inventoryUI == null) return;
             
             FindObjectOfType<PlayerCharacterController>().CharacterAnimation.CollectAnimation();
+            
             InventorySystem.Instance.AddItem(item);
+            InventorySystem.Instance.UpdateBulletCount(item.GetComponent<IBulletable>());
             inventoryUI.AddItemToSlot(item, item.itemDataSO.stackCount);
+            
             gameObject.SetActive(false);   
         }
     }
-
 }
