@@ -12,6 +12,8 @@ namespace AcademyProject.Movements
         private Rigidbody _rigidbody;
         private Vector3 _inputVector;
 
+        public bool CanMove => !_input.IncreaseSlingForce;
+
         public MovementRigidBody(IEntityController entity, IInputService input)
         {
             _entity = entity;
@@ -20,7 +22,7 @@ namespace AcademyProject.Movements
             _rigidbody = _entity.transform.GetComponent<Rigidbody>();
         }
         
-        void Gatherinput() => _inputVector = new Vector3(_input.HorizontalMovement, 0, _input.VerticalMovement);
+        void GatherInput() => _inputVector = new Vector3(_input.HorizontalMovement, 0, _input.VerticalMovement);
 
         public void TurnAround()
         {
@@ -33,10 +35,13 @@ namespace AcademyProject.Movements
 
         public void ApplyMovement()
         {
-            Gatherinput();
-            _rigidbody.MovePosition(_entity.transform.position + _entity.transform.forward * _inputVector.magnitude * _entity.MoveSpeed * Time.deltaTime);
+            // if (CanMove)
+            // {
+                GatherInput();
+                _rigidbody.MovePosition(_entity.transform.position + _entity.transform.forward * _inputVector.magnitude * _entity.MoveSpeed * Time.deltaTime);
+            // }
         }
-        
+
     } 
     
     public static class Helpers

@@ -4,5 +4,6 @@ namespace AcademyProject.Movements
     {
         void TurnAround();
         void ApplyMovement();
+        bool CanMove { get; }
     }
 }
