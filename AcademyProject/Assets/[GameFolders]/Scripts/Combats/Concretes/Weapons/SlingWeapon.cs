@@ -12,7 +12,7 @@ namespace AcademyProject.Combats
         private float _maxSlingForce = 1000;
 
         private PlayerCharacterController _player;
-        private Quaternion qtO;
+        private Quaternion lookRot;
         
         private void Awake()
         {
@@ -30,21 +30,24 @@ namespace AcademyProject.Combats
             if (_player.Input.IncreaseSlingForce)
             {
                 SlingForceSpeed();
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-
-                if (Physics.Raycast(ray, out hit, 1000))
-                {
-                    Vector3 pos = (hit.point - _player.transform.position).normalized;
-                    qtO = Quaternion.LookRotation(pos);
-                     qtO.x = 0;
-                    _player.transform.rotation = Quaternion.RotateTowards(_player.transform.rotation, qtO, 600 * Time.deltaTime);
-                }
+                PlayerPointLook();
             }
-            
             SlingShot();
         }
-        
+
+        private void PlayerPointLook()
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 1000))
+            {
+                Vector3 pos = (hit.point - _player.transform.position).normalized;
+                lookRot = Quaternion.LookRotation(pos);
+                lookRot.x = 0;
+                _player.transform.rotation = Quaternion.RotateTowards(_player.transform.rotation, lookRot, 600 * Time.deltaTime);
+            }
+        }
         private void SlingShot()
         {
             if (_player.Input.Fire && InventorySystem.Instance.HasBulletInInventory)
