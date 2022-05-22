@@ -1,5 +1,3 @@
-using AcademyProject.Controllers;
-using UnityEngine;
 using UnityEngine.AI;
 
 namespace AcademyProject.Controllers

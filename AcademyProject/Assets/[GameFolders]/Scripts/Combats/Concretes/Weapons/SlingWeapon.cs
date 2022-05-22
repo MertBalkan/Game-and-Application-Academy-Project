@@ -45,10 +45,11 @@ namespace AcademyProject.Combats
 
             if (Physics.Raycast(ray, out hit, 1000))
             {
+                if(hit.collider.gameObject.Equals(_player.gameObject)) return;
                 Vector3 pos = (hit.point - _player.transform.position).normalized;
                 _lookRot = Quaternion.LookRotation(pos);
                 _lookRot.x = 0;
-                _player.transform.rotation = Quaternion.RotateTowards(_player.transform.rotation, _lookRot, 600 * Time.deltaTime);
+                _player.transform.rotation = Quaternion.RotateTowards(_player.transform.rotation, _lookRot, 1000 * Time.deltaTime);
             }
         }
         private void SlingShot()

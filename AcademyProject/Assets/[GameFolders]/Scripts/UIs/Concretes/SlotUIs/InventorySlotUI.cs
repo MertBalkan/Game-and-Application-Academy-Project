@@ -1,7 +1,3 @@
-using System;
-using AcademyProject.Combats;
-using AcademyProject.Controllers;
-using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -16,8 +12,6 @@ namespace AcademyProject.UIs
         public bool isSlotFull = false;
         public bool imSelected = false;
 
-        private GameObject _canvas;
-        
         private TextMeshProUGUI itemCountText;
         public TextMeshProUGUI ItemCountText { get { return itemCountText;} set { value = itemCountText; } }
 
@@ -27,7 +21,6 @@ namespace AcademyProject.UIs
         {
             base.Awake();
             _mainTransform = transform;
-            _canvas = GameObject.Find("InventoryUICanvas");
             itemCountText = GetComponentInChildren<TextMeshProUGUI>();
         }
 

@@ -23,5 +23,17 @@ namespace AcademyProject.Combats
                 if(enemyHealth.IsDead) Destroy(enemyHealth.gameObject);
             }
         }
+
+        // private void OnTriggerEnter(Collider other)
+        // {
+        //     if (other.gameObject.tag.Equals("Enemy"))
+        //     {
+        //         var enemyHealth = other.transform.GetComponent<CharacterHealth>();
+        //         if(enemyHealth.Equals(null)) return;
+        //
+        //         enemyHealth.TakeDamage(damageDataSO.damageHitCount);
+        //         if(enemyHealth.IsDead) Destroy(enemyHealth.gameObject);
+        //     }
+        // }
     }
 }
