@@ -30,18 +30,31 @@ namespace AcademyProject.UIs
         /// <param name="item"></param>
         public void AddItemToSlot(BaseItemController item, int stackCount)
         {
+            var bulletItem = item.GetComponent<IBulletable>();
             foreach (var slotUI in inventorySlots)
             {
-                if (!InventorySystem.Instance.IsSame && !slotUI.isSlotFull)
+                if (bulletItem != null)
                 {
+                    if (!InventorySystem.Instance.IsSame && !slotUI.isSlotFull)
+                    {
+                        slotUI.whichObjectIHave = item.gameObject;
+                        slotUI.SlotImage.sprite = item.itemDataSO.itemTexture;
+                        slotUI.isSlotFull = true;
+                        slotUI.ItemCountText.text = InventorySystem.Instance.TotalBulletCount.ToString();
+                        break;
+                    }
+                    else if(InventorySystem.Instance.IsSame && slotUI.isSlotFull)
+                    {
+                        slotUI.ItemCountText.text = InventorySystem.Instance.TotalBulletCount.ToString();
+                    }
+                }
+                else
+                {
+                    slotUI.whichObjectIHave = item.gameObject;
                     slotUI.SlotImage.sprite = item.itemDataSO.itemTexture;
                     slotUI.isSlotFull = true;
-                    slotUI.ItemCountText.text = InventorySystem.Instance.TotalBulletCount.ToString();
+                    slotUI.ItemCountText.text = stackCount.ToString();
                     break;
-                }
-                else if(InventorySystem.Instance.IsSame && slotUI.isSlotFull)
-                {
-                    slotUI.ItemCountText.text = InventorySystem.Instance.TotalBulletCount.ToString();
                 }
             }
         }
@@ -55,6 +68,7 @@ namespace AcademyProject.UIs
             {
                 if (slotUI.isSlotFull && slotUI.imSelected)
                 {
+                    slotUI.whichObjectIHave = null;
                     slotUI.isSlotFull = false;
                     slotUI.SlotImage.sprite = null;
                     break;
@@ -75,7 +89,7 @@ namespace AcademyProject.UIs
             {
                 if (slotUI.isSlotFull && slotUI.imSelected)
                 {
-                    slotUI.ItemCountText.text = bullet.ItemDataSO.stackCount.ToString();
+                    slotUI.ItemCountText.text = InventorySystem.Instance.TotalBulletCount.ToString();
                     break;
                 }
             }

@@ -101,9 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemDataSO: {fileID: 11400000, guid: 3bf53c1105263f64daf096b7650be01a, type: 2}
   isInInventory: 0
-  stackQuantity: 1
-  bulletGameObject: {fileID: 8631630180081560192, guid: 5a19cd2c430d7b649aeadbd5be9f7084,
-    type: 3}
+  stackQuantity: 3
+  isDropped: 0
+  bulletDataSO: {fileID: 11400000, guid: 42effa6d5f76fab4ca3fec7b0514cb0f, type: 2}
+  totalBulletCount: 0
 --- !u!54 &851508971013264600
 Rigidbody:
   m_ObjectHideFlags: 0

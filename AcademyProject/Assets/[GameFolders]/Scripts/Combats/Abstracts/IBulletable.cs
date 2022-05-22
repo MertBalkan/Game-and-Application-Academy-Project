@@ -6,8 +6,8 @@ namespace AcademyProject.Combats
     public interface IBulletable
     {
         int AmmoCount();
-        GameObject ItemObject { get; }
         ItemDataSO ItemDataSO { get; }
+        BulletDataSO BulletDataSO { get; }
         bool IsDropped { get; }
     }   
 }

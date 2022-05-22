@@ -33,10 +33,7 @@ namespace AcademyProject.Systems
         public int TotalBulletCount { get { return _totalBulletCount;} set { _totalBulletCount = value; } }
         public bool HasBulletInInventory => _totalBulletCount > 0;
         private int _beforeTotalCount;
-
-        private Transform _bullet;
-        public Transform Bullet => _bullet;
-
+        
         public int BeforeTotalCount
         {
             get { return _beforeTotalCount;}
@@ -63,8 +60,7 @@ namespace AcademyProject.Systems
         {
             ApplySingleton(this);
             InitializeItems();
-
-        }
+        } 
 
         private void Update()
         {
@@ -87,11 +83,10 @@ namespace AcademyProject.Systems
         public void AddItem(BaseItemController item)
         {
             _isSame = false;
-            Debug.Log("item: " + item.GetType());
 
             foreach (var i in items)
             {
-                if (i != null )
+                if (i != null && i.GetComponent<IBulletable>() != null)
                     if(i.GetType() == item.GetType())
                         _isSame = true;
             }
@@ -140,23 +135,38 @@ namespace AcademyProject.Systems
         }
     
         /// <summary>
-        /// Increases bullet count
+        /// Updates bullet count
         /// </summary>
         public void UpdateBulletCount(IBulletable item)
         {
             if(item == null) return;
+            item.BulletDataSO.TotalBulletCount += item.AmmoCount();
+            Debug.Log(item.ToString() + " itemi'nin su an " + item.BulletDataSO.TotalBulletCount + " kadar bullet'i var");
+           
+            // foreach (var baseItemController in items)
+            // {
+            //     if(baseItemController == null) return;
+            //     if (baseItemController.GetComponent<IBulletable>() != null)
+            //     {
+            //         item.BulletDataSO.TotalBulletCount += item.AmmoCount();
+            //         Debug.Log(item.ToString() + " itemi'nin su an " + item.BulletDataSO.TotalBulletCount + " kadar bullet'i var");
+            //     } 
+            // }
             
             if (!item.IsDropped)
             {
                 _totalBulletCount += item.AmmoCount();
-                _bullet = item.ItemObject.transform;
+                item.BulletDataSO.TotalBulletCount += item.AmmoCount();
             }
             else
             {
                 _totalBulletCount += _beforeTotalCount;
             }
         }
-
+        
+        /// <summary>
+        /// Decreases bullet count
+        /// </summary>
         public void DecreaseBulletCount()
         {
             _totalBulletCount--;
@@ -166,6 +176,7 @@ namespace AcademyProject.Systems
                 if (items[i] != null)
                 {
                     var bullet = items[i].GetComponent<IBulletable>();
+                    if(bullet == null) return;
                     bullet.ItemDataSO.stackCount = _totalBulletCount;
                     OnBulletShoot?.Invoke(bullet);
                 }

@@ -10,7 +10,7 @@ namespace AcademyProject.Controllers
     [RequireComponent(typeof(Rigidbody))]
     public abstract class BaseItemController : BaseBehaviourController
     {
-        private void Awake()
+        protected virtual void Awake()
         {
             itemDataSO = Instantiate(itemDataSO);
             itemDataSO.stackCount = stackQuantity;

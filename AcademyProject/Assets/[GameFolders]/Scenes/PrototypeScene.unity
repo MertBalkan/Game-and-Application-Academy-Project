@@ -257,6 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aaccac1264fbfe42bb6ee72f0e3c78b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whichObjectIHave: {fileID: 0}
 --- !u!1 &27434747
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,6 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c13a0b48709c134491f395bf33b5a3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whichObjectIHave: {fileID: 0}
   isSlotFull: 0
   imSelected: 0
 --- !u!114 &257720373
@@ -1089,6 +1091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c13a0b48709c134491f395bf33b5a3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whichObjectIHave: {fileID: 0}
   isSlotFull: 0
   imSelected: 0
 --- !u!114 &306640784
@@ -1626,9 +1629,7 @@ MonoBehaviour:
   movespeed: 5
   turnspeed: 360
   muzzle: {fileID: 1345186943}
-  bullet: {fileID: 8631630180081560220, guid: 5a19cd2c430d7b649aeadbd5be9f7084, type: 3}
   point: {fileID: 27434748}
-  spine: {fileID: 1565405416389785411}
 --- !u!54 &356637365
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2316,6 +2317,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 948707309835609138, guid: b9674325f7a315645a8df3cfee43e187,
+        type: 3}
+      propertyPath: bulletDataSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 42effa6d5f76fab4ca3fec7b0514cb0f,
+        type: 2}
     - target: {fileID: 948707309835609141, guid: b9674325f7a315645a8df3cfee43e187,
         type: 3}
       propertyPath: m_Name
@@ -3323,28 +3330,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 851508971013264592, guid: 2557be77011b8d648a6120be48bbb4c8,
         type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 2800000, guid: ab48f29a06627b24fb9863ed9d947b97, type: 3}
-    - target: {fileID: 851508971013264592, guid: 2557be77011b8d648a6120be48bbb4c8,
-        type: 3}
       propertyPath: m_Name
       value: P_Fastener
       objectReference: {fileID: 0}
     - target: {fileID: 851508971013264601, guid: 2557be77011b8d648a6120be48bbb4c8,
         type: 3}
       propertyPath: stackQuantity
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 851508971013264603, guid: 2557be77011b8d648a6120be48bbb4c8,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 851508971013264603, guid: 2557be77011b8d648a6120be48bbb4c8,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.31811953
       objectReference: {fileID: 0}
     - target: {fileID: 851508971013264603, guid: 2557be77011b8d648a6120be48bbb4c8,
         type: 3}
@@ -3721,6 +3718,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Fastener (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 851508971013264601, guid: 2557be77011b8d648a6120be48bbb4c8,
+        type: 3}
+      propertyPath: bulletDataSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 6127919e8314e4f43a7419460a1799b8,
+        type: 2}
     - target: {fileID: 851508971013264603, guid: 2557be77011b8d648a6120be48bbb4c8,
         type: 3}
       propertyPath: m_RootOrder
@@ -4086,6 +4089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c13a0b48709c134491f395bf33b5a3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whichObjectIHave: {fileID: 0}
   isSlotFull: 0
   imSelected: 0
 --- !u!114 &1681427167
@@ -4722,6 +4726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c13a0b48709c134491f395bf33b5a3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whichObjectIHave: {fileID: 0}
   isSlotFull: 0
   imSelected: 0
 --- !u!114 &1785890327
@@ -4978,6 +4983,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 851508971013264601, guid: 2557be77011b8d648a6120be48bbb4c8,
         type: 3}
+      propertyPath: bulletDataSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 6127919e8314e4f43a7419460a1799b8,
+        type: 2}
+    - target: {fileID: 851508971013264601, guid: 2557be77011b8d648a6120be48bbb4c8,
+        type: 3}
       propertyPath: stackQuantity
       value: 2
       objectReference: {fileID: 0}
@@ -5103,6 +5114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c13a0b48709c134491f395bf33b5a3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whichObjectIHave: {fileID: 0}
   isSlotFull: 0
   imSelected: 0
 --- !u!114 &1824706003
@@ -5924,6 +5936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c13a0b48709c134491f395bf33b5a3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whichObjectIHave: {fileID: 0}
   isSlotFull: 0
   imSelected: 1
 --- !u!1 &2139079298

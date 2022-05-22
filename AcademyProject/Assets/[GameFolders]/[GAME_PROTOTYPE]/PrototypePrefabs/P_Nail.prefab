@@ -115,8 +115,8 @@ MonoBehaviour:
   itemDataSO: {fileID: 11400000, guid: 6bf89c04c3249bc4db629070382b70ff, type: 2}
   isInInventory: 0
   stackQuantity: 3
-  bulletGameObject: {fileID: 8631630180081560192, guid: ff64a3a071ed77144a42da74c2c75bbc,
-    type: 3}
+  isDropped: 0
+  bulletDataSO: {fileID: 11400000, guid: 6127919e8314e4f43a7419460a1799b8, type: 2}
 --- !u!54 &948707309835609149
 Rigidbody:
   m_ObjectHideFlags: 0

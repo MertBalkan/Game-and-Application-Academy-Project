@@ -39,7 +39,6 @@ namespace AcademyProject.Collectables
             InventorySystem.Instance.AddItem(item);
             InventorySystem.Instance.UpdateBulletCount(item.GetComponent<IBulletable>());
             inventoryUI.AddItemToSlot(item, item.itemDataSO.stackCount);
-            
             gameObject.SetActive(false);   
         }
     }

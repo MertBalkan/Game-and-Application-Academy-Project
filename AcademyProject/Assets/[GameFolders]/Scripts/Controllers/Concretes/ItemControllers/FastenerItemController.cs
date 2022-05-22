@@ -7,10 +7,20 @@ namespace AcademyProject.Controllers
     [RequireComponent(typeof(SphereCollider))]
     public class FastenerItemController : BaseItemController, IBulletable
     {
-        [SerializeField] private GameObject bulletGameObject;
-        public GameObject ItemObject => bulletGameObject;
+        [SerializeField] private BulletDataSO bulletDataSO;
+
+        [SerializeField] private int totalBulletCount = 0;
         public ItemDataSO ItemDataSO => itemDataSO;
+        public BulletDataSO BulletDataSO => bulletDataSO;
         public bool IsDropped => isDropped;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            
+            bulletDataSO = Instantiate(bulletDataSO);
+            bulletDataSO.TotalBulletCount = totalBulletCount;
+        }
 
         private void Update()
         {
