@@ -75,6 +75,16 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 # Sprint 2
 
+* Sprint Notları: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
+
+* Sprint içinde tamamlanması tahmin edilen puan: 100 Puan
+
+* Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
+
+* Backlog düzeni ve Story seçimleri: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
+
+* Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+
 - **<a href = "https://www.notion.so/Scrum-meeting-3-c34e9e2de29a4f89a1f865f78f33051e">15.05.2022 Updates<\a>** 
 
 
