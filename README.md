@@ -101,16 +101,31 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 - Envanter UI’ı ve Crafting sisteminin sprint 2 de yapılmasına karar verildi.
 
 - Daha önce düşünüllen camlı vantilatör trapini hazırlanan nerf gun mekaniği kullanılarak itemler azaltıldığı için vantilatör + dart oklarıyla kullanılacak.
+  
+
 
 
 ---
 - **Sprint Review**: 
+  
+  Gamedesignda başta konuşulan oyun mekanikleri bu süre içinde ulaşılması güç olduğu öngörülen noktalarda scobu küçültmek adına daraltıldı. Craft mekaniklerinin yerini daha çok combat mekanikleri aldı. Daha önce çeşitlendirilmiş olan item havuzundan kullanılacak olan itemler seçildi ve geri kalanlar elendi. İtemlerin UIdaki görünüşleri ve envanterde stacklenmesi sağlandı. Bazı itemlerin attack vfxleri tamamlandı. Movement ve etkileşim mekaniklerinde epey yol katedildi, karaktere animasyonlar seçilip eklenip retarget iskeleti oluşturuldu. Düşmanlar için yazılacak olan AI sistemi oluşturuldu ve sprint 3 için planlandı. Sprint 3'te yapılması planlanan tasklar önceliklendirildi.
 
 
 - **Sprint Retrospective:**
+  
+  Bu sprint için planlanmış tüm tasklar tamamlandı.
+  
+  Game design oluşturulurken büyük tutulmuş olan oyun scobu realize edilip küçültüldü ve final formu için mevcut scopta detaylandırıldı.
+  
+  Movement ve etkileşim mekaniklerinde ve animasyonlarda kayda değer bir ilerleme katedildi.
+   
 
 
 - **Diğer Notlar**:
+  
+ Sprint 3 taskları oluşturulmaya başlandı.
+  
+  
 
 
 
