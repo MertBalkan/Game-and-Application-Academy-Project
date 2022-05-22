@@ -18,7 +18,7 @@ namespace AcademyProject.Combats
             {
                 var enemyHealth = collision.transform.GetComponent<CharacterHealth>();
                 if(enemyHealth.Equals(null)) return;
-                
+
                 enemyHealth.TakeDamage(damageDataSO.damageHitCount);
                 if(enemyHealth.IsDead) Destroy(enemyHealth.gameObject);
             }
