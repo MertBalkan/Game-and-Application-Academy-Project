@@ -1,4 +1,6 @@
 using AcademyProject.Controllers;
+using AcademyProject.Systems;
+using AcademyProject.UIs;
 using UnityEngine;
 
 namespace AcademyProject.Combats
@@ -11,53 +13,90 @@ namespace AcademyProject.Combats
         private float _maxSlingForce = 1000;
 
         private PlayerCharacterController _player;
+        private Quaternion _lookRot;
+        private InventoryUI _inventoryUI;
         
         private void Awake()
         {
+            _inventoryUI = FindObjectOfType<InventoryUI>();
             _player = FindObjectOfType<PlayerCharacterController>();
         }
 
         private void Update()
         {
-            if (IsSlingInInventory())
+            if(IsSlingInInventory())
                 ApplyWeaponType();
         }
 
         public void ApplyWeaponType()
         {
             if (_player.Input.IncreaseSlingForce)
+            {
                 SlingForceSpeed();
-            
+                PlayerPointLook();
+            }
             SlingShot();
         }
-        
-        private void SlingShot()
+
+        private void PlayerPointLook()
         {
-            if (_player.Input.Fire)
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 1000))
             {
-                var clone = InstantiateBullet();
-                clone.GetComponent<Rigidbody>().AddForce(clone.up * _slingForce);
-                
-                _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, false);
-                ResetSlingForce();
+                if(hit.collider.gameObject.Equals(_player.gameObject)) return;
+                Vector3 pos = (hit.point - _player.transform.position).normalized;
+                _lookRot = Quaternion.LookRotation(pos);
+                _lookRot.x = 0;
+                _player.transform.rotation = Quaternion.RotateTowards(_player.transform.rotation, _lookRot, 1000 * Time.deltaTime);
             }
         }
-
-        private Transform InstantiateBullet()
+        private void SlingShot()
         {
-            return Instantiate(_player.Bullet, _player.Point.position, _player.Muzzle.rotation);
+            foreach (var slot in _inventoryUI.inventorySlots)       
+            {
+                if (slot.imSelected && slot.isSlotFull && slot.whichObjectIHave != null)
+                {
+                    if (_player.Input.Fire && InventorySystem.Instance.ownedBulletCounts[slot.transform.GetSiblingIndex()] > 0)
+                    {
+                        var bulletObject = slot.whichObjectIHave.GetComponent<IBulletable>().BulletDataSO.bullet.transform;
+                        // Debug.Log(slot.whichObjectIHave.GetComponent<IBulletable>().BulletDataSO.bullet.ToString());
+                        if(bulletObject == null) return;
+                        
+                        var clone = InstantiateBullet(bulletObject);
+                        clone.SetParent(null);
+                        clone.gameObject.SetActive(true);
+                        clone.GetComponent<Rigidbody>().AddForce(clone.up * _slingForce);
+                
+                        _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, false);
+                        ResetSlingForce();
+
+                        InventorySystem.Instance.DecreaseBulletCount(slot.whichObjectIHave.GetComponent<IBulletable>());
+                    }
+                }
+            }
         }
+        private Transform InstantiateBullet(Transform bullet) => Instantiate(bullet, _player.Point.position, _player.Muzzle.rotation);
+        
+        private bool IsSlingInInventory() => isInInventory;
 
         private void SlingForceSpeed()
         {
-            _slingTime += Time.deltaTime;
-            _slingForce += _slingTime * 5.0f;
-            
-            _slingTime = _slingTime >= _maxSlingTime ? _slingTime = _maxSlingTime : _slingTime ;
-            _slingForce = _slingForce >= _maxSlingForce ? _slingForce = _maxSlingForce : _slingForce;
+            var inventoryUI = FindObjectOfType<InventoryUI>();
 
-            Debug.Log("SLING TIME: " + _slingTime);
-            _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, true);
+            foreach (var slots in inventoryUI.inventorySlots)
+            {
+                if (slots.imSelected && slots.isSlotFull)
+                {
+                    if (InventorySystem.Instance.HasBulletInInventory)
+                    {
+                        SlingLogic();
+                        _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, true);
+                    }
+
+                }
+            }
         }
 
         private void ResetSlingForce()
@@ -66,6 +105,13 @@ namespace AcademyProject.Combats
             _slingTime = 0.0f;
         }
 
-        private bool IsSlingInInventory() => isInInventory;
+        private void SlingLogic()
+        {
+            _slingTime += Time.deltaTime;
+            _slingForce += _slingTime * 5.0f;
+            
+            _slingTime = _slingTime >= _maxSlingTime ? _slingTime = _maxSlingTime : _slingTime ;
+            _slingForce = _slingForce >= _maxSlingForce ? _slingForce = _maxSlingForce : _slingForce;
+        }
     }   
 }

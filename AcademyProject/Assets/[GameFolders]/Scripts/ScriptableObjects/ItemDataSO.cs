@@ -17,12 +17,5 @@ namespace AcademyProject.ScriptableObjects
         public int stackCount;
         [TextArea] public string itemDescription;
         public bool isWeapon;
-
-        // Here will be change...
-
-        /*
-        public bool isDamageable;
-        public DamageDataSO damageData;
-        */
     }
 }

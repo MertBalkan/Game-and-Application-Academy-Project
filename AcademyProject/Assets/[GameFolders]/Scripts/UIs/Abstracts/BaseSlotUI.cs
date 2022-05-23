@@ -1,3 +1,4 @@
+using AcademyProject.Controllers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,6 +6,7 @@ namespace AcademyProject.UIs
 {
     public class BaseSlotUI : MonoBehaviour
     {
+        public GameObject whichObjectIHave;
         private Image _slotImage;
         public Image SlotImage => _slotImage;
 

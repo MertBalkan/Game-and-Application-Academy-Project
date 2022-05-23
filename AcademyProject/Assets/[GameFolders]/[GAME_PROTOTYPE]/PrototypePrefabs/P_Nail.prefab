@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 948707309835609143}
   - component: {fileID: 948707309835609138}
   - component: {fileID: 948707309835609149}
-  - component: {fileID: 1725960468}
-  m_Layer: 0
+  - component: {fileID: 609373181}
+  m_Layer: 8
   m_Name: P_Nail
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: ab48f29a06627b24fb9863ed9d947b97, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -114,7 +114,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemDataSO: {fileID: 11400000, guid: 6bf89c04c3249bc4db629070382b70ff, type: 2}
   isInInventory: 0
-  stackQuantity: 0
+  stackQuantity: 3
+  isDropped: 0
+  bulletDataSO: {fileID: 11400000, guid: 42effa6d5f76fab4ca3fec7b0514cb0f, type: 2}
+  totalBulletCount: 0
 --- !u!54 &948707309835609149
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -131,7 +134,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1725960468
+--- !u!114 &609373181
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +143,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 948707309835609141}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 676936b84d5f23942b82bfb05c37344f, type: 3}
+  m_Script: {fileID: 11500000, guid: 831e82883929e4c48b37b79ee942c7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDataSO: {fileID: 11400000, guid: 32bae5344725eef4487643a905a18796, type: 2}

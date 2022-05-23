@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using AcademyProject.Combats;
 using AcademyProject.Controllers;
 using AcademyProject.Managers;
+using AcademyProject.UIs;
 using UnityEngine;
 
 namespace AcademyProject.Systems
@@ -19,6 +21,42 @@ namespace AcademyProject.Systems
         [SerializeField] private List<BaseWeaponController> weapons;
 
         private int _totalItems;
+        private bool _isSame;
+        public bool IsSame => _isSame;
+        public event System.Action<IBulletable> OnBulletShoot;
+
+
+        #region BULLET LOGIC VARIABLES
+
+        
+        //-------------------------------------BULLET LOGIC-------------------------------------
+        public  List<int> ownedBulletCounts;
+        public List<IBulletable> ownedBulletTypes;
+
+        public int TotalBulletCount { get
+        {
+            int totalCount = 0;
+            
+            foreach (int i in ownedBulletCounts)
+            {
+                totalCount += i;
+            }
+
+            return totalCount;
+        }}
+        
+        public bool HasBulletInInventory => TotalBulletCount > 0;
+        private int _beforeTotalCount;
+        
+        public int BeforeTotalCount
+        {
+            get { return _beforeTotalCount;}
+            set { _beforeTotalCount = value; }
+        }
+        //-------------------------------------BULLET LOGIC-------------------------------------
+        
+
+        #endregion
         
         /// <summary>
         /// Is inventory empty?
@@ -35,28 +73,62 @@ namespace AcademyProject.Systems
         private void Awake()
         {
             ApplySingleton(this);
+            InitializeItems();
+        } 
 
+        private void Update()
+        {
+            Debug.Log("TOTAL BULLET COUNT: " + TotalBulletCount);
+        }   
+        
+        /// <summary>
+        /// Initializing Items
+        /// </summary>
+        private void InitializeItems()
+        {
+            ownedBulletTypes = new List<IBulletable>();
+            ownedBulletCounts = new List<int>();
             for (int i = 0; i < maxCapacity; i++)
             {
                 items.Add(null);
+                ownedBulletTypes.Add(null);
+                ownedBulletCounts.Add(0);   
             }
         }
-        
+
         /// <summary>
         /// This function adds items to inventory.
         /// </summary>
         /// <param name="item"></param>
         public void AddItem(BaseItemController item)
         {
+            _isSame = false;
+
             foreach (var i in items)
             {
-                if (i == null)
+                if (i != null && i.GetComponent<IBulletable>() != null)
+                    if(i.GetType() == item.GetType())
+                        _isSame = true;
+            }
+            
+            foreach (var i in items)
+            {
+                if (i == null && !_isSame)
                 {
                     var index = items.IndexOf(i);
-                   
+                
                     items[index] = item;
                     item.isInInventory = true;
-                    
+
+                    try
+                    {
+                        ownedBulletTypes[index] = (IBulletable)item;
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.Log("Type isn't a bullet");
+                    }
+
                     _totalItems++;
                     break;
                 }
@@ -74,36 +146,135 @@ namespace AcademyProject.Systems
             
             items[indexOf] = null;
 
+            removedItem.isDropped = true;
             removedItem.isInInventory = false;
-            removedItem.gameObject.SetActive(true);
+
+            if(removedItem.GetComponent<IBulletable>() != null)
+                removedItem.itemDataSO.stackCount = ownedBulletCounts[indexOf];
+            
+            ownedBulletCounts[indexOf] = 0;
+            ownedBulletTypes[indexOf] = null;
+
+            Debug.Log("removedItem.itemDataSO.stackCount: " + removedItem.itemDataSO.stackCount);
+            if (removedItem.itemDataSO.stackCount == 0)
+            {
+                Destroy(removedItem.gameObject);
+                FindObjectOfType<InventoryUI>().RemoveItemFromSlot(indexOf);
+            }
+            else
+            {
+                removedItem.gameObject.SetActive(true);
+            }
             
             _totalItems--;
         }
-
+        
+        /// <summary>
+        /// Adds weapon to weapon list
+        /// </summary>
+        /// <param name="weapon"></param>
         public void AddWeapon(BaseWeaponController weapon)
         {
             weapons.Add(weapon);
             weapon.isInInventory = true;
         }
+    
+        /// <summary>
+        /// Updates bullet count
+        /// </summary>
+        public void UpdateBulletCount(IBulletable item)
+        {
+            if(item == null) return;
 
-        // public bool HasBulletInInventory()
-        // {
-        //     foreach (var bullet in items)
-        //     {
-        //         if (!bullet.GetComponent<IBulletable>().Equals(null))
-        //         {
-        //             return true;
-        //         }
-        //     }
-        //     return false;
-        // }
-        //
-        // public BaseItemController Bullet()
-        // {
-        //     if (HasBulletInInventory())
-        //     {
-        //         
-        //     }
-        // }
+            int indexOfSameTypeItem = -1;
+
+            var index = 0;
+            foreach (IBulletable IB in ownedBulletTypes)
+            {
+                if (IB != null)
+                {
+                    if (IB.GetType() == item.GetType())
+                    {
+                        indexOfSameTypeItem = index;
+                    }   
+                }
+
+                index++;
+            }
+            
+            if (indexOfSameTypeItem != -1)
+            {
+                ownedBulletCounts[indexOfSameTypeItem] += item.AmmoCount();
+            }
+            else
+            {
+                int firstEmpty = ownedBulletTypes.IndexOf(null);
+
+                if (firstEmpty != -1)
+                {
+                    ownedBulletTypes[firstEmpty] = item;
+                    ownedBulletCounts[firstEmpty] = item.AmmoCount();
+                }
+                else
+                {
+                    //SLOT YOK
+                }
+            }
+
+            
+            item.BulletDataSO.TotalBulletCount += item.AmmoCount();
+            Debug.Log(item.ToString() + " itemi'nin su an " + item.BulletDataSO.TotalBulletCount + " kadar bullet'i var");
+            
+            if (!item.IsDropped)
+                item.BulletDataSO.TotalBulletCount += item.AmmoCount();
+        }
+        
+        /// <summary>
+        /// Decreases bullet count
+        /// </summary>
+        public void DecreaseBulletCount(IBulletable shotItem)
+        {
+            if (shotItem != null)
+            {
+                int indexOfSameTypeItem = -1;
+                var index = 0;
+                foreach (IBulletable bulletable in ownedBulletTypes)
+                {
+                    if (bulletable != null)
+                    {
+                        if (bulletable.GetType() == shotItem.GetType())
+                        {
+                            indexOfSameTypeItem = index;
+                            break;
+                        }   
+                    }
+
+                    index++;
+                }
+
+                if (indexOfSameTypeItem  != -1)
+                {
+                    ownedBulletCounts[indexOfSameTypeItem]--;
+                    OnBulletShoot?.Invoke(shotItem);
+
+                    if (ownedBulletCounts[indexOfSameTypeItem] == 0)
+                    {
+                        RemoveItem((BaseItemController)ownedBulletTypes[indexOfSameTypeItem]);
+                    }
+                }   
+            }
+        }
+        
+        public bool CheckIfSameType(object A, object B)
+        {
+            if (A.GetType() == B.GetType())
+            {
+                return true;
+            }
+            else
+            {
+                return false;   
+            }
+        }
     }
 }

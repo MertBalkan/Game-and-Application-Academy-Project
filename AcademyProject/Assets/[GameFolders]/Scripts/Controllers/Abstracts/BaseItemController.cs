@@ -10,12 +10,11 @@ namespace AcademyProject.Controllers
     [RequireComponent(typeof(Rigidbody))]
     public abstract class BaseItemController : BaseBehaviourController
     {
-        private void Awake()
+        protected virtual void Awake()
         {
             itemDataSO = Instantiate(itemDataSO);
             itemDataSO.stackCount = stackQuantity;
         }
-
         private void OnEnable()
         {
             transform.SetParent(null);
@@ -34,7 +33,7 @@ namespace AcademyProject.Controllers
         private void ToThePlayerInventory()
         {
             if (!isInInventory || this.gameObject.activeSelf) return;
-
+            
             this.transform.position = FindObjectOfType<PlayerHand>().transform.position;
             Invoke(nameof(ReAttachParent), 0.1f);
         }

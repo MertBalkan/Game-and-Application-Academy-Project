@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec82e55a2f572a49a75c089b5b4218f, type: 3}
+  m_Name: DartItemData
+  m_EditorClassIdentifier: 
+  itemName: Dart
+  itemTexture: {fileID: 21300000, guid: f2524c7ee3700c946bd42fdd1c4aed9d, type: 3}
+  stackCount: 3
+  itemDescription: DART
+  isWeapon: 0

@@ -1,3 +1,4 @@
+using AcademyProject.Combats;
 using AcademyProject.Inputs;
 using AcademyProject.Systems;
 using AcademyProject.UIs;
@@ -14,18 +15,23 @@ namespace AcademyProject.Controllers
         
         public void DropItem(IInputService input)
         {
-            for (var i = 0; i < inventoryUI.inventorySlots.Length; i++)
+            if (!input.IncreaseSlingForce)
             {
-                var slot = inventoryUI.inventorySlots[i];
-                
-                if (input.DropItem && !InventorySystem.Instance.IsEmpty && slot.imSelected)
+                for (var i = 0; i < inventoryUI.inventorySlots.Length; i++)
                 {
-                    inventoryUI.RemoveItemFromSlot();
-                    if (!slot.isSlotFull) slot.ItemCountText.text = "x99";
-                    
-                    InventorySystem.Instance.RemoveItem(
-                        (InventorySystem.Instance.Items[i]));
-                }
+                    var slot = inventoryUI.inventorySlots[i];
+                
+                    if (input.DropItem && !InventorySystem.Instance.IsEmpty && slot.imSelected) // //InventorySystem.Instance.ownedBulletCounts[i] > 0)
+                    {
+                        inventoryUI.RemoveItemFromSlot();
+                        if (!slot.isSlotFull) slot.ItemCountText.text = "0";
+
+                        InventorySystem.Instance.BeforeTotalCount = InventorySystem.Instance.TotalBulletCount;
+
+                        //InventorySystem.Instance.UpdateBulletCount(null);
+                        InventorySystem.Instance.RemoveItem((InventorySystem.Instance.Items[i]));
+                    }
+                }   
             }
         }
     }
