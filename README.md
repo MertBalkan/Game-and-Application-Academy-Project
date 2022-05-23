@@ -85,7 +85,7 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 * Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 
-- **<a href = "https://www.notion.so/Scrum-meeting-3-c34e9e2de29a4f89a1f865f78f33051e">15.05.2022 Updates<\a>** 
+- **<a href = "https://www.notion.so/Scrum-meeting-3-c34e9e2de29a4f89a1f865f78f33051e">15.05.2022 Updates</a>** 
 
 
 ![image](https://user-images.githubusercontent.com/95376425/168487222-73c5f14a-e1b5-4f05-82e7-259e1f1fa836.png)
