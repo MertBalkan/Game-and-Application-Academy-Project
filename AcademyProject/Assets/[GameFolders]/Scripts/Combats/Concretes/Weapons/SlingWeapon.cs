@@ -56,9 +56,9 @@ namespace AcademyProject.Combats
         {
             foreach (var slot in _inventoryUI.inventorySlots)       
             {
-                if (slot.imSelected && slot.isSlotFull)
+                if (slot.imSelected && slot.isSlotFull && slot.whichObjectIHave != null)
                 {
-                    if (_player.Input.Fire && InventorySystem.Instance.HasBulletInInventory)
+                    if (_player.Input.Fire && InventorySystem.Instance.ownedBulletCounts[slot.transform.GetSiblingIndex()] > 0)
                     {
                         var bulletObject = slot.whichObjectIHave.GetComponent<IBulletable>().BulletDataSO.bullet.transform;
                         // Debug.Log(slot.whichObjectIHave.GetComponent<IBulletable>().BulletDataSO.bullet.ToString());
@@ -72,7 +72,7 @@ namespace AcademyProject.Combats
                         _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, false);
                         ResetSlingForce();
 
-                        InventorySystem.Instance.DecreaseBulletCount();
+                        InventorySystem.Instance.DecreaseBulletCount(slot.whichObjectIHave.GetComponent<IBulletable>());
                     }
                 }
             }

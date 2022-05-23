@@ -28,51 +28,87 @@ namespace AcademyProject.UIs
         /// Adds item to empty inventory slot
         /// </summary>
         /// <param name="item"></param>
-        public void AddItemToSlot(BaseItemController item, int stackCount)
+        public void AddItemToSlot(BaseItemController item)
         {
             var bulletItem = item.GetComponent<IBulletable>();
-            foreach (var slotUI in inventorySlots)
+            int indexOfFirstEmptyUIObject = -1;
+            var indexUI = 0;
+
+            foreach (InventorySlotUI ISUI in inventorySlots)
             {
-                if (bulletItem != null)
+                if (!ISUI.isSlotFull)
                 {
-                    if (!InventorySystem.Instance.IsSame && !slotUI.isSlotFull)
-                    {
-                        slotUI.whichObjectIHave = item.gameObject;
-                        slotUI.SlotImage.sprite = item.itemDataSO.itemTexture;
-                        slotUI.isSlotFull = true;
-                        slotUI.ItemCountText.text = InventorySystem.Instance.TotalBulletCount.ToString();
-                        break;
-                    }
-                    else if(InventorySystem.Instance.IsSame && slotUI.isSlotFull)
-                    {
-                        slotUI.ItemCountText.text = InventorySystem.Instance.TotalBulletCount.ToString();
-                    }
-                }
-                else
-                {
-                    slotUI.whichObjectIHave = item.gameObject;
-                    slotUI.SlotImage.sprite = item.itemDataSO.itemTexture;
-                    slotUI.isSlotFull = true;
-                    slotUI.ItemCountText.text = stackCount.ToString();
+                    indexOfFirstEmptyUIObject = indexUI;
                     break;
                 }
+
+                indexUI++;
+            }
+
+            int indexOfSameTypeItem = -1;
+            var index = 0;
+            foreach (IBulletable IB in InventorySystem.Instance.ownedBulletTypes)
+            {
+                if (IB != null || bulletItem != null)
+                {
+                    if (bulletItem != null && IB != null && IB.GetType() == bulletItem.GetType())
+                    {
+                        indexOfSameTypeItem = index;
+                        break;
+                    }   
+                }
+
+                index++;
+            }
+
+            if (indexOfSameTypeItem == -1)
+            {
+                index = indexUI;
+            }
+            else
+            {
+                index = indexOfSameTypeItem;
+            }
+            
+            InventorySlotUI slotUI = inventorySlots[index];
+            slotUI.whichObjectIHave = item.gameObject;
+            slotUI.SlotImage.sprite = item.itemDataSO.itemTexture;
+            slotUI.isSlotFull = true;
+
+            if (index == indexUI && indexOfSameTypeItem == -1)
+            {
+                slotUI.ItemCountText.text = InventorySystem.Instance.Items[index].itemDataSO.stackCount.ToString();
+            }
+            else
+            {
+                slotUI.ItemCountText.text = InventorySystem.Instance.ownedBulletCounts[index].ToString();
             }
         }
         
         /// <summary>
         /// Removes item from full slot
         /// </summary>
-        public void RemoveItemFromSlot()
+        public void RemoveItemFromSlot(int index = -1)
         {
-            foreach (var slotUI in inventorySlots.Reverse()) // reverse travelling
+            if (index == -1)
             {
-                if (slotUI.isSlotFull && slotUI.imSelected)
+                foreach (var slotUI in inventorySlots.Reverse()) // reverse travelling
                 {
-                    slotUI.whichObjectIHave = null;
-                    slotUI.isSlotFull = false;
-                    slotUI.SlotImage.sprite = null;
-                    break;
-                }
+                    if (slotUI.isSlotFull && slotUI.imSelected)
+                    {
+                        slotUI.whichObjectIHave = null;
+                        slotUI.isSlotFull = false;
+                        slotUI.SlotImage.sprite = null;
+                        break;
+                    }
+                }   
+            }
+            else
+            {
+                var slotUI = inventorySlots[index];
+                slotUI.whichObjectIHave = null;
+                slotUI.isSlotFull = false;
+                slotUI.SlotImage.sprite = null;
             }
         }
 
@@ -89,7 +125,7 @@ namespace AcademyProject.UIs
             {
                 if (slotUI.isSlotFull && slotUI.imSelected)
                 {
-                    slotUI.ItemCountText.text = InventorySystem.Instance.TotalBulletCount.ToString();
+                    slotUI.ItemCountText.text = InventorySystem.Instance.ownedBulletCounts[slotUI.transform.GetSiblingIndex()].ToString();
                     break;
                 }
             }
