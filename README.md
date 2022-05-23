@@ -79,7 +79,7 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 * Sprint içinde tamamlanması tahmin edilen puan: 100 Puan
 
-* Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
+* Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ikinci sprint'in en azından 100 ile devam edilmesine gerektiğine karar verildi.
 
 * Backlog düzeni ve Story seçimleri: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
 
@@ -87,7 +87,9 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 * <a href = "https://docs.google.com/document/d/1d5FooVpJPjE0MUlU8SJr0ZirTw0HQjWwToRM-CxxY_M/edit?usp=sharing">Daily Scrum</a>
 
- * <a href = "https://docs.google.com/document/d/1Z3sGpFCulYmL6Vy3WUCC6MkSGjj6lhWWQphwGXZG6GM/edit?usp=sharing">Sprint 2 Dokümantasyonu</a>
+* Daily Scrumlar Whatsapp ve Discord üzerinden yapılmasına karar verilmiştir
+
+* <a href = "https://docs.google.com/document/d/1Z3sGpFCulYmL6Vy3WUCC6MkSGjj6lhWWQphwGXZG6GM/edit?usp=sharing">Sprint 2 Dokümantasyonu</a>
 
 
 ---
