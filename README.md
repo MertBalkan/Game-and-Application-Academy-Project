@@ -85,33 +85,6 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 * Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 
-- **<a href = "https://www.notion.so/Scrum-meeting-3-c34e9e2de29a4f89a1f865f78f33051e">15.05.2022 Updates</a>** 
-
-
-![image](https://user-images.githubusercontent.com/95376425/168487222-73c5f14a-e1b5-4f05-82e7-259e1f1fa836.png)
-
-- Stack bugları konuşuldu
-
-- Oyunun scobunu küçültmenin gerekebileceği senaryosunda nelerin eleneceğine karar verildi.
-
-- Nerf Gun mekanikleri tamamlandı
-
-![image](https://user-images.githubusercontent.com/95376425/168487061-17aa282d-0c5a-4f3f-ad92-82f5096f6175.png)
-
-- Oyunun motionları geliştirildi, mixamodan kullanılacak olan animasyonlar kararlaştırıldı ve indirilerek proje içine import edildi. (Sprint içinde alınması plananlanan puan : 100/20 pts)
-
-![image](https://user-images.githubusercontent.com/95376425/168487359-20a0297e-2dcd-4ab3-836b-b6142ecb19ea.png)
-
-- Oyunun sfxlerinin sprint 3te yapılmasına karar verildi.
-
-- Vfxlerin sprint 2 ve 3e bölünerek yapılmasına karar verildi. (Bu Sprint içinde alınması plananlanan puan : 100/20 pts)
-
-- Weapon system ui ile envanter ui birbirinden ayrılacak. 
-
-- Envanter UI’ı ve Crafting sisteminin sprint 2 de yapılmasına karar verildi.
-
-- Daha önce düşünüllen camlı vantilatör trapini hazırlanan nerf gun mekaniği kullanılarak itemler azaltıldığı için vantilatör + dart oklarıyla kullanılacak.
-  
 
 
 
