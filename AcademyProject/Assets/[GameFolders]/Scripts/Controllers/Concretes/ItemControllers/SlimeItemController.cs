@@ -1,20 +1,18 @@
-using System;
 using AcademyProject.Combats;
 using AcademyProject.ScriptableObjects;
 using UnityEngine;
 
 namespace AcademyProject.Controllers
 {
-    [RequireComponent(typeof(BoxCollider))]
-    public class NailItemController : BaseItemController, IBulletable
+    public class SlimeItemController : BaseItemController, IBulletable
     {
         [SerializeField] private BulletDataSO bulletDataSO;
-        [SerializeField] private int totalBulletCount;
+        [SerializeField] private int totalBulletCount = 0;
         public ItemDataSO ItemDataSO => itemDataSO;
         public BulletDataSO BulletDataSO => bulletDataSO;
         public bool IsDropped => isDropped;
         public bool IsStackCountOver => itemDataSO.stackCount <= 0;
-        
+
         protected override void Awake()
         {
             base.Awake();
