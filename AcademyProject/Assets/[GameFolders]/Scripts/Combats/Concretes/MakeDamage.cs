@@ -12,23 +12,11 @@ namespace AcademyProject.Combats
     {
         [SerializeField] private DamageDataSO damageDataSO;
 
-        // private void OnCollisionEnter(Collision collision)
-        // {
-        //     if (collision.gameObject.tag.Equals("Enemy"))
-        //     {
-        //         var enemyHealth = collision.transform.GetComponent<CharacterHealth>();
-        //         if(enemyHealth.Equals(null)) return;
-        //
-        //         enemyHealth.TakeDamage(damageDataSO.damageHitCount);
-        //         if(enemyHealth.IsDead) Destroy(enemyHealth.gameObject);
-        //     }
-        // }
-
-        private void OnTriggerEnter(Collider other)
+        private void OnCollisionEnter(Collision collision)
         {
-            if (other.gameObject.tag.Equals("Enemy"))
+            if (collision.gameObject.tag.Equals("Enemy"))
             {
-                var enemyHealth = other.transform.GetComponent<CharacterHealth>();
+                var enemyHealth = collision.transform.GetComponent<CharacterHealth>();
                 if(enemyHealth.Equals(null)) return;
         
                 enemyHealth.TakeDamage(damageDataSO.damageHitCount);
