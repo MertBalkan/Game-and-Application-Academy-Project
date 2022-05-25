@@ -127,17 +127,17 @@ PrefabInstance:
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5.145557
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.1039785
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.223
+      value: -3.8093984
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
@@ -184,6 +184,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Lego
       objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103204, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: lego
+      objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103207, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -211,7 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemDataSO: {fileID: 11400000, guid: 86b5b784aca7cd649b3497b9533d9b33, type: 2}
   isInInventory: 0
-  stackQuantity: 0
+  stackQuantity: 1
   isDropped: 0
 --- !u!4 &9031282608005836997 stripped
 Transform:

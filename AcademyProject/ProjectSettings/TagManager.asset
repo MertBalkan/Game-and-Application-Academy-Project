@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - HasSlipperyEffect
   - cube
-  - lego
   layers:
   - Default
   - TransparentFX

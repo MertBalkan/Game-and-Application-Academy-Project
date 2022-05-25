@@ -14,12 +14,6 @@ namespace AcademyProject.ScriptableObjects
 
         public float damageHitCount;
         public int gainedPoints;
-        //public DamageType damageType;
+        public GameObject effectPrefab;
     }
-
-    // public enum DamageType
-    // {
-    //     MeleeDamage,
-    //     TrapDamage
-    // }
 }

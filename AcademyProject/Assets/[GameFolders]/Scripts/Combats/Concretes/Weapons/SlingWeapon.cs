@@ -16,6 +16,8 @@ namespace AcademyProject.Combats
         private Quaternion _lookRot;
         private InventoryUI _inventoryUI;
         
+        private bool IsSlingInInventory() => isInInventory;
+        
         private void Awake()
         {
             _inventoryUI = FindObjectOfType<InventoryUI>();
@@ -61,7 +63,6 @@ namespace AcademyProject.Combats
                     if (_player.Input.Fire && InventorySystem.Instance.ownedBulletCounts[slot.transform.GetSiblingIndex()] > 0)
                     {
                         var bulletObject = slot.whichObjectIHave.GetComponent<IBulletable>().BulletDataSO.bullet.transform;
-                        // Debug.Log(slot.whichObjectIHave.GetComponent<IBulletable>().BulletDataSO.bullet.ToString());
                         if(bulletObject == null) return;
                         
                         var clone = InstantiateBullet(bulletObject);
@@ -78,8 +79,6 @@ namespace AcademyProject.Combats
             }
         }
         private Transform InstantiateBullet(Transform bullet) => Instantiate(bullet, _player.Point.position, _player.Muzzle.rotation);
-        
-        private bool IsSlingInInventory() => isInInventory;
 
         private void SlingForceSpeed()
         {
@@ -94,7 +93,6 @@ namespace AcademyProject.Combats
                         SlingLogic();
                         _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, true);
                     }
-
                 }
             }
         }
