@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5271485669085348749
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3817773820885103200, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103204, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2800000, guid: 14735f7920c7dae47a567a8311db66ce, type: 3}
+    - target: {fileID: 3817773820885103204, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_Name
+      value: P_Nail
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103207, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 191404b7a49c48944aff1dcea6b24391, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e3022ebe5fc370546ae370585ce546a2, type: 3}
+--- !u!1 &9066697511095333353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3817773820885103204, guid: e3022ebe5fc370546ae370585ce546a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5271485669085348749}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3028356169911291306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9066697511095333353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c988c69370a3984b9ecb2a0f06a8fd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDataSO: {fileID: 11400000, guid: 6bf89c04c3249bc4db629070382b70ff, type: 2}
+  isInInventory: 0
+  stackQuantity: 3
+  isDropped: 0
+  bulletDataSO: {fileID: 11400000, guid: 42effa6d5f76fab4ca3fec7b0514cb0f, type: 2}
+  totalBulletCount: 0

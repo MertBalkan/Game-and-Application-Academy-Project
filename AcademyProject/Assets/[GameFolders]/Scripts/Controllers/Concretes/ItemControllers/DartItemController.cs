@@ -6,11 +6,12 @@ namespace AcademyProject.Controllers
 {
     public class DartItemController : BaseItemController, IBulletable
     {
-        [SerializeField] private int totalBulletCount = 0;
         [SerializeField] private BulletDataSO bulletDataSO;
+        [SerializeField] private int totalBulletCount = 0;
         public ItemDataSO ItemDataSO => itemDataSO;
         public BulletDataSO BulletDataSO => bulletDataSO;
         public bool IsDropped => isDropped;
+        public bool IsStackCountOver => itemDataSO.stackCount <= 0;
         protected override void Awake()
         {
             base.Awake();
@@ -21,7 +22,7 @@ namespace AcademyProject.Controllers
 
         private void Update()
         {
-            if (itemDataSO.stackCount <= 0)
+            if (IsStackCountOver)
                 Destroy(this.gameObject);
         }
 
