@@ -17,6 +17,7 @@ namespace AcademyProject.Combats
         private InventoryUI _inventoryUI;
         
         private bool IsSlingInInventory() => isInInventory;
+        public float SlingForce => _slingForce;
         
         private void Awake()
         {
