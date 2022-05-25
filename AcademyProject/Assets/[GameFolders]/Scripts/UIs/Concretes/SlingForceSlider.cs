@@ -1,4 +1,3 @@
-using System;
 using AcademyProject.Combats;
 using UnityEngine;
 using UnityEngine.UI;
