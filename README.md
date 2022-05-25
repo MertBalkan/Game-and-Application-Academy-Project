@@ -53,7 +53,9 @@ https://glorious-profit-4c1.notion.site/Google-Bootcamp-b5b50202df36401e9b1df505
 
 * <a href = "https://docs.google.com/document/d/1-YL_gxEn41rRx2XT2yHJaFkE5n3s698cRqE6_lMDz8s/edit?usp=sharing">Daily Scrum</a>
 
- * <a href = "https://docs.google.com/document/d/1DNTSnRsbarsP6R8FLp0kq5bD4ZkfKmlVKgvg4bsShbA/edit?usp=sharing">Sprint 1 Dokümantasyonu</a>
+* Daily Scrumlar Whatsapp ve Discord üzerinden yapılmasına karar verilmiştir
+
+* <a href = "https://docs.google.com/document/d/1DNTSnRsbarsP6R8FLp0kq5bD4ZkfKmlVKgvg4bsShbA/edit?usp=sharing">Sprint 1 Dokümantasyonu</a>
 
 - **Sprint Review**: 
 
@@ -75,42 +77,44 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 # Sprint 2
 
-- **<a href = "https://www.notion.so/Scrum-meeting-3-c34e9e2de29a4f89a1f865f78f33051e">15.05.2022 Updates<\a>** 
+* Sprint Notları: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
+* Sprint içinde tamamlanması tahmin edilen puan: 100 Puan
 
-![image](https://user-images.githubusercontent.com/95376425/168487222-73c5f14a-e1b5-4f05-82e7-259e1f1fa836.png)
+* Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ikinci sprint'in en azından 100 ile devam edilmesine gerektiğine karar verildi.
 
-- Stack bugları konuşuldu
+* Backlog düzeni ve Story seçimleri: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
 
-- Oyunun scobunu küçültmenin gerekebileceği senaryosunda nelerin eleneceğine karar verildi.
+* Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 
-- Nerf Gun mekanikleri tamamlandı
+* <a href = "https://docs.google.com/document/d/1d5FooVpJPjE0MUlU8SJr0ZirTw0HQjWwToRM-CxxY_M/edit?usp=sharing">Daily Scrum</a>
 
-![image](https://user-images.githubusercontent.com/95376425/168487061-17aa282d-0c5a-4f3f-ad92-82f5096f6175.png)
+* Daily Scrumlar Whatsapp ve Discord üzerinden yapılmasına karar verilmiştir
 
-- Oyunun motionları geliştirildi, mixamodan kullanılacak olan animasyonlar kararlaştırıldı ve indirilerek proje içine import edildi. (Sprint içinde alınması plananlanan puan : 100/20 pts)
-
-![image](https://user-images.githubusercontent.com/95376425/168487359-20a0297e-2dcd-4ab3-836b-b6142ecb19ea.png)
-
-- Oyunun sfxlerinin sprint 3te yapılmasına karar verildi.
-
-- Vfxlerin sprint 2 ve 3e bölünerek yapılmasına karar verildi. (Bu Sprint içinde alınması plananlanan puan : 100/20 pts)
-
-- Weapon system ui ile envanter ui birbirinden ayrılacak. 
-
-- Envanter UI’ı ve Crafting sisteminin sprint 2 de yapılmasına karar verildi.
-
-- Daha önce düşünüllen camlı vantilatör trapini hazırlanan nerf gun mekaniği kullanılarak itemler azaltıldığı için vantilatör + dart oklarıyla kullanılacak.
+* <a href = "https://docs.google.com/document/d/1Z3sGpFCulYmL6Vy3WUCC6MkSGjj6lhWWQphwGXZG6GM/edit?usp=sharing">Sprint 2 Dokümantasyonu</a>
 
 
 ---
 - **Sprint Review**: 
+  
+  Gamedesignda başta konuşulan oyun mekanikleri bu süre içinde ulaşılması güç olduğu öngörülen noktalarda scobu küçültmek adına daraltıldı. Craft mekaniklerinin yerini daha çok combat mekanikleri aldı. Daha önce çeşitlendirilmiş olan item havuzundan kullanılacak olan itemler seçildi ve geri kalanlar elendi. İtemlerin UIdaki görünüşleri ve envanterde stacklenmesi sağlandı. Bazı itemlerin attack vfxleri tamamlandı. Movement ve etkileşim mekaniklerinde epey yol katedildi, karaktere animasyonlar seçilip eklenip retarget iskeleti oluşturuldu. Düşmanlar için yazılacak olan AI sistemi oluşturuldu ve sprint 3 için planlandı. Sprint 3'te yapılması planlanan tasklar önceliklendirildi.
 
 
 - **Sprint Retrospective:**
+  
+  Bu sprint için planlanmış tüm tasklar tamamlandı.
+  
+  Game design oluşturulurken büyük tutulmuş olan oyun scobu realize edilip küçültüldü ve final formu için mevcut scopta detaylandırıldı.
+  
+  Movement ve etkileşim mekaniklerinde ve animasyonlarda kayda değer bir ilerleme katedildi.
+   
 
 
 - **Diğer Notlar**:
+  
+ Sprint 3 taskları oluşturulmaya başlandı.
+  
+  
 
 
 

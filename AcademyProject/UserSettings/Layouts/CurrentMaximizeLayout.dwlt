@@ -46,7 +46,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 882
+    x: 910
     y: 73
     width: 661
     height: 724
@@ -137,7 +137,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1545
+    width: 1554
     height: 957
   m_MinSize: {x: 300, y: 300}
   m_MaxSize: {x: 24288, y: 24288}
@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 193
+    x: 195
     y: 0
     width: 689
     height: 745
@@ -381,7 +381,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 193
+    x: 195
     y: 73
     width: 687
     height: 724
@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 882
+    x: 910
     y: 0
     width: 663
     height: 745
@@ -988,7 +988,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 143f0100
     m_LastClickedInstanceID: 81684
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c623000066770000de7b00000e7f0000
+    m_ExpandedInstanceIDs: c623000066770000de7b00000e7f000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1092,9 +1092,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1545
+    x: 1554
     y: 0
-    width: 375
+    width: 366
     height: 957
   m_MinSize: {x: 276, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
@@ -1125,9 +1125,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1545
+    x: 1554
     y: 73
-    width: 374
+    width: 365
     height: 936
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:

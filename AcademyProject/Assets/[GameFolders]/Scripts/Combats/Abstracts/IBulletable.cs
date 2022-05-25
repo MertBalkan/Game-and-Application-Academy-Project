@@ -9,5 +9,6 @@ namespace AcademyProject.Combats
         ItemDataSO ItemDataSO { get; }
         BulletDataSO BulletDataSO { get; }
         bool IsDropped { get; }
+        bool IsStackCountOver { get; }
     }   
 }

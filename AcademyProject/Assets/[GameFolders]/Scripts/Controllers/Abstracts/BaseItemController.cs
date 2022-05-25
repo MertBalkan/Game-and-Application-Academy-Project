@@ -1,5 +1,3 @@
-using System;
-using AcademyProject.ScriptableObjects;
 using UnityEngine;
 
 namespace AcademyProject.Controllers
@@ -7,7 +5,7 @@ namespace AcademyProject.Controllers
     /// <summary>
     /// Abstract Base Item Controller. 
     /// </summary>
-    [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(Rigidbody), typeof(Collider))]
     public abstract class BaseItemController : BaseBehaviourController
     {
         protected virtual void Awake()
