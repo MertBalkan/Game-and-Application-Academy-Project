@@ -1,5 +1,4 @@
 using AcademyProject.Combats;
-using AcademyProject.SpecialEffects;
 using UnityEngine;
 
 namespace AcademyProject.Controllers

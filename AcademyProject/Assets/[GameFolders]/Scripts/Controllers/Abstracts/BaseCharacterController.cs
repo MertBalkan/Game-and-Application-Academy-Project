@@ -8,10 +8,10 @@ namespace AcademyProject.Controllers
     [RequireComponent(typeof(Rigidbody), typeof(Collider))]
     public abstract class BaseCharacterController : MonoBehaviour, IEntityController
     {
-        [SerializeField] private float movespeed = default;
-        [SerializeField] private float turnspeed = default;
+        [SerializeField] private float moveSpeed = default;
+        [SerializeField] private float turnSpeed = default;
         
-        public float TurnSpeed { get => turnspeed; set => value = turnspeed; }
-        public float MoveSpeed{ get => movespeed; set => value = movespeed; }
+        public float TurnSpeed { get => turnSpeed; set => value = turnSpeed; }
+        public float MoveSpeed{ get => moveSpeed; set => value = moveSpeed; }
     }
 }
