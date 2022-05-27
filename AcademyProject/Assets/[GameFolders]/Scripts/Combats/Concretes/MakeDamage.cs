@@ -19,7 +19,6 @@ namespace AcademyProject.Combats
         {
             if (collision.gameObject.tag.Equals("Enemy"))
                ApplyDamage(collision);
-
             
             SpawnEffect(collision);
         }
