@@ -165,7 +165,6 @@ namespace AcademyProject.Systems
             {
                 removedItem.gameObject.SetActive(true);
             }
-            
             _totalItems--;
         }
         
@@ -196,7 +195,6 @@ namespace AcademyProject.Systems
                     if (CheckIfSameType(ib, item))
                         indexOfSameTypeItem = index;
                 }
-
                 index++;
             }
             
@@ -240,7 +238,6 @@ namespace AcademyProject.Systems
                             break;
                         }   
                     }
-
                     index++;
                 }
 
