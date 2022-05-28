@@ -41,21 +41,21 @@ namespace AcademyProject.UIs
         {    
             if (_isCollect)
             {
-                _scoreText.transform.localScale = Vector3.Lerp
+                 _scoreText.transform.localScale = Vector3.Lerp
                 (
                     _scoreText.transform.localScale,
-                    new Vector3(0.75f, 0.75f, 0.75f),
+                    new Vector3(1.5f, 1.5f, 1.5f),
                     Time.deltaTime * 10
                 );
                 StartCoroutine(Collect());
             }
 
             if (!_isCollect)
-            {   
+            {  
                 _scoreText.transform.localScale = Vector3.Lerp
                 (
                     _scoreText.transform.localScale,
-                    new Vector3(1f, 1f, 1f),
+                    new Vector3(0.75f, 0.75f, 0.75f),
                     Time.deltaTime * 10
                 );
             }
