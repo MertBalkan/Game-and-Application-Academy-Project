@@ -4,6 +4,7 @@ using AcademyProject.Combats;
 using AcademyProject.Controllers;
 using AcademyProject.Systems;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace AcademyProject.UIs
 {
@@ -47,11 +48,11 @@ namespace AcademyProject.UIs
 
             int indexOfSameTypeItem = -1;
             var index = 0;
-            foreach (IBulletable IB in InventorySystem.Instance.ownedBulletTypes)
+            foreach (IBulletable ib in InventorySystem.Instance.ownedBulletTypes)
             {
-                if (IB != null || bulletItem != null)
+                if (ib != null || bulletItem != null)
                 {
-                    if (bulletItem != null && IB != null && IB.GetType() == bulletItem.GetType())
+                    if (bulletItem != null && ib != null && InventorySystem.Instance.CheckIfSameType(ib, bulletItem))
                     {
                         indexOfSameTypeItem = index;
                         break;

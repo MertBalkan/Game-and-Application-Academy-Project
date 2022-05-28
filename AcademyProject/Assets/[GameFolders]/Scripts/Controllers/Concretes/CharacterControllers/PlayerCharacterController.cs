@@ -14,7 +14,7 @@ namespace AcademyProject.Controllers
 
         private InventoryController _inventory;
 
-        [SerializeField] private Transform muzzle,  point;
+        [SerializeField] private Transform muzzle, point;
         
         public Transform Muzzle => muzzle;
         public Transform Point => point;

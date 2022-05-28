@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9079429631870347473}
   - component: {fileID: 661015014055848557}
   - component: {fileID: 6191590780497053262}
-  - component: {fileID: 4645199094489905494}
   m_Layer: 0
   m_Name: LegoPart
   m_TagString: Untagged
@@ -84,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4645199094489905494
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430029144385625044}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5309456707602973348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,17 +113,17 @@ PrefabInstance:
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5.145557
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.1039785
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.223
+      value: -3.8093984
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
@@ -184,6 +170,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Lego
       objectReference: {fileID: 0}
+    - target: {fileID: 3817773820885103204, guid: e3022ebe5fc370546ae370585ce546a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: lego
+      objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103207, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -211,8 +202,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemDataSO: {fileID: 11400000, guid: 86b5b784aca7cd649b3497b9533d9b33, type: 2}
   isInInventory: 0
-  stackQuantity: 0
+  stackQuantity: 1
   isDropped: 0
+  trap: {fileID: 0}
 --- !u!4 &9031282608005836997 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,

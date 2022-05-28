@@ -75,11 +75,6 @@ namespace AcademyProject.Systems
             ApplySingleton(this);
             InitializeItems();
         } 
-
-        private void Update()
-        {
-            Debug.Log("TOTAL BULLET COUNT: " + TotalBulletCount);
-        }   
         
         /// <summary>
         /// Initializing Items
@@ -107,7 +102,7 @@ namespace AcademyProject.Systems
             foreach (var i in items)
             {
                 if (i != null && i.GetComponent<IBulletable>() != null)
-                    if(i.GetType() == item.GetType())
+                    if(CheckIfSameType(i, item))
                         _isSame = true;
             }
             
@@ -126,7 +121,7 @@ namespace AcademyProject.Systems
                     }
                     catch (Exception e)
                     {
-                        Debug.Log("Type isn't a bullet");
+                        Debug.Log(e.Message + "Type isn't a bullet");
                     }
 
                     _totalItems++;
@@ -165,7 +160,6 @@ namespace AcademyProject.Systems
             {
                 removedItem.gameObject.SetActive(true);
             }
-            
             _totalItems--;
         }
         
@@ -189,16 +183,13 @@ namespace AcademyProject.Systems
             int indexOfSameTypeItem = -1;
 
             var index = 0;
-            foreach (IBulletable IB in ownedBulletTypes)
+            foreach (IBulletable ib in ownedBulletTypes)
             {
-                if (IB != null)
+                if (ib != null)
                 {
-                    if (IB.GetType() == item.GetType())
-                    {
+                    if (CheckIfSameType(ib, item))
                         indexOfSameTypeItem = index;
-                    }   
                 }
-
                 index++;
             }
             
@@ -215,13 +206,7 @@ namespace AcademyProject.Systems
                     ownedBulletTypes[firstEmpty] = item;
                     ownedBulletCounts[firstEmpty] = item.AmmoCount();
                 }
-                else
-                {
-                    //SLOT YOK
-                }
             }
-
-            
             item.BulletDataSO.TotalBulletCount += item.AmmoCount();
             Debug.Log(item.ToString() + " itemi'nin su an " + item.BulletDataSO.TotalBulletCount + " kadar bullet'i var");
             
@@ -242,13 +227,12 @@ namespace AcademyProject.Systems
                 {
                     if (bulletable != null)
                     {
-                        if (bulletable.GetType() == shotItem.GetType())
+                        if (CheckIfSameType(bulletable, shotItem))
                         {
                             indexOfSameTypeItem = index;
                             break;
                         }   
                     }
-
                     index++;
                 }
 
@@ -265,16 +249,10 @@ namespace AcademyProject.Systems
             }
         }
         
-        public bool CheckIfSameType(object A, object B)
+        public bool CheckIfSameType(object a, object b)
         {
-            if (A.GetType() == B.GetType())
-            {
-                return true;
-            }
-            else
-            {
-                return false;   
-            }
+            if (a.GetType() == b.GetType()) return true;
+            return false;   
         }
     }
 }
