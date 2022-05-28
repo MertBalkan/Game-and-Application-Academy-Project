@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: NailDamageData
   m_EditorClassIdentifier: 
   damageHitCount: 25
-  gainedPoints: 25
+  gainedPoints: 5
   effectPrefab: {fileID: 0}

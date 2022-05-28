@@ -1,4 +1,5 @@
 using System.Collections;
+using AcademyProject.Managers;
 using AcademyProject.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -29,6 +30,7 @@ namespace AcademyProject.Combats
             if(enemyHealth.Equals(null)) return;
         
             enemyHealth.TakeDamage(damageDataSO.damageHitCount);
+            GameManager.Instance.ScoreUpdated(damageDataSO.gainedPoints);
             if(enemyHealth.IsDead) Destroy(enemyHealth.gameObject);
         }
 

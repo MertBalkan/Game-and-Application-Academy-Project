@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LegoDamageableData
   m_EditorClassIdentifier: 
   damageHitCount: 25
-  gainedPoints: 25
+  gainedPoints: 15
   effectPrefab: {fileID: 0}

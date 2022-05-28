@@ -75,11 +75,6 @@ namespace AcademyProject.Systems
             ApplySingleton(this);
             InitializeItems();
         } 
-
-        private void Update()
-        {
-            Debug.Log("TOTAL BULLET COUNT: " + TotalBulletCount);
-        }   
         
         /// <summary>
         /// Initializing Items
