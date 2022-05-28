@@ -30,7 +30,7 @@ namespace AcademyProject.Combats
             if(enemyHealth.Equals(null)) return;
         
             enemyHealth.TakeDamage(damageDataSO.damageHitCount);
-            GameManager.Instance.ScoreUpdated(damageDataSO.gainedPoints);
+            GameManager.Instance.UpdateScore(damageDataSO.gainedPoints);
             if(enemyHealth.IsDead) Destroy(enemyHealth.gameObject);
         }
 

@@ -17,7 +17,7 @@ namespace AcademyProject.Managers
             ApplySingleton(this);
         }
 
-        public void ScoreUpdated(int score)
+        public void UpdateScore(int score)
         {
             _totalScore += score;
             OnScoreChanged?.Invoke(score);
