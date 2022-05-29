@@ -1,5 +1,6 @@
 using System;
 using AcademyProject.AIs;
+using AcademyProject.Controllers;
 using AcademyProject.States;
 using UnityEngine;
 
@@ -14,9 +15,12 @@ namespace AcademyProject.Managers
         
         private ILevelState _currentLevelState;
         private LevelStateMachine _levelStateMachine;
+
+        private SpawnerController _spawnerController;
         
         private void Awake()
         {
+            _spawnerController = FindObjectOfType<SpawnerController>();
             _levelStateMachine = new LevelStateMachine(new WaitLevelState());
             
             // _currentLevelState = new SpawnState()
@@ -35,12 +39,15 @@ namespace AcademyProject.Managers
         {
             PrintState();
             // Just for test...
-            _levelStateMachine.NextLevelState(_currentLevelState = new SpawnEnemiesState(), ()=>Input.GetKeyDown(KeyCode.P));
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                _levelStateMachine.NextLevelState(_currentLevelState = new SpawnEnemiesState(), _spawnerController.StartToSpawnEnemy(true));
+            }
         }
 
         private void PrintState()
         {
-            _levelStateMachine.ReturnCurrentLevelState().LevelUpdateState();
+            _levelStateMachine.ReturnCurrentLevelState().OnLevelStateEnter();
         }
     }   
 }

@@ -1,4 +1,5 @@
 using AcademyProject.AIs;
+using UnityEngine;
 using UnityEngine.AI;
 
 namespace AcademyProject.Controllers
@@ -8,6 +9,8 @@ namespace AcademyProject.Controllers
         private NavMeshAgent _navMeshAgent;
         private PlayerCharacterController _player;
 
+        // public GameObject enemyObject => this.gameObject;
+        
         private void Awake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -19,5 +22,6 @@ namespace AcademyProject.Controllers
             if(_player == null) return;
             _navMeshAgent.SetDestination(_player.transform.position);
         }
+
     }
 }
