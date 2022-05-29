@@ -35,7 +35,7 @@ namespace AcademyProject.Managers
         {
             _levelStateMachine.ReturnCurrentLevelState().LevelUpdateState();
             // Just for test...
-            _levelStateMachine.NextLevelState(new SpawnEnemiesState(), ()=>Input.GetKeyDown(KeyCode.P));
+            _levelStateMachine.NextLevelState(_currentLevelState = new SpawnEnemiesState(), ()=>Input.GetKeyDown(KeyCode.P));
         }
     }   
 }
