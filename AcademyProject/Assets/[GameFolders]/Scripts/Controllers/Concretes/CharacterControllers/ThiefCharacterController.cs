@@ -1,8 +1,9 @@
+using AcademyProject.AIs;
 using UnityEngine.AI;
 
 namespace AcademyProject.Controllers
 {
-    public class ThiefCharacterController : BaseCharacterController
+    public class ThiefCharacterController : BaseCharacterController, IEnemyAI
     {
         private NavMeshAgent _navMeshAgent;
         private PlayerCharacterController _player;

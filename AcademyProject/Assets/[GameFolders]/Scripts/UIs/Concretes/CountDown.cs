@@ -6,31 +6,46 @@ namespace AcademyProject.UIs
 {
     public class CountDown : MonoBehaviour
     {
-        [SerializeField] private Image _time;
-        [SerializeField] private Text _timeText;
-        [SerializeField]private float _currentTime;
-        [SerializeField] private float _duration;
+        [SerializeField] private Image time;
+        [SerializeField] private Text timeText;
+        [SerializeField]private float currentTime;
+        [SerializeField] private float duration;
+
+        private float _minute;
+        private float _seconds;
+
+        public float Minute
+        {
+            get => _minute;
+            set => _minute = value;
+        }
+        public float Seconds
+        {
+            get => _seconds;
+            set => _seconds = value;
+        }
+
         void Start()
         {
-            _currentTime = _duration;
-            float minute = Mathf.FloorToInt(_currentTime / 60);
-            float seconds = Mathf.FloorToInt(_currentTime % 60);
-            _timeText.text = string.Format("{0:00}:{1:00}", minute, seconds);
+            currentTime = duration;
+            _minute = Mathf.FloorToInt(currentTime / 60);
+            _seconds = Mathf.FloorToInt(currentTime % 60);
+            timeText.text = string.Format("{0:00}:{1:00}", _minute, _seconds);
             StartCoroutine(CountdownTime());
         
         }
 
         private IEnumerator CountdownTime()
         {
-            while (_currentTime >= 0)
+            while (currentTime >= 0)
             {
-                _time.fillAmount = Mathf.InverseLerp(0, _duration, _currentTime);
-                float minute = Mathf.FloorToInt(_currentTime / 60);
-                float seconds = Mathf.FloorToInt(_currentTime % 60);
-                _timeText.text = string.Format("{0:00}:{1:00}", minute, seconds);
+                time.fillAmount = Mathf.InverseLerp(0, duration, currentTime);
+                _minute = Mathf.FloorToInt(currentTime / 60);
+                _seconds = Mathf.FloorToInt(currentTime % 60);
+                timeText.text = string.Format("{0:00}:{1:00}", _minute, _seconds);
                 yield return new WaitForSeconds(1f);
-                _currentTime--;
-                _time.fillAmount = _currentTime;
+                currentTime--;
+                time.fillAmount = currentTime;
             }
             yield return null;
         }
