@@ -1,7 +1,7 @@
-using System;
 using AcademyProject.AIs;
 using AcademyProject.Controllers;
 using AcademyProject.States;
+using AcademyProject.UIs;
 using UnityEngine;
 
 namespace AcademyProject.Managers
@@ -11,15 +11,16 @@ namespace AcademyProject.Managers
     /// </summary>
     public class LevelManager : MonoBehaviour
     {
-        private IEnemyAI[] _enemies;
-        
-        private ILevelState _currentLevelState;
         private LevelStateMachine _levelStateMachine;
-
         private SpawnerController _spawnerController;
+        private CountDown _timeUI;
+        
+        private IEnemyAI[] _enemies;
+        private ILevelState _currentLevelState;
         
         private void Awake()
         {
+            _timeUI = FindObjectOfType<CountDown>();
             _spawnerController = FindObjectOfType<SpawnerController>();
             _levelStateMachine = new LevelStateMachine(new WaitLevelState());
             
@@ -33,18 +34,14 @@ namespace AcademyProject.Managers
         {
             _currentLevelState = _levelStateMachine.ReturnCurrentLevelState();
         }
-        
 
         private void Update()
         {
-            PrintState();
-            // Just for test...
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                _levelStateMachine.NextLevelState(_currentLevelState = new SpawnEnemiesState(), _spawnerController.StartToSpawnEnemy(true));
-            }
-        }
+            _levelStateMachine.NextLevelState(_currentLevelState = new SpawnEnemiesState(_spawnerController), 
+                ()=>_timeUI.IsTimerFinished);
 
+            _levelStateMachine.ReturnCurrentLevelState().OnLevelStateExit();
+        }
         private void PrintState()
         {
             _levelStateMachine.ReturnCurrentLevelState().OnLevelStateEnter();

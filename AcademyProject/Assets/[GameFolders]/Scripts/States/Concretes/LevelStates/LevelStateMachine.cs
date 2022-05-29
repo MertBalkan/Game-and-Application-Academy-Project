@@ -16,7 +16,7 @@ namespace AcademyProject.States
             if (!condition.Invoke()) return;
             
             _currentState = levelState;
-            levelState.LevelUpdateState();
+            levelState.OnLevelStateEnter();
         }
 
         public ILevelState ReturnCurrentLevelState()

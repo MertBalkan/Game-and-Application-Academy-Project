@@ -1,12 +1,19 @@
+using AcademyProject.Controllers;
 using UnityEngine;
 
 namespace AcademyProject.States
 {
     public class SpawnEnemiesState : ILevelState
     {
+        private SpawnerController _spawner;
+        
+        public SpawnEnemiesState(SpawnerController spawner)
+        {
+            _spawner = spawner;
+        }
         public void OnLevelStateEnter()
         {
-            Debug.Log("SpawnEnemiesState OnLevelStateEnter");
+            _spawner.StartToSpawnEnemy(true);
         }
 
         public void LevelUpdateState()
@@ -16,7 +23,7 @@ namespace AcademyProject.States
 
         public void OnLevelStateExit()
         {
-            Debug.Log("SpawnEnemiesState OnLevelStateExit");
+            _spawner.StartToSpawnEnemy(false);
         }
     }
 }

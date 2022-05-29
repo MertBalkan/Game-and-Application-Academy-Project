@@ -11,23 +11,18 @@ namespace AcademyProject.Controllers
         private List<SpawnPointController> _spawnPoints;
         [SerializeField] private BaseCharacterController enemy;
 
-        public event Func<bool> OnStartSpawned;
-
         private void Start()
         {
             _spawnPoints = FindObjectsOfType<SpawnPointController>().ToList();
-            OnStartSpawned += () => true;
         }
 
-        public Func<bool> StartToSpawnEnemy(bool obj)
+        public void StartToSpawnEnemy(bool spawnCondition)
         {
-            if (obj)
+            if (spawnCondition)
             {
                 foreach (var spawnPoint in _spawnPoints)
                     Instantiate(enemy, spawnPoint.transform.position, Quaternion.identity);      
             }
-
-            return OnStartSpawned;
         }
     }
 }

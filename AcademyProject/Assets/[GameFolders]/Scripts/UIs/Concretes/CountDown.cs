@@ -13,17 +13,8 @@ namespace AcademyProject.UIs
 
         private float _minute;
         private float _seconds;
-
-        public float Minute
-        {
-            get => _minute;
-            set => _minute = value;
-        }
-        public float Seconds
-        {
-            get => _seconds;
-            set => _seconds = value;
-        }
+        
+        public bool IsTimerFinished => (_minute == 0 && _seconds == 0);
 
         void Start()
         {
