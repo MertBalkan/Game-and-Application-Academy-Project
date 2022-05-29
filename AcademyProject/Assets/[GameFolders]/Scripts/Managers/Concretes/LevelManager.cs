@@ -17,7 +17,7 @@ namespace AcademyProject.Managers
         
         private IEnemyAI[] _enemies;
         private ILevelState _currentLevelState;
-        
+
         private void Awake()
         {
             _timeUI = FindObjectOfType<CountDown>();
@@ -39,8 +39,6 @@ namespace AcademyProject.Managers
         {
             _levelStateMachine.NextLevelState(_currentLevelState = new SpawnEnemiesState(_spawnerController), 
                 ()=>_timeUI.IsTimerFinished);
-
-            _levelStateMachine.ReturnCurrentLevelState().OnLevelStateExit();
         }
         private void PrintState()
         {

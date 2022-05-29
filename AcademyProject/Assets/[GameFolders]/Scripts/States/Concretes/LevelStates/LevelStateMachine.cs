@@ -16,6 +16,7 @@ namespace AcademyProject.States
             if (!condition.Invoke()) return;
             
             _currentState = levelState;
+            Debug.Log(_currentState);
             levelState.OnLevelStateEnter();
         }
 

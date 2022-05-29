@@ -7,8 +7,8 @@ namespace AcademyProject.UIs
     public class CountDown : MonoBehaviour
     {
         [SerializeField] private Image time;
-        [SerializeField] private Text timeText;
-        [SerializeField]private float currentTime;
+        [SerializeField] private Text  timeText;
+        [SerializeField] private float currentTime;
         [SerializeField] private float duration;
 
         private float _minute;

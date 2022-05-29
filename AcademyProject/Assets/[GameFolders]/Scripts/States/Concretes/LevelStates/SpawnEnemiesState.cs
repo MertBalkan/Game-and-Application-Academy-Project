@@ -6,6 +6,7 @@ namespace AcademyProject.States
     public class SpawnEnemiesState : ILevelState
     {
         private SpawnerController _spawner;
+        private bool _isSpawned;
         
         public SpawnEnemiesState(SpawnerController spawner)
         {
