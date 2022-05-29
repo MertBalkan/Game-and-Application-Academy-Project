@@ -11,8 +11,10 @@ namespace AcademyProject.States
             _currentState = currentState;
         }
         
-        public void NextLevelState(ILevelState levelState)
+        public void NextLevelState(ILevelState levelState, System.Func<bool> condition)
         {
+            if (!condition.Invoke()) return;
+            
             _currentState = levelState;
             levelState.LevelUpdateState();
         }
