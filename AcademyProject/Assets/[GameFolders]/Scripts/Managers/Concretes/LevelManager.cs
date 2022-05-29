@@ -33,9 +33,14 @@ namespace AcademyProject.Managers
 
         private void Update()
         {
-            _levelStateMachine.ReturnCurrentLevelState().LevelUpdateState();
+            PrintState();
             // Just for test...
             _levelStateMachine.NextLevelState(_currentLevelState = new SpawnEnemiesState(), ()=>Input.GetKeyDown(KeyCode.P));
+        }
+
+        private void PrintState()
+        {
+            _levelStateMachine.ReturnCurrentLevelState().LevelUpdateState();
         }
     }   
 }
