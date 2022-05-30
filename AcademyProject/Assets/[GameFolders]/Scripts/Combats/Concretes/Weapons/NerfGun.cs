@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Bilye : MonoBehaviour
+public class NerfGun : MonoBehaviour
 {
     [SerializeField] Transform _player;
     public Transform top, namlu, mermi, nokta;
@@ -24,8 +24,8 @@ public class Bilye : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange,player);//playerim yanýnda
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange,player);//yanýndaysa saldýr
+        playerInSightRange = Physics.CheckSphere(transform.position, sightRange,player);//playerim yanï¿½nda
+        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange,player);//yanï¿½ndaysa saldï¿½r
         if (playerInSightRange && playerInAttackRange) 
         {
             
@@ -49,7 +49,7 @@ public class Bilye : MonoBehaviour
  //Instantiate(sphere, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             Rigidbody rb = Instantiate(mermi, nokta.position, namlu.rotation).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 25f,ForceMode.Impulse);//ileri   
-            rb.AddForce(transform.up * 7f, ForceMode.Impulse);//yukarý
+            rb.AddForce(transform.up * 7f, ForceMode.Impulse);//yukarï¿½
 
             AlreadyAttack = true;
              Invoke(nameof(resetAttack), timeBetweenAttacks);

@@ -15,7 +15,7 @@ namespace AcademyProject.UIs
         private float _seconds;
         
         public bool IsTimerFinished => (_minute == 0 && _seconds == 0);
-
+        
         void Start()
         {
             currentTime = duration;

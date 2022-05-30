@@ -17,13 +17,16 @@ namespace AcademyProject.Managers
         
         private IEnemyAI[] _enemies;
         private ILevelState _currentLevelState;
+        private ILevelState _nextLevelState;
+
+        private bool _isSpawnStateDone = false;
 
         private void Awake()
         {
             _timeUI = FindObjectOfType<CountDown>();
             _spawnerController = FindObjectOfType<SpawnerController>();
-            _levelStateMachine = new LevelStateMachine(new WaitLevelState());
-            
+            _levelStateMachine = new LevelStateMachine(new SpawnEnemiesState(_spawnerController));
+
             // _currentLevelState = new SpawnState()
             // _currentLevelState = new PlayLevelState()
             // _currentLevelState = new WaveEndState()
@@ -37,12 +40,10 @@ namespace AcademyProject.Managers
 
         private void Update()
         {
-            _levelStateMachine.NextLevelState(_currentLevelState = new SpawnEnemiesState(_spawnerController), 
-                ()=>_timeUI.IsTimerFinished);
-        }
-        private void PrintState()
-        {
-            _levelStateMachine.ReturnCurrentLevelState().OnLevelStateEnter();
+            if(!_isSpawnStateDone && _timeUI.IsTimerFinished){
+                _levelStateMachine.NextLevelState(_currentLevelState, ()=>_timeUI.IsTimerFinished);
+                _isSpawnStateDone = true;
+            }
         }
     }   
 }

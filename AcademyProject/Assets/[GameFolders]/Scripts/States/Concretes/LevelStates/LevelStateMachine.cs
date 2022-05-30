@@ -17,7 +17,7 @@ namespace AcademyProject.States
             
             _currentState = levelState;
             Debug.Log(_currentState);
-            levelState.OnLevelStateEnter();
+            _currentState.OnLevelStateEnter();
         }
 
         public ILevelState ReturnCurrentLevelState()
