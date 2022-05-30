@@ -1,8 +1,5 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using AcademyProject.Controllers;
-using AcademyProject.UIs;
 using UnityEngine;
 
 namespace AcademyProject.Managers
