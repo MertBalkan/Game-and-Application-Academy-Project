@@ -208,7 +208,6 @@ namespace AcademyProject.Systems
                 }
             }
             item.BulletDataSO.TotalBulletCount += item.AmmoCount();
-            Debug.Log(item.ToString() + " itemi'nin su an " + item.BulletDataSO.TotalBulletCount + " kadar bullet'i var");
             
             if (!item.IsDropped)
                 item.BulletDataSO.TotalBulletCount += item.AmmoCount();

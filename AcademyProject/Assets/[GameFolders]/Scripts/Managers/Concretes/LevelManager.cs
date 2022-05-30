@@ -15,7 +15,6 @@ namespace AcademyProject.Managers
         private SpawnerController _spawnerController;
         private CountDown _timeUI;
         
-        private IEnemyAI[] _enemies;
         private ILevelState _currentLevelState;
         private ILevelState _nextLevelState;
 
@@ -27,8 +26,6 @@ namespace AcademyProject.Managers
             _spawnerController = FindObjectOfType<SpawnerController>();
             _levelStateMachine = new LevelStateMachine(new SpawnEnemiesState(_spawnerController));
 
-            // _currentLevelState = new SpawnState()
-            // _currentLevelState = new PlayLevelState()
             // _currentLevelState = new WaveEndState()
             // _currentLevelState = new FinishGameState();
         }

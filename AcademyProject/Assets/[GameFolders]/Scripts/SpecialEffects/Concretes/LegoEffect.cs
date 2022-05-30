@@ -20,7 +20,7 @@ namespace AcademyProject.SpecialEffects
 
         public void ApplyEffect(Collision collision)
         {
-            var enemy = collision.gameObject.GetComponent<ThiefCharacterController>();
+            var enemy = collision.gameObject.GetComponent<EnemyController>();
             if(enemy == null) return;
             Debug.Log("DESTROYLANDI");
             Destroy(enemy); // for now
