@@ -388,7 +388,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51339645}
-  m_LocalRotation: {x: 0.3642975, y: 0.0038946648, z: -0.0015235234, w: 0.9312733}
+  m_LocalRotation: {x: 0.3642975, y: 0.0038947102, z: -0.0015235409, w: 0.9312733}
   m_LocalPosition: {x: 0, y: 15, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2365,7 +2365,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.3642975, y: 0.0038946648, z: -0.0015235234, w: 0.9312733}
+  m_LocalRotation: {x: 0.3642975, y: 0.0038947102, z: -0.0015235409, w: 0.9312733}
   m_LocalPosition: {x: 0, y: 15, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2835,7 +2835,7 @@ PrefabInstance:
     - target: {fileID: 2950174103788222569, guid: 518f8688aa9736542abd33075ab5278e,
         type: 3}
       propertyPath: duration
-      value: 2
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2950174103788222569, guid: 518f8688aa9736542abd33075ab5278e,
         type: 3}
@@ -5232,7 +5232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762739777}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.31, y: -0.00000030609982, z: 3.648994e-14}
+  m_LocalPosition: {x: 0, y: -0.00000030609982, z: 3.648994e-14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5821,41 +5821,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 877333849}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &930194851 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1604902003781680388, guid: baca278d7f28e6d4994ef18bccbfb554,
-    type: 3}
-  m_PrefabInstance: {fileID: 4254882235493180475}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &930194856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930194851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b3e5b5ef37c21c4b9d658b992a15e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 0}
-  top: {fileID: 0}
-  namlu: {fileID: 0}
-  mermi: {fileID: 0}
-  nokta: {fileID: 0}
-  AlreadyAttack: 0
-  timeBetweenAttacks: 0
-  ground:
-    serializedVersion: 2
-    m_Bits: 0
-  player:
-    serializedVersion: 2
-    m_Bits: 0
-  sightRange: 0
-  attackRange: 0
-  playerInSightRange: 0
-  playerInAttackRange: 0
 --- !u!1 &962702649
 GameObject:
   m_ObjectHideFlags: 0
@@ -25776,6 +25741,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: P_NerfGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254882235293489723, guid: baca278d7f28e6d4994ef18bccbfb554,
+        type: 3}
+      propertyPath: mermi
+      value: 
+      objectReference: {fileID: 8631630180081560220, guid: 5a19cd2c430d7b649aeadbd5be9f7084,
+        type: 3}
+    - target: {fileID: 4254882235293489723, guid: baca278d7f28e6d4994ef18bccbfb554,
+        type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254882235293489723, guid: baca278d7f28e6d4994ef18bccbfb554,
+        type: 3}
+      propertyPath: player.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baca278d7f28e6d4994ef18bccbfb554, type: 3}
