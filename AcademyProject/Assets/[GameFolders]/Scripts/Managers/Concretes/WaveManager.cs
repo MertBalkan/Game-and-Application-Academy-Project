@@ -16,7 +16,6 @@ namespace AcademyProject.Managers
         [SerializeField] private int enemyCoefficientPerWave;
         
         private List<EnemyController> _enemies;
-        private CountDown _countDown;
         private int _totalSpawnPointCount;
         private int _deadEnemyCount;
         private int _currentWave = 1;
@@ -40,7 +39,6 @@ namespace AcademyProject.Managers
         private void Awake()
         {
             ApplySingleton(this);
-            _countDown = FindObjectOfType<CountDown>();
             _enemies = new List<EnemyController>();
         }
 
