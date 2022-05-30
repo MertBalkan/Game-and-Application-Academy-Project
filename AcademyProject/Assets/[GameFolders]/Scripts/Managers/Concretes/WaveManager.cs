@@ -19,11 +19,11 @@ namespace AcademyProject.Managers
         private CountDown _countDown;
         private int _totalSpawnPointCount;
         private int _deadEnemyCount;
-        private int _currrentWave = 1;
+        private int _currentWave = 1;
         private int _currentWaveEnemyCount;
 
         public event System.Action OnWaveFinished;
-        public bool CanPassNextWave => _currrentWave <= maxWaveCount;
+        public bool CanPassNextWave => _deadEnemyCount == _currentWaveEnemyCount;
 
         public int CurrentWaveEnemyCount
         {
@@ -51,19 +51,9 @@ namespace AcademyProject.Managers
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                FinishWave();
-                Debug.Log("WAVE FINISHED!");
-            }
+            FinishWave();
 
-            if (_deadEnemyCount == _currentWaveEnemyCount)
-            {
-                _currrentWave++;
-                _currentWaveEnemyCount = -1;
-            }
-
-            Debug.Log("CURRENT WAVE:" + _currrentWave);
+            Debug.Log("CURRENT WAVE:" + _currentWave);
         }
 
         public void SetEnemies(EnemyController enemy)
@@ -71,11 +61,18 @@ namespace AcademyProject.Managers
             _enemies.Add(enemy);
         }
 
+        public void StartWave()
+        {
+            Debug.Log("New wave started");
+            _currentWave++;
+        }
+        
         public void FinishWave()
         {
             if (CanPassNextWave)
             {
                 OnWaveFinished?.Invoke();
+                _currentWaveEnemyCount = -1;
             }
         }
 

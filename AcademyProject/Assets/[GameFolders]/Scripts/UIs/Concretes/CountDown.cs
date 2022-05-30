@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using AcademyProject.Managers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,7 +25,20 @@ namespace AcademyProject.UIs
             _seconds = Mathf.FloorToInt(currentTime % 60);
             timeText.text = string.Format("{0:00}:{1:00}", _minute, _seconds);
             StartCoroutine(CountdownTime());
-        
+
+            WaveManager.Instance.OnWaveFinished += HandleOnWaveFinished;
+        }
+
+        private void OnDisable()
+        {  
+            WaveManager.Instance.OnWaveFinished -= HandleOnWaveFinished;
+        }
+
+        private void HandleOnWaveFinished()
+        {
+            currentTime = 3; // hardcode for now
+            StartCoroutine(CountdownTime());
+            WaveManager.Instance.StartWave();
         }
 
         private IEnumerator CountdownTime()
