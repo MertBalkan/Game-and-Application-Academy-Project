@@ -46,6 +46,7 @@ namespace AcademyProject.Managers
 
         private void Start()
         {
+            _currentWaveEnemyCount = -1;
         }
 
         private void Update()
@@ -55,9 +56,12 @@ namespace AcademyProject.Managers
                 FinishWave();
                 Debug.Log("WAVE FINISHED!");
             }
-            
+
             if (_deadEnemyCount == _currentWaveEnemyCount)
+            {
                 _currrentWave++;
+                _currentWaveEnemyCount = -1;
+            }
 
             Debug.Log("CURRENT WAVE:" + _currrentWave);
         }
