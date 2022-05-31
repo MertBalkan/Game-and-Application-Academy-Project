@@ -10,9 +10,9 @@ namespace AcademyProject.Managers
     public class WaveManager : SingletonMonoBehaviour<WaveManager>
     {
         [SerializeField] private int maxWaveCount;
-        [SerializeField] private int enemyCoefficientPerWave;
         
         private List<EnemyController> _enemies;
+
         private int _totalSpawnPointCount;
         private int _deadEnemyCount;
         private int _currentWave = 1;
@@ -23,19 +23,16 @@ namespace AcademyProject.Managers
 
         public int DeadEnemyCount
         {
-            get => _deadEnemyCount;
             set => _deadEnemyCount = value;
         }
         
         public int CurrentWaveEnemyCount
         {
-            get => _currentWaveEnemyCount;
             set => _currentWaveEnemyCount = value;
         }
         
         public int TotalSpawnPointCount
         {
-            get => _totalSpawnPointCount;
             set =>  _totalSpawnPointCount = value;
         }
                 
@@ -54,8 +51,6 @@ namespace AcademyProject.Managers
         {
             if(maxWaveCount == _currentWave) return;
             FinishWave();
-
-            Debug.Log("CURRENT WAVE:" + _currentWave);
         }
 
         public void SetEnemies(EnemyController enemy)
@@ -65,7 +60,6 @@ namespace AcademyProject.Managers
 
         public void StartWave()
         {
-            Debug.Log("New wave started");
             _currentWave++;
         }
         
@@ -83,6 +77,5 @@ namespace AcademyProject.Managers
             _deadEnemyCount += 1;
             _enemies.Remove(enemy);
         }
-
     }
 }

@@ -34,8 +34,8 @@ namespace AcademyProject.Controllers
                 for (var index = 0; index < _spawnPoints.Count; index++)
                 {
                     var spawnPoint = _spawnPoints[index];
-
                     var enemyController = Instantiate(enemy, spawnPoint.transform.position, Quaternion.identity);
+                    
                     WaveManager.Instance.SetEnemies(enemyController);
                 }
                 WaveManager.Instance.CurrentWaveEnemyCount = _spawnPoints.Count;
