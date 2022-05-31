@@ -21,6 +21,12 @@ namespace AcademyProject.Managers
         public event System.Action OnWaveFinished;
         public bool CanPassNextWave => _deadEnemyCount == _currentWaveEnemyCount;
 
+        public int DeadEnemyCount
+        {
+            get => _deadEnemyCount;
+            set => _deadEnemyCount = value;
+        }
+        
         public int CurrentWaveEnemyCount
         {
             get => _currentWaveEnemyCount;
@@ -76,5 +82,6 @@ namespace AcademyProject.Managers
             _deadEnemyCount += 1;
             _enemies.Remove(enemy);
         }
+
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AcademyProject.AIs;
 using AcademyProject.Managers;
+using AcademyProject.UIs;
 using UnityEngine;
 
 namespace AcademyProject.Controllers
@@ -12,7 +13,14 @@ namespace AcademyProject.Controllers
         private List<SpawnPointController> _spawnPoints;
         [SerializeField] private EnemyController enemy;
 
-        
+
+        private CountDown _countDown;
+
+        private void Awake()
+        {
+            _countDown = FindObjectOfType<CountDown>();
+        }
+
         private void Start()
         {
             _spawnPoints = FindObjectsOfType<SpawnPointController>().ToList();
@@ -21,7 +29,7 @@ namespace AcademyProject.Controllers
 
         public void StartToSpawnEnemy(bool spawnCondition)
         {
-            if (spawnCondition)
+            if (spawnCondition && _countDown.IsTimerFinished)
             {
                 for (var index = 0; index < _spawnPoints.Count; index++)
                 {

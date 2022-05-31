@@ -1,3 +1,4 @@
+using System.Collections;
 using AcademyProject.AIs;
 using AcademyProject.Controllers;
 using AcademyProject.States;
@@ -9,7 +10,7 @@ namespace AcademyProject.Managers
     /// <summary>
     /// Controlling Level From Level Manager
     /// </summary>
-    public class LevelManager : MonoBehaviour
+    public class LevelManager : SingletonMonoBehaviour<LevelManager>
     {
         private LevelStateMachine _levelStateMachine;
         private SpawnerController _spawnerController;
@@ -20,8 +21,15 @@ namespace AcademyProject.Managers
 
         private bool _isSpawnStateDone = false;
 
+        public bool IsSpawnStateDone
+        {
+            get => _isSpawnStateDone;
+            set => _isSpawnStateDone = value;
+        }
+        
         private void Awake()
         {
+            ApplySingleton(this);
             _timeUI = FindObjectOfType<CountDown>();
             _spawnerController = FindObjectOfType<SpawnerController>();
             _levelStateMachine = new LevelStateMachine(new SpawnEnemiesState(_spawnerController));

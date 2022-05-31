@@ -38,7 +38,11 @@ namespace AcademyProject.UIs
         {
             currentTime = 3; // hardcode for now
             StartCoroutine(CountdownTime());
+            
+            //-----MANAGERS-----\\
             WaveManager.Instance.StartWave();
+            LevelManager.Instance.IsSpawnStateDone = false;
+            WaveManager.Instance.DeadEnemyCount = 0;
         }
 
         private IEnumerator CountdownTime()
