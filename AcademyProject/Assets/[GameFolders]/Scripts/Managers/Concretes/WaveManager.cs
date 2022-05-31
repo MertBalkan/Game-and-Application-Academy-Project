@@ -18,24 +18,15 @@ namespace AcademyProject.Managers
         private int _currentWave = 1;
         private int _currentWaveEnemyCount;
 
+        public event System.Action OnWaveStarted;
         public event System.Action OnWaveFinished;
         public bool CanPassNextWave => _deadEnemyCount == _currentWaveEnemyCount;
 
-        public int DeadEnemyCount
-        {
-            set => _deadEnemyCount = value;
-        }
+        public int DeadEnemyCount { set => _deadEnemyCount = value; }
+        public int CurrentWaveEnemyCount { set => _currentWaveEnemyCount = value; }
+        public int TotalSpawnPointCount { set =>  _totalSpawnPointCount = value; }
+        public int CurrentWave => _currentWave;
         
-        public int CurrentWaveEnemyCount
-        {
-            set => _currentWaveEnemyCount = value;
-        }
-        
-        public int TotalSpawnPointCount
-        {
-            set =>  _totalSpawnPointCount = value;
-        }
-                
         private void Awake()
         {
             ApplySingleton(this);
@@ -61,6 +52,7 @@ namespace AcademyProject.Managers
         public void StartWave()
         {
             _currentWave++;
+            OnWaveStarted?.Invoke();
         }
         
         public void FinishWave()
