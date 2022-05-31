@@ -49,9 +49,12 @@ namespace AcademyProject.Combats
             if (Physics.Raycast(ray, out hit, 1000))
             {
                 if(hit.collider.gameObject.Equals(_player.gameObject)) return;
+                // if(hit.collider.gameObject.GetComponent<EnemyController>()) return;
+                
                 Vector3 pos = (hit.point - _player.transform.position).normalized;
                 _lookRot = Quaternion.LookRotation(pos);
                 _lookRot.x = 0;
+                _lookRot.z = 0;
                 _player.transform.rotation = Quaternion.RotateTowards(_player.transform.rotation, _lookRot, 1000 * Time.deltaTime);
             }
         }
