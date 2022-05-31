@@ -52,6 +52,7 @@ namespace AcademyProject.Managers
 
         private void Update()
         {
+            if(maxWaveCount == _currentWave) return;
             FinishWave();
 
             Debug.Log("CURRENT WAVE:" + _currentWave);
