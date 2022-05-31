@@ -74,6 +74,7 @@ namespace AcademyProject.Combats
                         _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, false);
                         ResetSlingForce();
 
+                        CursorManager.Instance.SetNormalCursor();
                         InventorySystem.Instance.DecreaseBulletCount(slot.whichObjectIHave.GetComponent<IBulletable>());
                     }
                 }
@@ -92,6 +93,7 @@ namespace AcademyProject.Combats
                     if (InventorySystem.Instance.HasBulletInInventory)
                     {
                         SlingLogic();
+                        CursorManager.Instance.SetFireCursor();
                         _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, true);
                     }
                 }

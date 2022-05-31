@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using AcademyProject.Managers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,31 +8,54 @@ namespace AcademyProject.UIs
 {
     public class CountDown : MonoBehaviour
     {
-        [SerializeField] private Image _time;
-        [SerializeField] private Text _timeText;
-        [SerializeField]private float _currentTime;
-        [SerializeField] private float _duration;
+        [SerializeField] private Image time;
+        [SerializeField] private Text  timeText;
+        [SerializeField] private float currentTime;
+        [SerializeField] private float duration;
+
+        private float _minute;
+        private float _seconds;
+        
+        public bool IsTimerFinished => (_minute == 0 && _seconds == 0);
+        
         void Start()
         {
-            _currentTime = _duration;
-            float minute = Mathf.FloorToInt(_currentTime / 60);
-            float seconds = Mathf.FloorToInt(_currentTime % 60);
-            _timeText.text = string.Format("{0:00}:{1:00}", minute, seconds);
+            currentTime = duration;
+            _minute = Mathf.FloorToInt(currentTime / 60);
+            _seconds = Mathf.FloorToInt(currentTime % 60);
+            timeText.text = string.Format("{0:00}:{1:00}", _minute, _seconds);
             StartCoroutine(CountdownTime());
-        
+
+            WaveManager.Instance.OnWaveFinished += HandleOnWaveFinished;
+        }
+
+        private void OnDisable()
+        {  
+            WaveManager.Instance.OnWaveFinished -= HandleOnWaveFinished;
+        }
+
+        private void HandleOnWaveFinished()
+        {
+            currentTime = 3; // hardcode for now
+            StartCoroutine(CountdownTime());
+            
+            //-----MANAGERS-----\\
+            WaveManager.Instance.StartWave();
+            LevelManager.Instance.IsSpawnStateDone = false;
+            WaveManager.Instance.DeadEnemyCount = 0;
         }
 
         private IEnumerator CountdownTime()
         {
-            while (_currentTime >= 0)
+            while (currentTime >= 0)
             {
-                _time.fillAmount = Mathf.InverseLerp(0, _duration, _currentTime);
-                float minute = Mathf.FloorToInt(_currentTime / 60);
-                float seconds = Mathf.FloorToInt(_currentTime % 60);
-                _timeText.text = string.Format("{0:00}:{1:00}", minute, seconds);
+                time.fillAmount = Mathf.InverseLerp(0, duration, currentTime);
+                _minute = Mathf.FloorToInt(currentTime / 60);
+                _seconds = Mathf.FloorToInt(currentTime % 60);
+                timeText.text = string.Format("{0:00}:{1:00}", _minute, _seconds);
                 yield return new WaitForSeconds(1f);
-                _currentTime--;
-                _time.fillAmount = _currentTime;
+                currentTime--;
+                time.fillAmount = currentTime;
             }
             yield return null;
         }

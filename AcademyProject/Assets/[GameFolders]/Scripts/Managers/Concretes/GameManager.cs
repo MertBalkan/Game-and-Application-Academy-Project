@@ -21,7 +21,6 @@ namespace AcademyProject.Managers
         {
             _totalScore += score;
             OnScoreChanged?.Invoke(score);
-            Debug.Log(_totalScore);
         }
     }
 }

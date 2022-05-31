@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1604902003781680384}
   - component: {fileID: 1604902003781680391}
   - component: {fileID: 1604902003781680390}
-  - component: {fileID: 4254882235293489723}
   m_Layer: 0
   m_Name: P_NerfGun
   m_TagString: Untagged
@@ -101,35 +100,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4254882235293489723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604902003781680388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b3e5b5ef37c21c4b9d658b992a15e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 0}
-  top: {fileID: 1604902003781680385}
-  namlu: {fileID: 1604902004014731229}
-  mermi: {fileID: 948707309835609136, guid: b9674325f7a315645a8df3cfee43e187, type: 3}
-  nokta: {fileID: 1604902005674410861}
-  AlreadyAttack: 0
-  timeBetweenAttacks: 0.2
-  ground:
-    serializedVersion: 2
-    m_Bits: 8
-  player:
-    serializedVersion: 2
-    m_Bits: 64
-  sightRange: 5
-  attackRange: 5
-  playerInSightRange: 0
-  playerInAttackRange: 0
 --- !u!1 &1604902003851728297
 GameObject:
   m_ObjectHideFlags: 0

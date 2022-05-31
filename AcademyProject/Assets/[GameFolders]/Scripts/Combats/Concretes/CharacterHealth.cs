@@ -1,3 +1,6 @@
+using System;
+using AcademyProject.Controllers;
+using AcademyProject.Managers;
 using UnityEngine;
 
 namespace AcademyProject.Combats
@@ -12,9 +15,10 @@ namespace AcademyProject.Combats
         {
             _currentHealth = currentHealth;
         }
+        
         public void TakeDamage(float damageCount)
         {
-            if(IsDead) return;
+            if (IsDead) return;
             _currentHealth -= damageCount;
         }
     }
