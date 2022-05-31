@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using AcademyProject.AIs;
 using AcademyProject.Managers;
 using AcademyProject.UIs;
 using UnityEngine;
