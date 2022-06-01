@@ -1,8 +1,6 @@
-using System.Collections;
 using AcademyProject.Managers;
 using AcademyProject.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace AcademyProject.Combats
 {
@@ -15,6 +13,11 @@ namespace AcademyProject.Combats
         [SerializeField] private DamageDataSO damageDataSO;
 
         private int _helperCount = 3;
+
+        private void Start()
+        {
+            Destroy(this.gameObject, 5.0f);
+        }
 
         private void OnCollisionExit(Collision collision)
         {
