@@ -11,6 +11,11 @@ namespace AcademyProject.Managers
     {
         public static T Instance { get; private set; }
 
+        private void OnEnable()
+        {
+            transform.parent = null;
+        }
+
         protected void ApplySingleton(T gameObject)
         {
             if (Instance == null)
