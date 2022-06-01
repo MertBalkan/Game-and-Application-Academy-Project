@@ -28,7 +28,7 @@ namespace AcademyProject.Managers
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        public void LoadSceneByBuildIndex()
+        public void LoadNextScene()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
