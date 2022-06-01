@@ -28,5 +28,11 @@ namespace AcademyProject.Inputs
         bool IncreaseSlingForce { get; }
 
         #endregion
+
+        #region Camera Inputs
+
+        float CameraScroll { get; }
+
+        #endregion
     }
 }

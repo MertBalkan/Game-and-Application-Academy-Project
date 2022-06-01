@@ -1,9 +1,6 @@
-using System.Collections;
-using AcademyProject.AIs;
 using AcademyProject.Controllers;
 using AcademyProject.States;
 using AcademyProject.UIs;
-using UnityEngine;
 
 namespace AcademyProject.Managers
 {
