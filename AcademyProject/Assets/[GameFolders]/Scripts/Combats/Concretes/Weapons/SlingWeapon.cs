@@ -54,7 +54,8 @@ namespace AcademyProject.Combats
                 Vector3 pos = (hit.point - _player.transform.position).normalized;
                 _lookRot = Quaternion.LookRotation(pos);
                 _lookRot.x = 0;
-                _lookRot.z = 0;
+                _lookRot.z = Mathf.Clamp(_lookRot.z, -0.1f, 0.1f);
+                Debug.Log(_lookRot.z);
                 _player.transform.rotation = Quaternion.RotateTowards(_player.transform.rotation, _lookRot, 1000 * Time.deltaTime);
             }
         }
