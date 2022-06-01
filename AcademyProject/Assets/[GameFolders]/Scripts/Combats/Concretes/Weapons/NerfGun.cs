@@ -1,63 +1,62 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-
-public class NerfGun : MonoBehaviour
+namespace AcademyProject.Combats
 {
-    [SerializeField] Transform _player;
-    public Transform top, namlu, mermi, nokta;
-
-    public bool AlreadyAttack;
-    public float timeBetweenAttacks;
-    public LayerMask ground, player;
-    public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
-
-    //public GameObject sphere;
-    // Start is called before the first frame update
-    void Start()
+    public class NerfGun : MonoBehaviour
     {
+        [SerializeField] private float attackRange;
+        [SerializeField] private float timeBetweenAttacks;
+       
+        [SerializeField] private LayerMask enemy;
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange,player);//playerim yan�nda
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange,player);//yan�ndaysa sald�r
-        if (playerInSightRange && playerInAttackRange) 
+        [SerializeField] private Transform bullet;
+        [SerializeField] private Transform spawnPoint;
+        
+        private bool  _isEnemyInAttackRange;
+        private bool  _alreadyAttack;
+        
+        private Collider _targetCollider;
+        
+        void Update()
         {
-            
-          
-                attackRangePlayer();
-         
+            _isEnemyInAttackRange = Physics.CheckSphere(transform.position, attackRange,enemy);
 
-            
+            if (_isEnemyInAttackRange)
+            {
+                Collider[] colliders = Physics.OverlapSphere(transform.position, attackRange, enemy);
+                
+                foreach (var playerCollider in colliders)
+                    _targetCollider = playerCollider;
+                
+                AttackEnemy();
+            }
         }
         
-
-    }
-    void attackRangePlayer()
-    {
-      
-        transform.LookAt(_player);
-        top.Rotate(0, Input.GetAxis("Horizontal"), 0);
-        namlu.Rotate(Input.GetAxis("Horizontal"), 0, 0);
-        if (!AlreadyAttack)
+        void AttackEnemy()
         {
- //Instantiate(sphere, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            Rigidbody rb = Instantiate(mermi, nokta.position, namlu.rotation).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 25f,ForceMode.Impulse);//ileri   
-            rb.AddForce(transform.up * 7f, ForceMode.Impulse);//yukar�
+            transform.LookAt(_targetCollider.transform);
+            
+            if (!_alreadyAttack)
+            {
+                var qut = Quaternion.Euler(_targetCollider.transform.rotation.x - 20.0f,
+                    _targetCollider.transform.rotation.y, _targetCollider.transform.rotation.z);
+                
+                var obj = Instantiate(bullet, spawnPoint.position,  qut);
+                if(obj == null) return;
+                
+                obj.GetComponent<Rigidbody>().AddForce(transform.forward * 25f,ForceMode.Impulse);
+                obj.GetComponent<Rigidbody>().AddForce(transform.up * 7f, ForceMode.Impulse);
 
-            AlreadyAttack = true;
-             Invoke(nameof(resetAttack), timeBetweenAttacks);
+                _alreadyAttack = true;
+                Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            }
         }
         
-    }
-    void resetAttack()
-    {
-        AlreadyAttack = false;
+        void ResetAttack() => _alreadyAttack = false;
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(transform.position, attackRange);
+        }
     }
 }
