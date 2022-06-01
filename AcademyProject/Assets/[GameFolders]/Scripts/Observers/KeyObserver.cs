@@ -22,15 +22,11 @@ namespace AcademyProject.Observers
         private void HandleOnWaveFinished()
         {
             if(allKeys == null) return;
-
-            for (int i = 0; i < WaveManager.Instance.CurrentWave; i++)
+            
+            for (int i = 0; i < 1 && allKeys.Capacity != 0; i++)
             {
-                if (allKeys[i].gameObject == null)
-                {
-                    allKeys.Remove(allKeys[i]);
-                    break;
-                }
                 allKeys[i].gameObject.SetActive(true);
+                allKeys.Remove(allKeys[i]);
             }
         }
     }
