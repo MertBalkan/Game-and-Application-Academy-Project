@@ -1,8 +1,8 @@
-using System.Collections;
+using System;
+using AcademyProject.Controllers;
 using AcademyProject.Managers;
 using AcademyProject.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace AcademyProject.Combats
 {
@@ -14,15 +14,10 @@ namespace AcademyProject.Combats
     {
         [SerializeField] private DamageDataSO damageDataSO;
 
-        private int _helperCount = 3;
-<<<<<<< HEAD
-=======
-
         private void Start()
         {
             Destroy(this.gameObject, 5.0f);
         }
->>>>>>> parent of 35556e9 (helper clear)
 
         private void OnCollisionExit(Collision collision)
         {
@@ -36,17 +31,33 @@ namespace AcademyProject.Combats
         {
             var enemyHealth = collision.transform.GetComponent<CharacterHealth>();
             if(enemyHealth.Equals(null)) return;
+            
+            try
+            {
+                var enemyAnimation = collision.transform.GetComponent<EnemyController>().EnemyAnimation;
+                
+                if(enemyAnimation.Equals(null)) return;
+            
+                Debug.Log(enemyAnimation);
         
-            enemyHealth.TakeDamage(damageDataSO.damageHitCount);
-            GameManager.Instance.UpdateScore(damageDataSO.gainedPoints);
-            if(enemyHealth.IsDead) Destroy(enemyHealth.gameObject);
+                enemyHealth.TakeDamage(damageDataSO.damageHitCount);
+                GameManager.Instance.UpdateScore(damageDataSO.gainedPoints);
+            
+                if (enemyHealth.IsDead)
+                {
+                    enemyAnimation.DieAnimation();
+                    Destroy(enemyHealth.gameObject, 2.0f);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
         }
 
         private void SpawnEffect(Collision collision)
         {
-            _helperCount--;
-
-            if (_helperCount <= -1) return;
             if(damageDataSO.effectPrefab == null) return; // Just pass if prefab is null
             if(collision.gameObject.tag.Equals("Player")) return;
             
