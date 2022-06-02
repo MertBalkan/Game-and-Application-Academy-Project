@@ -23,6 +23,7 @@ namespace AcademyProject.SpecialEffects
             var enemy = collision.gameObject.GetComponent<EnemyController>();
             if(enemy == null) return;
             Debug.Log("DESTROYLANDI");
+            
             Destroy(enemy); // for now
         }
     }

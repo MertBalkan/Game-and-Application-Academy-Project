@@ -1,3 +1,5 @@
+using System;
+using AcademyProject.Controllers;
 using AcademyProject.Managers;
 using AcademyProject.ScriptableObjects;
 using UnityEngine;
@@ -31,10 +33,29 @@ namespace AcademyProject.Combats
         {
             var enemyHealth = collision.transform.GetComponent<CharacterHealth>();
             if(enemyHealth.Equals(null)) return;
+            
+            try
+            {
+                var enemyAnimation = collision.transform.GetComponent<EnemyController>().EnemyAnimation;
+                
+                if(enemyAnimation.Equals(null)) return;
+            
+                Debug.Log(enemyAnimation);
         
-            enemyHealth.TakeDamage(damageDataSO.damageHitCount);
-            GameManager.Instance.UpdateScore(damageDataSO.gainedPoints);
-            if(enemyHealth.IsDead) Destroy(enemyHealth.gameObject);
+                enemyHealth.TakeDamage(damageDataSO.damageHitCount);
+                GameManager.Instance.UpdateScore(damageDataSO.gainedPoints);
+            
+                if (enemyHealth.IsDead)
+                {
+                    enemyAnimation.DieAnimation();
+                    Destroy(enemyHealth.gameObject, 2.0f);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
         }
 
         private void SpawnEffect(Collision collision)
