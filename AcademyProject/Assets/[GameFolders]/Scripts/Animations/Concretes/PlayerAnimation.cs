@@ -19,6 +19,11 @@ namespace AcademyProject.Animations
             _playerAnimator.SetFloat("speed", Mathf.Abs(speed), 0.09f, Time.deltaTime);
         }
 
+        public void DieAnimation()
+        {
+            _playerAnimator.SetTrigger("die");
+        }
+
         public void CollectAnimation()
         {
             _playerAnimator.SetTrigger("collect");
@@ -28,6 +33,11 @@ namespace AcademyProject.Animations
         {
             _playerAnimator.SetFloat("slingTime", slingTime);
             _playerAnimator.SetBool("readyFire", readyFire);
+        }
+
+        public void AttackAnimation(bool attack)
+        {
+            attack = false;
         }
     }
 }
