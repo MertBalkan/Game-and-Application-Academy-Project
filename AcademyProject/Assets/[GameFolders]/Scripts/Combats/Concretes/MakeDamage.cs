@@ -14,8 +14,6 @@ namespace AcademyProject.Combats
     {
         [SerializeField] private DamageDataSO damageDataSO;
 
-        private int _helperCount = 3;
-
         private void Start()
         {
             Destroy(this.gameObject, 5.0f);
@@ -60,9 +58,6 @@ namespace AcademyProject.Combats
 
         private void SpawnEffect(Collision collision)
         {
-            _helperCount--;
-
-            if (_helperCount <= -1) return;
             if(damageDataSO.effectPrefab == null) return; // Just pass if prefab is null
             if(collision.gameObject.tag.Equals("Player")) return;
             
