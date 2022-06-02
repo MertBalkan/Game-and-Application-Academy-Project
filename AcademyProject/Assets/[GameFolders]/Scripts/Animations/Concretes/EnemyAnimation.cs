@@ -21,6 +21,11 @@ namespace AcademyProject.Animations
             _enemyAnimator.SetFloat("speed", speed);
         }
 
+        public void AttackAnimation(bool attack)
+        {
+            _enemyAnimator.SetBool("isAttack", attack);
+        }
+
         public void DieAnimation()
         {
             _enemyAnimator.SetTrigger("die");

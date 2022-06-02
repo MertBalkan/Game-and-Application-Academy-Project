@@ -8,5 +8,6 @@ namespace AcademyProject.Animations
         void DieAnimation();
         void CollectAnimation();
         void SlingWeaponAnimation(float slingTime, bool readyFire);
+        void AttackAnimation(bool attack);
     }   
 }

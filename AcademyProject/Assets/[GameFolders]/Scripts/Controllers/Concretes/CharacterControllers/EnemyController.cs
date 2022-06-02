@@ -16,7 +16,6 @@ namespace AcademyProject.Controllers
         public Animator EnemyAnimator => this.GetComponent<Animator>();
 
         private ICharacterAnimation _enemyAnimation;
-
         public ICharacterAnimation EnemyAnimation => _enemyAnimation;
 
         private void Awake()
@@ -44,5 +43,22 @@ namespace AcademyProject.Controllers
             WaveManager.Instance.EnemyDead(this);
         }
 
+        private void OnCollisionStay(Collision other)
+        {
+            EnemyAttack(other, true);
+        }
+
+        private void OnCollisionExit(Collision other)
+        {
+            EnemyAttack(other, false);
+        }  
+        
+        public void EnemyAttack(Collision other, bool canAttack)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                _enemyAnimation.AttackAnimation(canAttack);
+            }
+        }
     }
 }

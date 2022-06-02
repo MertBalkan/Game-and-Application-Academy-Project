@@ -34,5 +34,10 @@ namespace AcademyProject.Animations
             _playerAnimator.SetFloat("slingTime", slingTime);
             _playerAnimator.SetBool("readyFire", readyFire);
         }
+
+        public void AttackAnimation(bool attack)
+        {
+            attack = false;
+        }
     }
 }

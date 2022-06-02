@@ -32,7 +32,9 @@ namespace AcademyProject.Inputs
         #region Camera Inputs
 
         float CameraScroll { get; }
-
+        bool CamLeftMov { get; }
+        bool CamRightMov { get; }
+        
         #endregion
     }
 }

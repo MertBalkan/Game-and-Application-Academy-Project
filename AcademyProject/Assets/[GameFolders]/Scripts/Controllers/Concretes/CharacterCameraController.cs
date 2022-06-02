@@ -1,4 +1,6 @@
+using Cinemachine;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 namespace AcademyProject.Controllers
 {
@@ -10,12 +12,14 @@ namespace AcademyProject.Controllers
         [SerializeField] private float relativePositionToPlayer = 30.0f;
         [SerializeField] private float cameraSpeed;
         [SerializeField] private float  cameraScrollSpeed = 250.0f;
-
+        
+        private CinemachineVirtualCamera _cinemachine;
         private PlayerCharacterController _player;
 
         private void Awake()
         {
             _player = FindObjectOfType<PlayerCharacterController>();
+            _cinemachine = GetComponent<CinemachineVirtualCamera>();
         }
 
         private void Update()
@@ -27,7 +31,17 @@ namespace AcademyProject.Controllers
             CamMovementDir(Vector3.forward, _player.Input.VerticalMovement, 1);
             CamMovementDir(Vector3.back, _player.Input.VerticalMovement, -1);
 
-            MouseScroolControl();
+            MouseScrollControl();
+
+            if (_player.Input.CamLeftMov)
+            {
+                transform.RotateAround(_player.transform.position, Vector3.up, 20 * Time.deltaTime);
+            }
+
+            if (_player.Input.CamRightMov)
+            {
+                transform.RotateAround(_player.transform.position, Vector3.up, 20 * Time.deltaTime);
+            }
         }
 
         private void CamMovementDir(Vector3 directionVector, float direction, float compareValue)
@@ -37,15 +51,11 @@ namespace AcademyProject.Controllers
                 this.transform.localPosition += directionVector * Time.deltaTime * cameraSpeed;
         }
 
-        private void MouseScroolControl()
+        private void MouseScrollControl()
         {
-            var transformPosition = transform.position;
             var camScrollVal = _player.Input.CameraScroll * cameraScrollSpeed * Time.deltaTime;
-
-            transformPosition.y += camScrollVal;
-            transformPosition.z += camScrollVal;
-            
-            transform.position = transformPosition;
+            var clampedVal = Mathf.Clamp(camScrollVal, 15, 60);
+            _cinemachine.m_Lens.FieldOfView -= camScrollVal;
         }
     }
 }
