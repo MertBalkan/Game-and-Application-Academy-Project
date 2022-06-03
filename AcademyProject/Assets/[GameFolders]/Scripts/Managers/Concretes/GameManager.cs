@@ -33,7 +33,6 @@ namespace AcademyProject.Managers
         public void LoseGame(bool loseCondition)
         {
             OnGameLose?.Invoke(loseCondition);
-            Invoke("LoadSelfScene", 3.0f);
         }
         
         public void LoadSelfScene()
