@@ -8,6 +8,7 @@ using UnityEngine.AI;
 
 namespace AcademyProject.Controllers
 {
+    
     public class EnemyController : BaseCharacterController, IEnemyAI
     {
         private NavMeshAgent _navMeshAgent;
@@ -36,6 +37,19 @@ namespace AcademyProject.Controllers
             
             _navMeshAgent.SetDestination(_player.transform.position);
             _enemyAnimation.MovementAnimation(_navMeshAgent.speed);
+            
+            
+            if (Vector3.Distance(_player.transform.position, transform.position) >= _navMeshAgent.stoppingDistance)
+            {
+                _enemyAnimation.AttackAnimation(false);
+                _navMeshAgent.destination = _player.transform.position;
+            }
+
+            if (Vector3.Distance(_player.transform.position, transform.position) <= _navMeshAgent.stoppingDistance)
+            {
+                _enemyAnimation.AttackAnimation(true);
+                this.transform.LookAt(_player.transform);
+            }
         }
 
         private void OnDestroy()
