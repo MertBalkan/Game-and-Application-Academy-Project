@@ -15,6 +15,14 @@ namespace AcademyProject.Combats
         [SerializeField] private DamageDataSO damageDataSO;
 
         private int _helperCount = 3;
+<<<<<<< HEAD
+=======
+
+        private void Start()
+        {
+            Destroy(this.gameObject, 5.0f);
+        }
+>>>>>>> parent of 35556e9 (helper clear)
 
         private void OnCollisionExit(Collision collision)
         {
