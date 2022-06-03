@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2813566456671838355}
   - component: {fileID: 2813566456671838354}
   - component: {fileID: 1328356874}
+  - component: {fileID: 3665713530641525413}
   m_Layer: 0
   m_Name: P_EnemyWeapon
   m_TagString: Untagged
@@ -96,8 +97,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.6352654, y: 1, z: 4.8627105}
+  m_Center: {x: 0.19372167, y: -0.000000002075925, z: -0.25368688}
 --- !u!114 &1328356874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +111,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179df95acd0809441a4df7602383c1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3665713530641525413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2813566456671838353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676936b84d5f23942b82bfb05c37344f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDataSO: {fileID: 11400000, guid: 0da336232bceec64d902062b4899b156, type: 2}

@@ -1,4 +1,5 @@
 using System;
+using System.Xml;
 using AcademyProject.Controllers;
 using AcademyProject.Managers;
 using AcademyProject.ScriptableObjects;
@@ -14,17 +15,33 @@ namespace AcademyProject.Combats
     {
         [SerializeField] private DamageDataSO damageDataSO;
 
+        private bool _hasEnemyWeapon;
+
+        private void Awake()
+        {
+            _hasEnemyWeapon = gameObject.GetComponent<EnemyWeapon>() != null;
+        }
+
         private void Start()
         {
-            Destroy(this.gameObject, 5.0f);
+            if(!_hasEnemyWeapon)
+                Destroy(this.gameObject, 5.0f);
         }
 
         private void OnCollisionExit(Collision collision)
         {
             if (collision.gameObject.tag.Equals("Enemy"))
                ApplyDamage(collision);
-            
+
             SpawnEffect(collision);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.tag.Equals("Player") && _hasEnemyWeapon)
+            {
+                other.GetComponent<IHealth>().TakeDamage(5);
+            }
         }
 
         public void ApplyDamage(Collision collision)
