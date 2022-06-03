@@ -45,6 +45,8 @@ namespace AcademyProject.Controllers
                 return;
             }
             
+            if(FindObjectOfType<PlayerCharacterController>().GetComponent<IHealth>().IsDead) return;
+            
             _navMeshAgent.SetDestination(_player.transform.position);
             _enemyAnimation.MovementAnimation(_navMeshAgent.speed);
             
@@ -95,7 +97,7 @@ namespace AcademyProject.Controllers
         {
             _navMeshAgent.SetDestination(FindObjectOfType<SpawnPointController>().transform.position); // temporarily
             _enemyAnimation.AttackAnimation(false);
-            _navMeshAgent.speed = 0.2f;
+            _navMeshAgent.speed = 1.5f;
         }
     }
 }
