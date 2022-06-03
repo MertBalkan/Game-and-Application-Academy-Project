@@ -19,5 +19,8 @@ namespace AcademyProject.Inputs
         };
         public bool Fire => Input.GetMouseButtonUp(0);
         public bool IncreaseSlingForce => Input.GetMouseButton(0);
+        public float CameraScroll => Input.GetAxis("Mouse ScrollWheel");
+        public bool CamLeftMov => Input.GetKey(KeyCode.Q);
+        public bool CamRightMov => Input.GetKey(KeyCode.E);
     }
 }

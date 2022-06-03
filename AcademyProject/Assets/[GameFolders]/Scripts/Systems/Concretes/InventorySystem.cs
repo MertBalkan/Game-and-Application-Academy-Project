@@ -30,8 +30,10 @@ namespace AcademyProject.Systems
 
         
         //-------------------------------------BULLET LOGIC-------------------------------------
-        public  List<int> ownedBulletCounts;
+        public List<int> ownedBulletCounts;
         public List<IBulletable> ownedBulletTypes;
+
+        // public Dictionary<List<int>, List<IBulletable>> bulletDic = new Dictionary<List<int>, List<IBulletable>>();
 
         public int TotalBulletCount { get
         {
@@ -47,15 +49,8 @@ namespace AcademyProject.Systems
         
         public bool HasBulletInInventory => TotalBulletCount > 0;
         private int _beforeTotalCount;
-        
-        public int BeforeTotalCount
-        {
-            get { return _beforeTotalCount;}
-            set { _beforeTotalCount = value; }
-        }
-        //-------------------------------------BULLET LOGIC-------------------------------------
-        
 
+        //-------------------------------------BULLET LOGIC-------------------------------------
         #endregion
         
         /// <summary>

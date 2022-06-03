@@ -2428,13 +2428,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8584814866441970497}
   m_Enabled: 1
-<<<<<<< HEAD:AcademyProject/Academy/Assets/Prefabs/Characters/Thiefv1.prefab
-  m_Avatar: {fileID: 9000000, guid: 0d13f484b1127254780c4dd3adf5de78, type: 3}
-  m_Controller: {fileID: 9100000, guid: 5779d833daaad3b4eb793397f85cf327, type: 2}
-=======
   m_Avatar: {fileID: 9000000, guid: cc4502cda5a6f59498fb20ff65abc6f2, type: 3}
   m_Controller: {fileID: 22100000, guid: dd11f9183d4b35a4d9185751c1ca5e82, type: 2}
->>>>>>> MertWorkSpaceBranch:AcademyProject/Assets/[GameFolders]/Prefabs/Characters/Thiefv1.prefab
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1

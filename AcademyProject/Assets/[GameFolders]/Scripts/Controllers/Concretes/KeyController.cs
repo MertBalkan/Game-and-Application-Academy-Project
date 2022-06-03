@@ -11,6 +11,8 @@ namespace AcademyProject.Controllers
         {
             for (int i = 0; i < whichDoors.Length; i++)
                 whichDoors[i].OnKeyCollected += HandleOnKeyCollected;
+            
+            gameObject.SetActive(false);
         }
 
         private void HandleOnKeyCollected()
@@ -28,7 +30,7 @@ namespace AcademyProject.Controllers
                 for (int i = 0; i < whichDoors.Length; i++)
                     whichDoors[i].CollectKey();
                 
-                Destroy(this.gameObject);
+                gameObject.SetActive(false);
             }                
         }
     }
