@@ -996,7 +996,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5112985126132146045}
-  - component: {fileID: 1126586318}
   m_Layer: 0
   m_Name: Police
   m_TagString: Untagged
@@ -1020,25 +1019,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1126586318
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5602240774566970823}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 84b7a182b96998948ac78f9a90d33d44, type: 3}
-  m_Controller: {fileID: 9100000, guid: 71ed646ae654b2547a60d3d84aa1e6bf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5655185226123962012
 GameObject:
   m_ObjectHideFlags: 0
