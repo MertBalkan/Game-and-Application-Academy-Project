@@ -1,5 +1,4 @@
 using AcademyProject.Animations;
-using AcademyProject.Combats;
 using AcademyProject.Inputs;
 using AcademyProject.Movements;
 using AcademyProject.UIs;
@@ -35,8 +34,6 @@ namespace AcademyProject.Controllers
 
         private void Update()
         {
-            if(gameObject.GetComponent<IHealth>().IsDead) return;
-            
             #region Movement
             _movement.TurnAround();
             #endregion

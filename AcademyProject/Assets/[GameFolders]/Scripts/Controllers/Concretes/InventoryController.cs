@@ -26,6 +26,8 @@ namespace AcademyProject.Controllers
                         inventoryUI.RemoveItemFromSlot();
                         if (!slot.isSlotFull) slot.ItemCountText.text = "0";
 
+                        InventorySystem.Instance.BeforeTotalCount = InventorySystem.Instance.TotalBulletCount;
+
                         //InventorySystem.Instance.UpdateBulletCount(null);
                         InventorySystem.Instance.RemoveItem((InventorySystem.Instance.Items[i]));
                     }

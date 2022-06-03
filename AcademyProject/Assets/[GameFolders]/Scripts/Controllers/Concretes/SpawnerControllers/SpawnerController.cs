@@ -9,10 +9,10 @@ namespace AcademyProject.Controllers
     public class SpawnerController : MonoBehaviour
     {
         private List<SpawnPointController> _spawnPoints;
-        [SerializeField] private List<EnemyController> enemy;
+        [SerializeField] private EnemyController enemy;
+
 
         private CountDown _countDown;
-        private int _randomEnemyIndex;
 
         private void Awake()
         {
@@ -32,8 +32,7 @@ namespace AcademyProject.Controllers
                 for (var index = 0; index < _spawnPoints.Count; index++)
                 {
                     var spawnPoint = _spawnPoints[index];
-                    _randomEnemyIndex = Random.Range(0, enemy.Count);
-                    var enemyController = Instantiate(enemy[_randomEnemyIndex], spawnPoint.transform.position, Quaternion.identity);
+                    var enemyController = Instantiate(enemy, spawnPoint.transform.position, Quaternion.identity);
                     
                     WaveManager.Instance.SetEnemies(enemyController);
                 }

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace AcademyProject.Managers
 {
@@ -22,23 +21,6 @@ namespace AcademyProject.Managers
         {
             _totalScore += score;
             OnScoreChanged?.Invoke(score);
-        }
-        
-        public void LoadSelfScene()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        public void LoadNextScene()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        public void LoadSceneByIndex(int sceneIndex)
-        {
-            SceneManager.LoadScene(sceneIndex);
-        }
-        public void QuitGame()
-        {
-            Application.Quit();
         }
     }
 }
