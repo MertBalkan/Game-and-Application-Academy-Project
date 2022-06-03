@@ -29,8 +29,8 @@ namespace AcademyProject.Combats
 
         public void ApplyDamage(Collision collision)
         {
-            var enemyHealth = collision.transform.GetComponent<CharacterHealth>();
-            if(enemyHealth.Equals(null)) return;
+            var health = collision.transform.GetComponent<CharacterHealth>();
+            if(health.Equals(null)) return;
             
             try
             {
@@ -40,13 +40,13 @@ namespace AcademyProject.Combats
             
                 Debug.Log(enemyAnimation);
         
-                enemyHealth.TakeDamage(damageDataSO.damageHitCount);
+                health.TakeDamage(damageDataSO.damageHitCount);
                 GameManager.Instance.UpdateScore(damageDataSO.gainedPoints);
             
-                if (enemyHealth.IsDead)
+                if (health.IsDead)
                 {
                     enemyAnimation.DieAnimation();
-                    Destroy(enemyHealth.gameObject, 2.0f);
+                    Destroy(health.gameObject, 2.0f);
                 }
             }
             catch (Exception e)
