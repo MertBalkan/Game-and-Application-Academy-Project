@@ -18,14 +18,24 @@ namespace AcademyProject.Controllers
 
         private ICharacterAnimation _enemyAnimation;
         public ICharacterAnimation EnemyAnimation => _enemyAnimation;
-
+        
         private void Awake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _player = FindObjectOfType<PlayerCharacterController>();
             _enemyAnimation = new EnemyAnimation(this);
         }
-        
+
+        private void Start()
+        {
+            GameManager.Instance.OnGameLose += HandleOnGameLose;
+        }
+
+        private void OnDisable()
+        {
+            GameManager.Instance.OnGameLose -= HandleOnGameLose;
+        }
+
         private void Update()
         {
             if(_player == null) return;
@@ -67,12 +77,25 @@ namespace AcademyProject.Controllers
             EnemyAttack(other, false);
         }  
         
+        private void HandleOnGameLose(bool loseCondition)
+        {
+            if (loseCondition)
+                TurnBack();
+        }
+        
         public void EnemyAttack(Collision other, bool canAttack)
         {
             if (other.gameObject.CompareTag("Player"))
             {
                 _enemyAnimation.AttackAnimation(canAttack);
             }
+        }
+
+        public void TurnBack()
+        {
+            _navMeshAgent.SetDestination(FindObjectOfType<SpawnPointController>().transform.position); // temporarily
+            _enemyAnimation.AttackAnimation(false);
+            _navMeshAgent.speed = 0.2f;
         }
     }
 }

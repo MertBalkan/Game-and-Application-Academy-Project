@@ -1,6 +1,7 @@
 using AcademyProject.Animations;
 using AcademyProject.Combats;
 using AcademyProject.Inputs;
+using AcademyProject.Managers;
 using AcademyProject.Movements;
 using AcademyProject.UIs;
 using UnityEngine;
@@ -35,7 +36,8 @@ namespace AcademyProject.Controllers
 
         private void Update()
         {
-            if(gameObject.GetComponent<IHealth>().IsDead) return;
+            if (gameObject.GetComponent<IHealth>().IsDead)
+                GameManager.Instance.LoseGame(true);
             
             #region Movement
             _movement.TurnAround();
@@ -53,6 +55,7 @@ namespace AcademyProject.Controllers
 
         private void FixedUpdate()
         {
+            if(gameObject.GetComponent<IHealth>().IsDead) return;
             _movement.ApplyMovement();
         }
     }

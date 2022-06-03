@@ -27,6 +27,7 @@ namespace AcademyProject.Combats
 
         private void Update()
         {
+            if(_player.GetComponent<IHealth>().IsDead) return;
             if(IsSlingInInventory())
                 ApplyWeaponType();
         }
