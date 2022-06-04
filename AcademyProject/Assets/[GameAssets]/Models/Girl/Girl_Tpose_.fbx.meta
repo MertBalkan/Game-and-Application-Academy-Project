@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: b5aaff7f9f078ac45bcc56d12da45d3d
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 6677628_preview
+    second: {fileID: 2800000, guid: 7db8313dc69f99b45aeed1bee863f3fd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_ARMS2_BaseColor
+    second: {fileID: 2800000, guid: 60d0cdc4d1fc3524dacf0daa91eeb6de, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_BUNNY2_BaseColor
+    second: {fileID: 2800000, guid: e9c7d76c511689645a52ed0fb0ef3af0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_BUNNY2_Normal
+    second: {fileID: 2800000, guid: e92edb27137724540a40e6635af9cb8d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_BUNNY2_Roughness
+    second: {fileID: 2800000, guid: c0bb38553d81639479b4fb04be0bde4a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_SHIRT2_BaseColor
+    second: {fileID: 2800000, guid: c536887638662da43b88f3b7ac68802b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_SHIRT2_Metalness
+    second: {fileID: 2800000, guid: fb6caf922908c054ebdb662d9c261026, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_SHIRT2_Normal
+    second: {fileID: 2800000, guid: a2248b729d7e1ad49a0656261306f348, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_SHIRT2_Roughness
+    second: {fileID: 2800000, guid: 25596e84f83519c468dc6f98173bea1b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_SHOES2_BaseColor
+    second: {fileID: 2800000, guid: 9b3c814a6a9ad8241adc1c7ee212b24d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_SHOES2_Normal
+    second: {fileID: 2800000, guid: 2ea137e107deebd4e99f4a17be68b18f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_SHOES2_Roughness
+    second: {fileID: 2800000, guid: 5c9dda4b502ad304ea71ed9d6e49ab1d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_belt base2_BaseColor
+    second: {fileID: 2800000, guid: 5e0547175150de74381631b4001bd795, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_belt base2_Normal
+    second: {fileID: 2800000, guid: 2cbb0c1554e754a4bad8b382c5cac494, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_belt base2_Roughness
+    second: {fileID: 2800000, guid: 7c94e35acc709d64fac6679d1c68a5e2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_body1_2_BaseColor
+    second: {fileID: 2800000, guid: f19b7c0de8cf2f449834907ba41fad70, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_body1_2_Roughness
+    second: {fileID: 2800000, guid: 79c21eccff9638d40bd90f21840896dc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_body3_BaseColor
+    second: {fileID: 2800000, guid: 955a0f11cb20c7048ac60dec8d8f5b8d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_body3_Normal
+    second: {fileID: 2800000, guid: ec2006dde0c2c494cbd19be5e81c3a98, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_body3_Roughness
+    second: {fileID: 2800000, guid: 32cf35e1de1ea8f428b92a126426d46c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_head2_BaseColor
+    second: {fileID: 2800000, guid: 4d00af461f58b9c438a79bc3e30aef70, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_head2_Metalness
+    second: {fileID: 2800000, guid: 83460989660a70a4d86395c4b361cefa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_head2_Normal
+    second: {fileID: 2800000, guid: 2df1d40ba28703b488e50eeee128f2b6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_head2_Roughness
+    second: {fileID: 2800000, guid: 734bd93e34586b14f8e5ee28fdc10694, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_leg2_BaseColor
+    second: {fileID: 2800000, guid: 5c77c11b6186384499df64bb53d347fd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_leg2_Normal
+    second: {fileID: 2800000, guid: 6ad631113be24b54bb3b8cb7134e2f1b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: girl_lopo_leg2_Roughness
+    second: {fileID: 2800000, guid: e4020e8fb928a9f4db0b37c5b71c8389, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
