@@ -13,6 +13,12 @@ namespace AcademyProject.Managers
         
         #endregion
 
+        #region Lose Game Logic
+
+        public event System.Action<bool> OnGameLose;
+
+        #endregion
+
         private void Awake()
         {
             ApplySingleton(this);
@@ -22,6 +28,11 @@ namespace AcademyProject.Managers
         {
             _totalScore += score;
             OnScoreChanged?.Invoke(score);
+        }
+
+        public void LoseGame(bool loseCondition)
+        {
+            OnGameLose?.Invoke(loseCondition);
         }
         
         public void LoadSelfScene()

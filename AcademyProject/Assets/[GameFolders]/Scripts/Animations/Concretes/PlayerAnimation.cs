@@ -7,6 +7,8 @@ namespace AcademyProject.Animations
     {
         private PlayerCharacterController _player;
         private Animator _playerAnimator;
+
+        private bool isDead = false;
         
         public PlayerAnimation(PlayerCharacterController player)
         {
@@ -21,7 +23,11 @@ namespace AcademyProject.Animations
 
         public void DieAnimation()
         {
-            _playerAnimator.SetTrigger("die");
+            if (!isDead)
+            {
+                isDead = true;
+                _playerAnimator.SetTrigger("die");
+            }
         }
 
         public void CollectAnimation()

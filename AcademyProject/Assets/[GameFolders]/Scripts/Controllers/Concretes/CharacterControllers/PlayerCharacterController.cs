@@ -1,6 +1,8 @@
+using System;
 using AcademyProject.Animations;
 using AcademyProject.Combats;
 using AcademyProject.Inputs;
+using AcademyProject.Managers;
 using AcademyProject.Movements;
 using AcademyProject.UIs;
 using UnityEngine;
@@ -33,9 +35,34 @@ namespace AcademyProject.Controllers
             _inventory.inventoryUI = FindObjectOfType<InventoryUI>();
         }
 
+        private void Start()
+        {
+            GameManager.Instance.OnGameLose += HandleOnGameLose;
+        }
+
+        private void OnDisable()
+        {
+            GameManager.Instance.OnGameLose -= HandleOnGameLose;
+        }
+
+        private void HandleOnGameLose(bool gameLoseCondition)
+        {
+            if (gameLoseCondition)
+            {
+                gameObject.GetComponent<Collider>().isTrigger = true;
+                gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                _animation.DieAnimation();
+            }
+        }
+
         private void Update()
         {
-            if(gameObject.GetComponent<IHealth>().IsDead) return;
+            #region Lose Game
+            
+            if (gameObject.GetComponent<IHealth>().IsDead)
+                GameManager.Instance.LoseGame(true);
+            
+            #endregion
             
             #region Movement
             _movement.TurnAround();
@@ -53,6 +80,7 @@ namespace AcademyProject.Controllers
 
         private void FixedUpdate()
         {
+            if(gameObject.GetComponent<IHealth>().IsDead) return;
             _movement.ApplyMovement();
         }
     }
