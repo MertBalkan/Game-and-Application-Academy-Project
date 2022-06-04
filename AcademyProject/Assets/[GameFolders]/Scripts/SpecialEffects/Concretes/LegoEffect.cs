@@ -1,3 +1,4 @@
+using AcademyProject.Combats;
 using AcademyProject.Controllers;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ namespace AcademyProject.SpecialEffects
             Destroy(this.gameObject, 5.0f);
         }
 
-        private void OnCollisionStay(Collision collision)
+        private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.CompareTag("Enemy"))
             {
@@ -22,9 +23,7 @@ namespace AcademyProject.SpecialEffects
         {
             var enemy = collision.gameObject.GetComponent<EnemyController>();
             if(enemy == null) return;
-            Debug.Log("DESTROYLANDI");
-            
-            Destroy(enemy); // for now
+            enemy.GetComponent<IHealth>().TakeDamage(20);
         }
     }
 }
