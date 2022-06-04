@@ -35,11 +35,14 @@ namespace AcademyProject.Combats
 
         public void ApplyWeaponType()
         {
-            if (_player.Input.IncreaseSlingForce)
+            foreach (var slot in _inventoryUI.inventorySlots)
             {
-                AudioManager.Instance.SlingSound();
-                SlingForceSpeed();
-                PlayerPointLook();
+                if (_player.Input.IncreaseSlingForce && slot.isSlotFull)
+                {
+                    AudioManager.Instance.SlingSound();
+                    SlingForceSpeed();
+                    PlayerPointLook();
+                }
             }
             SlingShot();
         }
