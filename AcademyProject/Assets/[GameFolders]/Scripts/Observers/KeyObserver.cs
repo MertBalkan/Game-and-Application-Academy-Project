@@ -28,6 +28,8 @@ namespace AcademyProject.Observers
                 allKeys[i].gameObject.SetActive(true);
                 allKeys.Remove(allKeys[i]);
             }
+            
+            AudioManager.Instance.PlayWaveEndSound();
         }
     }
 }

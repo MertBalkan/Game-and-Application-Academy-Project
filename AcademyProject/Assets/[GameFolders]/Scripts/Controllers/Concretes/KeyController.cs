@@ -1,4 +1,5 @@
 using System;
+using AcademyProject.Managers;
 using UnityEngine;
 
 namespace AcademyProject.Controllers
@@ -44,6 +45,7 @@ namespace AcademyProject.Controllers
                     whichDoors[i].CollectKey();
 
                 _isCollected = true;
+                AudioManager.Instance.PlayDoorOpenSound();
                 gameObject.SetActive(false);
             }                
         }

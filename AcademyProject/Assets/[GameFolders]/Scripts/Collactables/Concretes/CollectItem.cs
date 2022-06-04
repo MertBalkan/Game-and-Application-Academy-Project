@@ -1,6 +1,7 @@
 using AcademyProject.Combats;
 using AcademyProject.Controllers;
 using AcademyProject.Inputs;
+using AcademyProject.Managers;
 using AcademyProject.Systems;
 using AcademyProject.UIs;
 using UnityEngine;
@@ -38,6 +39,8 @@ namespace AcademyProject.Collectables
             
             InventorySystem.Instance.AddItem(item);
             InventorySystem.Instance.UpdateBulletCount(item.GetComponent<IBulletable>());
+            AudioManager.Instance.PlayGrabSound();
+            
             inventoryUI.AddItemToSlot(item);
             gameObject.SetActive(false);   
         }

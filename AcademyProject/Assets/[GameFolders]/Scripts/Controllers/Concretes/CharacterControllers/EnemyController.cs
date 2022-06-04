@@ -89,6 +89,14 @@ namespace AcademyProject.Controllers
         {
             if (other.gameObject.CompareTag("Player"))
             {
+                if (canAttack)
+                    AudioManager.Instance.PlayerHitPlayed = true;
+                if (!canAttack)
+                {
+                    AudioManager.Instance.PlayerHitPlayed = false;
+                    AudioManager.Instance.PlayerHitSound();
+                }
+                
                 _enemyAnimation.AttackAnimation(canAttack);
             }
         }

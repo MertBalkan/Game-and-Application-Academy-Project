@@ -1,4 +1,5 @@
 using AcademyProject.Controllers;
+using AcademyProject.Managers;
 using AcademyProject.Systems;
 using AcademyProject.UIs;
 using UnityEngine;
@@ -36,6 +37,7 @@ namespace AcademyProject.Combats
         {
             if (_player.Input.IncreaseSlingForce)
             {
+                AudioManager.Instance.SlingSound();
                 SlingForceSpeed();
                 PlayerPointLook();
             }
@@ -78,6 +80,7 @@ namespace AcademyProject.Combats
                         _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, false);
                         ResetSlingForce();
 
+                        AudioManager.Instance.SlingShotSound();
                         CursorManager.Instance.SetNormalCursor();
                         InventorySystem.Instance.DecreaseBulletCount(slot.whichObjectIHave.GetComponent<IBulletable>());
                     }
