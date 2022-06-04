@@ -9,6 +9,7 @@ namespace AcademyProject.Managers
     {
         private List<AudioSource> _audios;
 
+        private bool _losePlayed = false;
         private bool _slingShotPlayed = false;
         private bool _playerHitPlayed = false;
 
@@ -63,12 +64,16 @@ namespace AcademyProject.Managers
         public void PlayWaveEndSound()
         {
             _audios[4].Play();
+            _losePlayed = false;
         }
 
         public void PlayGameLoseSound()
         {
-            if (_audios[5].isPlaying) return;
-            _audios[5].Play();
+            if (!_losePlayed)
+            {
+                _audios[5].Play();
+                _losePlayed = true;
+            }
         }
 
         public void SlingSound()
