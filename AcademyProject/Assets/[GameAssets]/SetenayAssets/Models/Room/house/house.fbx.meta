@@ -1,0 +1,345 @@
+fileFormatVersion: 2
+guid: 8f77b56c361536541a8dec2a7a20faa5
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FreeVector-Cloud-Pattern
+    second: {fileID: 2800000, guid: 41ba69dc2621eae478e645c8e88a6b56, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 'ORANGE BAKE '
+    second: {fileID: 2800000, guid: c7e21ebcd38de2748893065a7866c5ca, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SRAWBERRY BAKE
+    second: {fileID: 2800000, guid: a1a97bbc23298334399a4b571cadc3cb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Screenshot_46
+    second: {fileID: 2800000, guid: bf1b9757688b8db4c985f4fcea19c24c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: _BaseMaterial_d.tga
+    second: {fileID: 2800000, guid: 2d83df9f44bb5d2499711579c7ccb15b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: _BaseMaterial_o.tga
+    second: {fileID: 2800000, guid: d73fe623161751d4ca4d828e3b776a9b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: apple bake
+    second: {fileID: 2800000, guid: 979a409a58f4e554aa1bfc20e384aebd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: banana bake
+    second: {fileID: 2800000, guid: c1ebf93bf5678644f81c65b4b9fa6091, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: blue knit tex
+    second: {fileID: 2800000, guid: 73e88988c1985fc44b5ec4cbc280e149, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cat
+    second: {fileID: 2800000, guid: 5a20c898744608a49b83bd28d5114a42, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: clancy
+    second: {fileID: 2800000, guid: 799cfec8f59a3e145985c68407f59a99, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: coffeecup
+    second: {fileID: 2800000, guid: 3925bf79d7d51ff4bb6c7141390f80a8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dino
+    second: {fileID: 2800000, guid: 462148b113662d74e8c7ee5a5ec82539, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fabric1blue
+    second: {fileID: 2800000, guid: 6627f2b500c1200479a2c30e62bca9c2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fam
+    second: {fileID: 2800000, guid: ef146fdc81b0910498e3f69527b725f0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fine wood
+    second: {fileID: 2800000, guid: 982043ff06072974791f863f72037e46, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: geometric
+    second: {fileID: 2800000, guid: 1751aa410648e744fa9cd73691f56374, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: glass brick
+    second: {fileID: 2800000, guid: 220024d22bd479a4784297a723c2ada5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: greenwood
+    second: {fileID: 2800000, guid: d49d9c79e3390fc4d925d95a5f7f31b9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "hal\u0131 fur"
+    second: {fileID: 2800000, guid: ef3848451c971c44c8d047ab34cf9ab4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "hal\u01312"
+    second: {fileID: 2800000, guid: 5a9e32f30564bb2418c411b9af501070, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: kdbathroomtiles
+    second: {fileID: 2800000, guid: 4e1a294b4c4b4f84cb6d4647df59d965, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: kidroomwalls
+    second: {fileID: 2800000, guid: 4dc93d066f5792244b1322b5a88a56bd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: kidsroomwalls
+    second: {fileID: 2800000, guid: bc5e82c598bf89144bd65c387a16b8f5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: kidsshowercurtain
+    second: {fileID: 2800000, guid: 11b2b3fd93a58ce4694a794d7a255177, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: kitchen wall
+    second: {fileID: 2800000, guid: 08afdffd6816f424e98791d8bbf0d0d2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: kitchenfloor
+    second: {fileID: 2800000, guid: 66230a1a2f3aa574388ffd342f71302a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: kivi bake
+    second: {fileID: 2800000, guid: e365db436bbcdf6449b6762938f57f55, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lava
+    second: {fileID: 2800000, guid: 7033e598519547f47a46e479b89f09f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: marble
+    second: {fileID: 2800000, guid: 008d088d83e9eb34b8a3078db5a2512b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: marblegreen
+    second: {fileID: 2800000, guid: ceb128d61a3ed4c4395455ce23f488ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: old leather
+    second: {fileID: 2800000, guid: 41635e0a88104424db0251d82a312f08, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: outdoor
+    second: {fileID: 2800000, guid: 06af622b4c6ac324cbcff68b4e2d225b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: parentsroomwall
+    second: {fileID: 2800000, guid: 0026db8e42a603d4fa7cd74e2c74595f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: parentstextile
+    second: {fileID: 2800000, guid: debe082784d6b7c4ea0cb0f969e1fd24, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: parentswood
+    second: {fileID: 2800000, guid: 4d6d467ea7f06c84782a246cfd857ee9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: picography-woven-fabric-texture-wallpaper-768x512
+    second: {fileID: 2800000, guid: bbec03acffbe6c94e9680104d59877b4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: pumpkin bake
+    second: {fileID: 2800000, guid: 5ac09dd071369474097aa3eff9f998ab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: roundjute
+    second: {fileID: 2800000, guid: 5e88b91db24ce7647ae8e2cf3793f1d6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: salonkilim
+    second: {fileID: 2800000, guid: 720340eb994887545a974727f706213f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: salonkilim2
+    second: {fileID: 2800000, guid: 4188a95676f8bd243ade908c6470c85a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: victor-belov-2k-texture-png
+    second: {fileID: 2800000, guid: c65ac3e22f8e0cd48817162f5f09f373, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wallpaper
+    second: {fileID: 2800000, guid: 393daa238ab35354c86da648dbf1e8af, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: whitebrickwall
+    second: {fileID: 2800000, guid: 7ed4374d65a8aef4eb09bc2db6182cbd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: whitewood2
+    second: {fileID: 2800000, guid: 4e1b14e6dd28e62479439470a60e1bd9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood
+    second: {fileID: 2800000, guid: 27bdf0257a224a14a965bd651032f942, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: yellow fabric
+    second: {fileID: 2800000, guid: a68c97eb16387cf43bec99ae917d6f36, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: yellow knit
+    second: {fileID: 2800000, guid: 8d34a926967ebba4e94e6dbd19e3c2a5, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
