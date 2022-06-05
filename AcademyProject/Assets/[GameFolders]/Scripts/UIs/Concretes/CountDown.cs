@@ -36,7 +36,7 @@ namespace AcademyProject.UIs
 
         private void HandleOnWaveFinished()
         {
-            currentTime = 5; // hardcode for now
+            currentTime = 60; // hardcode for now
             StartCoroutine(CountdownTime());
             
             //-----MANAGERS-----\\
