@@ -135,7 +135,7 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 * Daily Scrumlar Whatsapp ve Discord üzerinden yapılmasına karar verilmiştir
 
-* <a href = "https://docs.google.com/document/d/1V4cDJ8MHa0nAWZhZ69tT-XIYJKQ7b6ozwlNerss2ijc/edit?usp=sharing">Sprint 2 Dokümantasyonu</a>
+* <a href = "https://docs.google.com/document/d/1V4cDJ8MHa0nAWZhZ69tT-XIYJKQ7b6ozwlNerss2ijc/edit?usp=sharing">Sprint 3 Dokümantasyonu</a>
 
 
 *
