@@ -125,9 +125,44 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 * Sprint içinde tamamlanması tahmin edilen puan: 100 Puan
 
-* Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ikinci sprint'in en azından 100 ile devam edilmesine gerektiğine karar verildi.
+* Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde üçüncü sprint'in en azından 100 ile devam edilmesine gerektiğine karar verildi.
 
 * Backlog düzeni ve Story seçimleri: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
 
 * Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+* 
+* * <a href = "https://docs.google.com/document/d/1d5FooVpJPjE0MUlU8SJr0ZirTw0HQjWwToRM-CxxY_M/edit?usp=sharing">Daily Scrum</a>
+
+* Daily Scrumlar Whatsapp ve Discord üzerinden yapılmasına karar verilmiştir
+
+* <a href = "https://docs.google.com/document/d/1V4cDJ8MHa0nAWZhZ69tT-XIYJKQ7b6ozwlNerss2ijc/edit?usp=sharing">Sprint 2 Dokümantasyonu</a>
+
+
+*
+
+
+---
+- **Sprint Review**: 
+  
+  Gamedesignda başta konuşulan oyun mekanikleri bu süre içinde ulaşılması güç olduğu öngörülen noktalarda scobu küçültmek adına daraltıldı. Craft mekaniklerinin yerini daha çok combat mekanikleri aldı. Daha önce çeşitlendirilmiş olan item havuzundan kullanılacak olan itemler seçildi ve geri kalanlar elendi. İtemlerin UIdaki görünüşleri ve envanterde stacklenmesi sağlandı. Bazı itemlerin attack vfxleri tamamlandı. Movement ve etkileşim mekaniklerinde epey yol katedildi, karaktere animasyonlar seçilip eklenip retarget iskeleti oluşturuldu. Düşmanlar için yazılacak olan AI sistemi oluşturuldu ve sprint 3 için planlandı. Sprint 3'te yapılması planlanan tasklar önceliklendirildi.
+
+
+- **Sprint Retrospective:**
+  
+  Bu sprint için planlanmış tüm tasklar tamamlandı.
+  
+  Game design oluşturulurken büyük tutulmuş olan oyun scobu realize edilip küçültüldü ve final formu için mevcut scopta detaylandırıldı.
+  
+  Movement ve etkileşim mekaniklerinde ve animasyonlarda kayda değer bir ilerleme katedildi.
+   
+
+
+- **Diğer Notlar**:
+  
+ Sprint 3 taskları oluşturulmaya başlandı.
+  
+  
+
+
+
 ---
