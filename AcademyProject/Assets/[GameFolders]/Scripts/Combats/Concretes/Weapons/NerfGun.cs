@@ -38,9 +38,6 @@ namespace AcademyProject.Combats
             
             if (!_alreadyAttack)
             {
-                var qut = Quaternion.Euler(spawnPoint.transform.rotation.x - 20.0f,
-                    spawnPoint.transform.rotation.y, spawnPoint.transform.rotation.z);
-                
                 var obj = Instantiate(bullet, spawnPoint.position,  spawnPoint.transform.rotation);
                 if(obj == null) return;
                 
