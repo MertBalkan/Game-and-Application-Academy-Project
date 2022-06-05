@@ -422,7 +422,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8413174, y: 1}
+    m_SensorSize: {x: 1.8219178, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -14607,11 +14607,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 117387423}
     m_Modifications:
-    - target: {fileID: 930194856, guid: baca278d7f28e6d4994ef18bccbfb554, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 6414061730446556000, guid: aed04451d18695e4db8e7950f5f512a0,
-        type: 3}
     - target: {fileID: 1604902003781680385, guid: baca278d7f28e6d4994ef18bccbfb554,
         type: 3}
       propertyPath: m_RootOrder

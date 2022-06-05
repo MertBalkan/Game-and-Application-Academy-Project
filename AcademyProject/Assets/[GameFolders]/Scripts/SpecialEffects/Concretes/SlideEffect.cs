@@ -12,7 +12,7 @@ namespace AcademyProject.SpecialEffects
             Destroy(this.gameObject, 5.0f);
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnCollisionStay(Collision collision)
         {
             if (collision.gameObject.CompareTag("Enemy"))
                 ApplyEffect(collision);
