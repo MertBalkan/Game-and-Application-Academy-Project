@@ -572,17 +572,17 @@ PrefabInstance:
     - target: {fileID: 1680682381333410706, guid: a3303325b5a58174ba06edf6d3bd799b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.34065396
+      value: 0.340654
       objectReference: {fileID: 0}
     - target: {fileID: 1680682381333410706, guid: a3303325b5a58174ba06edf6d3bd799b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.03022571
+      value: -0.030225731
       objectReference: {fileID: 0}
     - target: {fileID: 1680682381333410706, guid: a3303325b5a58174ba06edf6d3bd799b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0109579405
+      value: 0.01095795
       objectReference: {fileID: 0}
     - target: {fileID: 1680682381333410706, guid: a3303325b5a58174ba06edf6d3bd799b,
         type: 3}
@@ -1106,17 +1106,17 @@ PrefabInstance:
     - target: {fileID: 408243143869381899, guid: b53fb64ac566ff945a3935b0797bfb97,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.34065396
+      value: 0.340654
       objectReference: {fileID: 0}
     - target: {fileID: 408243143869381899, guid: b53fb64ac566ff945a3935b0797bfb97,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.03022571
+      value: -0.030225731
       objectReference: {fileID: 0}
     - target: {fileID: 408243143869381899, guid: b53fb64ac566ff945a3935b0797bfb97,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0109579405
+      value: 0.01095795
       objectReference: {fileID: 0}
     - target: {fileID: 408243143869381899, guid: b53fb64ac566ff945a3935b0797bfb97,
         type: 3}
@@ -7004,8 +7004,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7874255, y: 0.016978374, z: 0.9097451}
-  m_Center: {x: 0, y: 0.21993405, z: 0.571649}
+  m_Size: {x: 2.7874255, y: 0.02735338, z: 0.9097451}
+  m_Center: {x: 0, y: 0.22512169, z: 0.571649}
 --- !u!65 &2036526314270954565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7942,8 +7942,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9519978, z: 1}
-  m_Center: {x: 0, y: -0.024001082, z: 0}
+  m_Size: {x: 1, y: 0.9245309, z: 1}
+  m_Center: {x: 0, y: -0.037734512, z: 0}
 --- !u!4 &2036526316078127285
 Transform:
   m_ObjectHideFlags: 0
