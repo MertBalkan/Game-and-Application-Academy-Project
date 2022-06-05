@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a6115aa80a75444199872d98c79d4bd, type: 3}
   m_Name: DartBulletData
   m_EditorClassIdentifier: 
-  bullet: {fileID: 8631630180081560192, guid: 01e52bd286d2f6e46b7bff62f52897bd, type: 3}
+  bullet: {fileID: 1037549801697848600, guid: a36e1cfd067a2eb449e6c2f8403f7017, type: 3}
   TotalBulletCount: 0

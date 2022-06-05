@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageHitCount: 25
   gainedPoints: 20
-  effectPrefab: {fileID: 7580829135068681424, guid: 6ed9311b023939643a91c3a3453e60db,
+  effectPrefab: {fileID: 1432069429154357613, guid: 3af6482db352bbf4b9ddc4cb1b489f27,
     type: 3}

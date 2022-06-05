@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a6115aa80a75444199872d98c79d4bd, type: 3}
   m_Name: NailBulletData
   m_EditorClassIdentifier: 
-  bullet: {fileID: 8631630180081560192, guid: 5a19cd2c430d7b649aeadbd5be9f7084, type: 3}
+  bullet: {fileID: 8991276177962015923, guid: 9194226ec052fa64eb354af8255063cf, type: 3}
   TotalBulletCount: 0

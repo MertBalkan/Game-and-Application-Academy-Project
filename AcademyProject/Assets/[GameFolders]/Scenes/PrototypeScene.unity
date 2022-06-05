@@ -422,7 +422,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.8413174, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -525,11 +525,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2666862389111713101, guid: 8403ad7424130874aa11cfbee9076d66,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2ac416bf01240cf4eb87fd5b790a4eef, type: 2}
     - target: {fileID: 2666862389111713102, guid: 8403ad7424130874aa11cfbee9076d66,
         type: 3}
       propertyPath: m_Name
@@ -6861,6 +6856,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1441372375, guid: 1eb50ac9a19f8124fa56bf3fa7a8a257, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 26.701197
+      objectReference: {fileID: 0}
+    - target: {fileID: 1441372375, guid: 1eb50ac9a19f8124fa56bf3fa7a8a257, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0021502
+      objectReference: {fileID: 0}
     - target: {fileID: 1898822832, guid: 1eb50ac9a19f8124fa56bf3fa7a8a257, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8972,21 +8975,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 117387423}
     m_Modifications:
-    - target: {fileID: 5124584887664817230, guid: dede42a1cb6dbf84c9355d3dc9843886,
-        type: 3}
-      propertyPath: trap
-      value: 
-      objectReference: {fileID: 7580829135068681424, guid: 257b0a5646fcfe14a82ca36a63d6407e,
-        type: 3}
     - target: {fileID: 9031282608005836992, guid: dede42a1cb6dbf84c9355d3dc9843886,
         type: 3}
       propertyPath: m_Name
       value: P_Lego (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 9031282608005836992, guid: dede42a1cb6dbf84c9355d3dc9843886,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 9031282608005836997, guid: dede42a1cb6dbf84c9355d3dc9843886,
         type: 3}
@@ -9043,8 +9035,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4645199094489905494, guid: dede42a1cb6dbf84c9355d3dc9843886, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dede42a1cb6dbf84c9355d3dc9843886, type: 3}
 --- !u!4 &1253128332 stripped
 Transform:
