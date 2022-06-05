@@ -137,10 +137,6 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 * <a href = "https://docs.google.com/document/d/1V4cDJ8MHa0nAWZhZ69tT-XIYJKQ7b6ozwlNerss2ijc/edit?usp=sharing">Sprint 3 Dokümantasyonu</a>
 
-
-*
-
-
 ---
 - **Sprint Review**: 
   
@@ -153,16 +149,9 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
   
   Game design oluşturulurken büyük tutulmuş olan oyun scobu realize edilip küçültüldü ve final formu için mevcut scopta detaylandırıldı.
   
-  Movement ve etkileşim mekaniklerinde ve animasyonlarda kayda değer bir ilerleme katedildi.
-   
+  Movement ve etkileşim mekaniklerinde ve animasyonlarda kayda değer bir ilerleme katedildi. 
 
 
 - **Diğer Notlar**:
-  
- Sprint 3 taskları oluşturulmaya başlandı.
-  
-  
-
-
-
+ 
 ---
