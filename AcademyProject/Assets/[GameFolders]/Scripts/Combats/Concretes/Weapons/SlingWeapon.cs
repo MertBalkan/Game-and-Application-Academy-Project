@@ -8,6 +8,7 @@ namespace AcademyProject.Combats
 {
     public class SlingWeapon : BaseWeaponController, IWeaponType
     {
+        [SerializeField] private LayerMask ground;
         private float _slingTime;
         private float _slingForce = 0;
         private float _maxSlingTime = 2.0f;
@@ -52,7 +53,7 @@ namespace AcademyProject.Combats
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 1000))
+            if (Physics.Raycast(ray, out hit, 5000, ground))
             {
                 if(hit.collider.gameObject.Equals(_player.gameObject)) return;
                 // if(hit.collider.gameObject.GetComponent<EnemyController>()) return;

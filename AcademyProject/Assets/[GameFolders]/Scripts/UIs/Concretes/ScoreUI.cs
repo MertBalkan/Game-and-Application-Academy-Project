@@ -9,7 +9,7 @@ namespace AcademyProject.UIs
     public class ScoreUI : MonoBehaviour
     {
         private TextMeshProUGUI _scoreText;
-        public bool _isCollect;
+        public bool isCollect;
 
         private void Awake()
         {
@@ -28,7 +28,7 @@ namespace AcademyProject.UIs
 
         private void HandleOnScoreChanged(int obj)
         {
-            _isCollect = true;
+            isCollect = true;
             _scoreText.text = "Score: "+ GameManager.Instance.TotalScore;
         }
 
@@ -39,7 +39,7 @@ namespace AcademyProject.UIs
         
         private void ScoreTextAnimation()
         {    
-            if (_isCollect)
+            if (isCollect)
             {
                  _scoreText.transform.localScale = Vector3.Lerp
                 (
@@ -50,12 +50,12 @@ namespace AcademyProject.UIs
                 StartCoroutine(Collect());
             }
 
-            if (!_isCollect)
+            if (!isCollect)
             {  
                 _scoreText.transform.localScale = Vector3.Lerp
                 (
                     _scoreText.transform.localScale,
-                    new Vector3(0.75f, 0.75f, 0.75f),
+                    new Vector3(2, 2, 2),
                     Time.deltaTime * 10
                 );
             }
@@ -63,7 +63,7 @@ namespace AcademyProject.UIs
         private IEnumerator Collect()
         {
             yield return new WaitForSeconds(0.3f);
-            _isCollect = false;
+            isCollect = false;
         }
     }
 }
