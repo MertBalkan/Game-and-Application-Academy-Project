@@ -77,6 +77,7 @@ namespace AcademyProject.Combats
                         
                         var clone = InstantiateBullet(bulletObject);
                         clone.SetParent(null);
+                        clone.transform.SetPositionAndRotation(_player.Muzzle.position, clone.transform.rotation);
                         clone.gameObject.SetActive(true);
                         clone.GetComponent<Rigidbody>().AddForce(clone.up * _slingForce);
                 

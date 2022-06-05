@@ -202,10 +202,10 @@ namespace AcademyProject.Systems
                     ownedBulletCounts[firstEmpty] = item.AmmoCount();
                 }
             }
-            item.BulletDataSO.TotalBulletCount += item.AmmoCount();
+            item.BulletDataSO.totalBulletCount += item.AmmoCount();
             
             if (!item.IsDropped)
-                item.BulletDataSO.TotalBulletCount += item.AmmoCount();
+                item.BulletDataSO.totalBulletCount += item.AmmoCount();
         }
         
         /// <summary>

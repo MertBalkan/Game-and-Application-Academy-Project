@@ -27,10 +27,10 @@ namespace AcademyProject.Controllers
         {
             if (_player == null) return;
             
-            CamMovementDir(Vector3.left, _player.Input.HorizontalMovement, 1);
-            CamMovementDir(Vector3.right, _player.Input.HorizontalMovement, -1);
-            CamMovementDir(Vector3.forward, _player.Input.VerticalMovement, -1);
-            CamMovementDir(Vector3.back, _player.Input.VerticalMovement, 1);
+            CamMovementDir(Vector3.left, _player.Input.HorizontalMovement, -1);
+            CamMovementDir(Vector3.right, _player.Input.HorizontalMovement, 1);
+            CamMovementDir(Vector3.forward, _player.Input.VerticalMovement, 1);
+            CamMovementDir(Vector3.back, _player.Input.VerticalMovement, -1);
 
             MouseScrollControl();
             CameraRotate();

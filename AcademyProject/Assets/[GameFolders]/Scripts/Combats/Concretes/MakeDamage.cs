@@ -14,7 +14,6 @@ namespace AcademyProject.Combats
     public class MakeDamage : MonoBehaviour, IDamage
     {
         [SerializeField] private DamageDataSO damageDataSO;
-
         private bool _hasEnemyWeapon;
 
         private void Awake()
@@ -27,7 +26,7 @@ namespace AcademyProject.Combats
             if(!_hasEnemyWeapon)
                 Destroy(this.gameObject, 5.0f);
         }
-
+        
         private void OnCollisionExit(Collision collision)
         {
             if (collision.gameObject.tag.Equals("Enemy"))
