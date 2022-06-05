@@ -333,17 +333,17 @@ PrefabInstance:
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -11.947
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.8783592
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -14.066112
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
@@ -353,17 +353,17 @@ PrefabInstance:
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103201, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
@@ -388,7 +388,7 @@ PrefabInstance:
     - target: {fileID: 3817773820885103204, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
       propertyPath: m_Name
-      value: P_Detergent
+      value: P_Detergent (5)
       objectReference: {fileID: 0}
     - target: {fileID: 3817773820885103206, guid: e3022ebe5fc370546ae370585ce546a2,
         type: 3}
@@ -470,4 +470,4 @@ MonoBehaviour:
   isInInventory: 0
   stackQuantity: 1
   isDropped: 0
-  trap: {fileID: 0}
+  trap: {fileID: 7580829135068681424, guid: 100a59fac3aed364db8a4ee4988b4905, type: 3}
