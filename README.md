@@ -131,7 +131,7 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 * Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 * 
-* * <a href = "https://docs.google.com/document/d/1d5FooVpJPjE0MUlU8SJr0ZirTw0HQjWwToRM-CxxY_M/edit?usp=sharing">Daily Scrum</a>
+*  <a href = "https://docs.google.com/document/d/1d5FooVpJPjE0MUlU8SJr0ZirTw0HQjWwToRM-CxxY_M/edit?usp=sharing">Daily Scrum</a>
 
 * Daily Scrumlar Whatsapp ve Discord üzerinden yapılmasına karar verilmiştir
 
