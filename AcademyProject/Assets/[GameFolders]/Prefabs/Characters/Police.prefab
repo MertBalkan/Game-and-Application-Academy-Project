@@ -1201,10 +1201,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.31097877
+  m_Radius: 0.19141434
   m_Height: 2.001669
   m_Direction: 1
-  m_Center: {x: -0.0013489127, y: 1.0342674, z: 0}
+  m_Center: {x: -0.004583661, y: 1.0342674, z: 0}
 --- !u!195 &2420781657899366308
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3a81dc024b6054ca4bf56bc1bba393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHealth: 100
+  currentHealth: 100
 --- !u!1 &5655185226123962012
 GameObject:
   m_ObjectHideFlags: 0
