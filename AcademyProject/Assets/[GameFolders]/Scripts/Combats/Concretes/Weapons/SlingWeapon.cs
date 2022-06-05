@@ -37,7 +37,7 @@ namespace AcademyProject.Combats
         {
             foreach (var slot in _inventoryUI.inventorySlots)
             {
-                if (_player.Input.IncreaseSlingForce && slot.isSlotFull)
+                if (_player.Input.IncreaseSlingForce && slot.isSlotFull && slot.whichObjectIHave.GetComponent<IBulletable>() != null && slot.imSelected)
                 {
                     AudioManager.Instance.SlingSound();
                     SlingForceSpeed();
