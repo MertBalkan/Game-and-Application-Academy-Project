@@ -49,7 +49,11 @@ https://glorious-profit-4c1.notion.site/Google-Bootcamp-b5b50202df36401e9b1df505
 
 * Backlog düzeni ve Story seçimleri: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
 
-* Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+* Story'ler yapılacak işlere (task'lere) bölünmüştür. Notion'da ve Sprint Dökümantasyonda gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+
+
+* -----------NOT = Sprint ve Daily scrum döküman oluşturup kaydedilmiştir.Bunlar aşağıda verilen linklerde mevcuttur. Ürün durumu, board, ve puanlamalar dökümantasyonda mevcuttur. ---------------
+
 
 * <a href = "https://docs.google.com/document/d/1-YL_gxEn41rRx2XT2yHJaFkE5n3s698cRqE6_lMDz8s/edit?usp=sharing">Daily Scrum</a>
 
@@ -85,7 +89,9 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 * Backlog düzeni ve Story seçimleri: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
 
-* Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+* Story'ler yapılacak işlere (task'lere) bölünmüştür. Notion'da ve Sprint Dökümantasyonda gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+
+* -----------NOT = Sprint ve Daily scrum döküman oluşturup kaydedilmiştir.Bunlar aşağıda verilen linklerde mevcuttur. Ürün durumu, board, ve puanlamalar dökümantasyonda mevcuttur. ---------------
 
 * <a href = "https://docs.google.com/document/d/1d5FooVpJPjE0MUlU8SJr0ZirTw0HQjWwToRM-CxxY_M/edit?usp=sharing">Daily Scrum</a>
 
@@ -129,9 +135,11 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 * Backlog düzeni ve Story seçimleri: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
 
-* Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
-* 
-*  <a href = "https://docs.google.com/document/d/1d5FooVpJPjE0MUlU8SJr0ZirTw0HQjWwToRM-CxxY_M/edit?usp=sharing">Daily Scrum</a>
+* Story'ler yapılacak işlere (task'lere) bölünmüştür. Notion'da ve Sprint Dökümantasyonda gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+
+* -----------NOT = Sprint ve Daily scrum döküman oluşturup kaydedilmiştir.Bunlar aşağıda verilen linklerde mevcuttur. Ürün durumu, board, ve puanlamalar dökümantasyonda mevcuttur. ---------------
+
+*  <a href = "https://docs.google.com/document/d/1ik8cqOYqVsTor5vdSdPjDk2Hu-ZKvWUPTBxfjVJRNXs/edit?usp=sharing">Daily Scrum</a>
 
 * Daily Scrumlar Whatsapp ve Discord üzerinden yapılmasına karar verilmiştir
 
