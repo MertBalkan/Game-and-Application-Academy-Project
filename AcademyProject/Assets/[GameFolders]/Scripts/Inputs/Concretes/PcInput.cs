@@ -22,5 +22,6 @@ namespace AcademyProject.Inputs
         public float CameraScroll => Input.GetAxis("Mouse ScrollWheel");
         public bool CamLeftMov => Input.GetKey(KeyCode.Q);
         public bool CamRightMov => Input.GetKey(KeyCode.E);
+        public bool ResetLevel => Input.GetKeyDown(KeyCode.T);
     }
 }

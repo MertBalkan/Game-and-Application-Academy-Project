@@ -36,5 +36,11 @@ namespace AcademyProject.Inputs
         bool CamRightMov { get; }
         
         #endregion
+
+        #region Level Inputs
+
+        bool ResetLevel { get; }
+
+        #endregion
     }
 }

@@ -23,7 +23,7 @@ namespace AcademyProject.Observers
         {
             if(allKeys == null) return;
             
-            for (int i = 0; i < 1 && allKeys.Capacity != 0; i++)
+            for (int i = 0; i < allKeys.Count && allKeys.Capacity != 0; i++)
             {
                 allKeys[i].gameObject.SetActive(true);
                 allKeys.Remove(allKeys[i]);

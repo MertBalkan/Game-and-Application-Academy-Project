@@ -12,6 +12,7 @@ namespace AcademyProject.Managers
         private LevelStateMachine _levelStateMachine;
         private SpawnerController _spawnerController;
         private CountDown _timeUI;
+        private PlayerCharacterController _player;
         
         private ILevelState _currentLevelState;
         private ILevelState _nextLevelState;
@@ -30,6 +31,7 @@ namespace AcademyProject.Managers
             _timeUI = FindObjectOfType<CountDown>();
             _spawnerController = FindObjectOfType<SpawnerController>();
             _levelStateMachine = new LevelStateMachine(new SpawnEnemiesState(_spawnerController));
+            _player = FindObjectOfType<PlayerCharacterController>();
 
             // _currentLevelState = new WaveEndState()
             // _currentLevelState = new FinishGameState();
@@ -42,6 +44,11 @@ namespace AcademyProject.Managers
 
         private void Update()
         {
+            if(_player == null) return;
+            
+            if (_player.Input.ResetLevel)
+                GameManager.Instance.LoadSelfScene();
+            
             if(!_isSpawnStateDone && _timeUI.IsTimerFinished){
                 _levelStateMachine.NextLevelState(_currentLevelState, ()=>_timeUI.IsTimerFinished);
                 _isSpawnStateDone = true;
