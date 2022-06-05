@@ -4,6 +4,7 @@ using AcademyProject.Controllers;
 using AcademyProject.Managers;
 using AcademyProject.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace AcademyProject.Combats
 {
@@ -15,6 +16,7 @@ namespace AcademyProject.Combats
     {
         [SerializeField] private DamageDataSO damageDataSO;
         private bool _hasEnemyWeapon;
+        private bool _isSpawned = false;
 
         private void Awake()
         {
@@ -76,11 +78,19 @@ namespace AcademyProject.Combats
         {
             if(damageDataSO.effectPrefab == null) return; // Just pass if prefab is null
             if(collision.gameObject.tag.Equals("Player")) return;
-            
-            var effect = Instantiate(damageDataSO.effectPrefab);
 
-            if (collision.gameObject.Equals(effect)) Destroy(effect);
-            effect.transform.position = this.transform.position + Vector3.up * 2;
+            var enemyAgent = collision.gameObject.GetComponent<NavMeshAgent>();
+            if(enemyAgent == null) return;
+            enemyAgent.speed = 1.2f;
+            
+            if (!_isSpawned)
+            {
+                var effect = Instantiate(damageDataSO.effectPrefab);
+                if (collision.gameObject.Equals(effect)) Destroy(effect);
+                effect.transform.position = this.transform.position + Vector3.up * 1.2f;
+                _isSpawned = true;
+            }
+
         }
     }
 }

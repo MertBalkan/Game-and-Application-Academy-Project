@@ -18,9 +18,9 @@ namespace AcademyProject.Controllers
         {
             if (IsTrapActive && !_isSpawnedEffect)
             {
-                _isSpawnedEffect = true;
                 Destroy(this.gameObject);
                 var trapObj = Instantiate(trap);
+                _isSpawnedEffect = true;
                 trapObj.transform.position = this.transform.position + Vector3.up * 2;
             }
         }

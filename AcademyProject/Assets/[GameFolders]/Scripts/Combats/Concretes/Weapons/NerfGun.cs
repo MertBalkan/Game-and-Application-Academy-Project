@@ -1,3 +1,4 @@
+using AcademyProject.Managers;
 using UnityEngine;
 
 namespace AcademyProject.Combats
@@ -41,6 +42,7 @@ namespace AcademyProject.Combats
                 var obj = Instantiate(bullet, spawnPoint.position,  spawnPoint.transform.rotation);
                 if(obj == null) return;
                 
+                AudioManager.Instance.PlayNerfGunSound();
                 obj.GetComponent<Rigidbody>().AddForce(transform.forward * 25f,ForceMode.Impulse);
                 obj.GetComponent<Rigidbody>().AddForce(transform.up * 7f, ForceMode.Impulse);
 

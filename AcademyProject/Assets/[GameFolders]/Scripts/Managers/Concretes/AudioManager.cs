@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace AcademyProject.Managers
 {
@@ -98,6 +99,13 @@ namespace AcademyProject.Managers
                 _audios[8].Play();
                 _playerHitPlayed = true;
             }
+        }
+
+        public void PlayNerfGunSound()
+        {
+            if(_audios[9].isPlaying) return;
+            _audios[9].pitch = Random.Range(0.8f, 1.1f);
+            _audios[9].Play();
         }
     }
 }
