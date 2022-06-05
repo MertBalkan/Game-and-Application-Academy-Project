@@ -140,7 +140,6 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 ---
 - **Sprint Review**: 
   
-  Gamedesignda başta konuşulan oyun mekanikleri bu süre içinde ulaşılması güç olduğu öngörülen noktalarda scobu küçültmek adına daraltıldı. Craft mekaniklerinin yerini daha çok combat mekanikleri aldı. Daha önce çeşitlendirilmiş olan item havuzundan kullanılacak olan itemler seçildi ve geri kalanlar elendi. İtemlerin UIdaki görünüşleri ve envanterde stacklenmesi sağlandı. Bazı itemlerin attack vfxleri tamamlandı. Movement ve etkileşim mekaniklerinde epey yol katedildi, karaktere animasyonlar seçilip eklenip retarget iskeleti oluşturuldu. Düşmanlar için yazılacak olan AI sistemi oluşturuldu ve sprint 3 için planlandı. Sprint 3'te yapılması planlanan tasklar önceliklendirildi.
 
 
 - **Sprint Retrospective:**
