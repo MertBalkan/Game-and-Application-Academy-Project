@@ -4,6 +4,7 @@ namespace AcademyProject.Movements
 {
     public class ObjectRotator : MonoBehaviour
     {
+        [SerializeField] private Vector3 rotVector;
         void Update()
         {
             RotateMe();
@@ -11,7 +12,7 @@ namespace AcademyProject.Movements
 
         private void RotateMe()
         {
-            transform.Rotate(Vector3.down * 90.0f * Time.deltaTime);
+            transform.Rotate(rotVector * 180.0f * Time.deltaTime);
         }
     }
 }

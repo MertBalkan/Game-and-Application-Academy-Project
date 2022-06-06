@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DartItemData
   m_EditorClassIdentifier: 
   itemName: Dart
-  itemTexture: {fileID: 21300000, guid: 2e972d9058162de4f8eea392e15b4329, type: 3}
+  itemTexture: {fileID: 21300000, guid: 6f5cdd3d33651d94f831a2497a680cac, type: 3}
   stackCount: 3
   itemDescription: DART
   isWeapon: 0

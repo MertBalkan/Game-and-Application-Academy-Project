@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SlimeItemData
   m_EditorClassIdentifier: 
   itemName: Slime
-  itemTexture: {fileID: 21300000, guid: f4bb7e8ac8f736841bc205f45c72f82f, type: 3}
+  itemTexture: {fileID: 21300000, guid: b45a7d94c5596424e9b83899f008c398, type: 3}
   stackCount: 3
   itemDescription: "P\u0131ccc\u0131k P\u0131ccc\u0131k, Egvvv!"
   isWeapon: 0
