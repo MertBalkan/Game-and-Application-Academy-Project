@@ -147,18 +147,15 @@ Yaptığımız sprint toplantılarında yapacağımız oyunun game designını b
 
 ---
 - **Sprint Review**: 
-  
 
+Geçtiğimiz sprintte daralttığımız kapsamdaki tüm görevler tamamlandı, bootcamp sonrasında istendiği takdirde oyun ana game design çerçevesinde gelişitirilebilir haliyle ürün tamamlandı. Fark edilen buglar çözülüp [Itchio](https://emulization.itch.io/home-alone) sayfası düzenlendi ve build downloadable ve open gl formunda uploadlandı.
+  
 
 - **Sprint Retrospective:**
   
-  Bu sprint için planlanmış tüm tasklar tamamlandı.
-  
-  Game design oluşturulurken büyük tutulmuş olan oyun scobu realize edilip küçültüldü ve final formu için mevcut scopta detaylandırıldı.
-  
-  Movement ve etkileşim mekaniklerinde ve animasyonlarda kayda değer bir ilerleme katedildi. 
-
+  Bu sprint için planlanmış tüm tasklar tamamlandı, kısıtlı zamanda ekip üyelerinin emekleriyle küçültülmüş olan skoptaki ürün, bazı buglar olsa da tamamlandı. Sürecin her birimize development ve ekip çalışması adına değerli bir tecrübe kattığını düşünüyoruz. Emeği geçen ve vesile olan herkese teşekkürlerimizi sunarız. 
+ 
 
 - **Diğer Notlar**:
  
----
+Ürün tamamlandı
