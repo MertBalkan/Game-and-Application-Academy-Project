@@ -33,7 +33,7 @@ namespace AcademyProject.Controllers
             CamMovementDir(Vector3.back, _player.Input.VerticalMovement, -1);
 
             MouseScrollControl();
-            CameraRotate();
+            // CameraRotate();
         }
 
         private void CamMovementDir(Vector3 directionVector, float direction, float compareValue)
