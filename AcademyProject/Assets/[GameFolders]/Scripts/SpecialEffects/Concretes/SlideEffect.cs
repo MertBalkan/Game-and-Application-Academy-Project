@@ -7,10 +7,10 @@ namespace AcademyProject.SpecialEffects
     {
         [SerializeField] private float slideSpeed = 10f;
 
-        private void Start()
-        {
-            Destroy(this.gameObject, 5.0f);
-        }
+        // private void Start()
+        // {
+        //     Destroy(this.gameObject, 5.0f);
+        // }
 
         private void OnCollisionExit(Collision collision)
         {

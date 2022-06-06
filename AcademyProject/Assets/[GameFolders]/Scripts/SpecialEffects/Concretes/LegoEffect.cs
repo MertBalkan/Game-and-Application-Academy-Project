@@ -5,12 +5,13 @@ using UnityEngine;
 namespace AcademyProject.SpecialEffects
 {
     public class LegoEffect : MonoBehaviour, IEffect
-    {
-        private void Start()
-        {
-            Destroy(this.gameObject, 5.0f);
-        }
-
+    {      
+        
+        // private void Start()
+        // {
+        //     Destroy(this.gameObject, 5.0f);
+        // }
+        
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.CompareTag("Enemy"))
