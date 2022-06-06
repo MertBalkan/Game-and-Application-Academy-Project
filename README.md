@@ -18,7 +18,7 @@ Google Oyun ve Uygulama akademisi Bootcamp takım #69
 
 ## Ürün İsmi
 
-![photo](https://user-images.githubusercontent.com/43827959/172247412-565a10b7-0404-4f77-8dd4-7a48a7652bb5.png)
+![image](https://user-images.githubusercontent.com/43827959/172247627-40c772d8-ee13-4f2e-8f77-06bf96eda24e.png)
 
 
 Grey Hat : Home Alone
