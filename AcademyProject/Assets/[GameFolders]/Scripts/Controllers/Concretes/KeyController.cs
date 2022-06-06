@@ -27,8 +27,6 @@ namespace AcademyProject.Controllers
         private void Update()
         {
             if(_isCollected) gameObject.SetActive(false);
-            transform.Rotate(Vector3.down * 90.0f * Time.deltaTime);
-            transform.Rotate(Vector3.down * 90.0f * Time.deltaTime);
         }
 
         private void HandleOnKeyCollected()
