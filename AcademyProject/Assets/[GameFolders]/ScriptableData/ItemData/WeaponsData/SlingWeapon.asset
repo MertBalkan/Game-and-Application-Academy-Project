@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SlingWeapon
   m_EditorClassIdentifier: 
   itemName: Sling
-  itemTexture: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  itemTexture: {fileID: 21300000, guid: 8c93b9deb6ce7f64bb99dbb2a9a85da3, type: 3}
   stackCount: 1
   itemDescription: Piuvvvvvv, Kill 'Em!
   isWeapon: 1
