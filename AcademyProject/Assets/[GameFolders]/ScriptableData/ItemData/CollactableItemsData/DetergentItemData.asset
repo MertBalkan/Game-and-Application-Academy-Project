@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DetergentItemData
   m_EditorClassIdentifier: 
   itemName: Detergent
-  itemTexture: {fileID: 21300000, guid: 26ae9b812bb29db42b4b9dca2975ccfa, type: 3}
+  itemTexture: {fileID: 21300000, guid: 38dbf91e95429004fb5f722a31d71ff3, type: 3}
   stackCount: 1
   itemDescription: JUST A DETERGENT, WHAT DID U EXCEPT???
   isWeapon: 0

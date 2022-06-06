@@ -1,6 +1,7 @@
 using System;
 using AcademyProject.Controllers;
 using AcademyProject.Inputs;
+using AcademyProject.Managers;
 using AcademyProject.Systems;
 using AcademyProject.UIs;
 using UnityEngine;
@@ -49,6 +50,7 @@ namespace AcademyProject.Collectables
             FindObjectOfType<PlayerCharacterController>().CharacterAnimation.CollectAnimation();
             weapon.GetComponent<BoxCollider>().isTrigger = true; // temporarily
             InventorySystem.Instance.AddWeapon(weapon);
+            AudioManager.Instance.PlayGrabSound();
             weaponUI.AddWeaponToSlot(weapon);
             _isWeaponPicked = true;
         }

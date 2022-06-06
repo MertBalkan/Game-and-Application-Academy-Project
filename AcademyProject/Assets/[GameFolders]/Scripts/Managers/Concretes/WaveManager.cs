@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using AcademyProject.Controllers;
+using TMPro;
 using UnityEngine;
 
 namespace AcademyProject.Managers
@@ -10,6 +11,7 @@ namespace AcademyProject.Managers
     public class WaveManager : SingletonMonoBehaviour<WaveManager>
     {
         [SerializeField] private int maxWaveCount;
+        [SerializeField] private GameObject gameOverPanel;
         
         private List<EnemyController> _enemies;
 
@@ -42,6 +44,12 @@ namespace AcademyProject.Managers
         {
             if(maxWaveCount == _currentWave) return;
             FinishWave();
+
+            if (_currentWave == maxWaveCount)
+            {
+                gameOverPanel.gameObject.SetActive(true);
+                Time.timeScale = 0.0f;
+            }
         }
 
         public void SetEnemies(EnemyController enemy)

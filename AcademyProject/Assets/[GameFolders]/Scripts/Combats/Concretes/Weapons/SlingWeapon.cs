@@ -1,4 +1,5 @@
 using AcademyProject.Controllers;
+using AcademyProject.Managers;
 using AcademyProject.Systems;
 using AcademyProject.UIs;
 using UnityEngine;
@@ -7,6 +8,7 @@ namespace AcademyProject.Combats
 {
     public class SlingWeapon : BaseWeaponController, IWeaponType
     {
+        [SerializeField] private LayerMask ground;
         private float _slingTime;
         private float _slingForce = 0;
         private float _maxSlingTime = 2.0f;
@@ -34,10 +36,14 @@ namespace AcademyProject.Combats
 
         public void ApplyWeaponType()
         {
-            if (_player.Input.IncreaseSlingForce)
+            foreach (var slot in _inventoryUI.inventorySlots)
             {
-                SlingForceSpeed();
-                PlayerPointLook();
+                if (_player.Input.IncreaseSlingForce && slot.isSlotFull && slot.whichObjectIHave.GetComponent<IBulletable>() != null && slot.imSelected)
+                {
+                    AudioManager.Instance.SlingSound();
+                    SlingForceSpeed();
+                    PlayerPointLook();
+                }
             }
             SlingShot();
         }
@@ -47,7 +53,7 @@ namespace AcademyProject.Combats
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 1000))
+            if (Physics.Raycast(ray, out hit, 5000, ground))
             {
                 if(hit.collider.gameObject.Equals(_player.gameObject)) return;
                 // if(hit.collider.gameObject.GetComponent<EnemyController>()) return;
@@ -72,12 +78,14 @@ namespace AcademyProject.Combats
                         
                         var clone = InstantiateBullet(bulletObject);
                         clone.SetParent(null);
+                        clone.transform.SetPositionAndRotation(_player.Muzzle.position, clone.transform.rotation);
                         clone.gameObject.SetActive(true);
                         clone.GetComponent<Rigidbody>().AddForce(clone.up * _slingForce);
                 
                         _player.CharacterAnimation.SlingWeaponAnimation(_slingTime, false);
                         ResetSlingForce();
 
+                        AudioManager.Instance.SlingShotSound();
                         CursorManager.Instance.SetNormalCursor();
                         InventorySystem.Instance.DecreaseBulletCount(slot.whichObjectIHave.GetComponent<IBulletable>());
                     }

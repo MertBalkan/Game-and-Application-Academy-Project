@@ -16,6 +16,7 @@ namespace AcademyProject.Controllers
         private ICharacterAnimation _animation;
 
         private InventoryController _inventory;
+        private CharacterCameraController _camera;
 
         [SerializeField] private Transform muzzle, point;
         
@@ -28,6 +29,8 @@ namespace AcademyProject.Controllers
         private void Awake()
         {
             _input = new PcInput();
+            
+            _camera = FindObjectOfType<CharacterCameraController>();
             _movement = new MovementRigidBody(this, _input);
             _animation = new PlayerAnimation(this);
             

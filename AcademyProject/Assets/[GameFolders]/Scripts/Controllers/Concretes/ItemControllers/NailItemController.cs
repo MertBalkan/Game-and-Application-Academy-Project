@@ -20,7 +20,7 @@ namespace AcademyProject.Controllers
             base.Awake();
             
             bulletDataSO = Instantiate(bulletDataSO);
-            bulletDataSO.TotalBulletCount = totalBulletCount;
+            bulletDataSO.totalBulletCount = totalBulletCount;
         }
 
         private void Update()

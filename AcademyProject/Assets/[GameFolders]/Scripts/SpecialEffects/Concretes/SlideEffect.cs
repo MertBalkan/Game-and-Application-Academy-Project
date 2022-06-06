@@ -7,12 +7,12 @@ namespace AcademyProject.SpecialEffects
     {
         [SerializeField] private float slideSpeed = 10f;
 
-        private void Start()
-        {
-            Destroy(this.gameObject, 5.0f);
-        }
+        // private void Start()
+        // {
+        //     Destroy(this.gameObject, 5.0f);
+        // }
 
-        private void OnCollisionStay(Collision collision)
+        private void OnCollisionExit(Collision collision)
         {
             if (collision.gameObject.CompareTag("Enemy"))
                 ApplyEffect(collision);

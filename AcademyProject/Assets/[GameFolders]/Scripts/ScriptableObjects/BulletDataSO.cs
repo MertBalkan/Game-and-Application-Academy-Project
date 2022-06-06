@@ -13,6 +13,6 @@ namespace AcademyProject.ScriptableObjects
         [Space(35)]
 
         public GameObject bullet;
-        public int TotalBulletCount;
+        public int totalBulletCount;
     }
 }

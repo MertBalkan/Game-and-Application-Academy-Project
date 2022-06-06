@@ -28,6 +28,7 @@ namespace AcademyProject.UIs
         {
             if (loseCondition)
             {
+                AudioManager.Instance.PlayGameLoseSound();
                 gameOverPanel.SetActive(true);
             }
         }

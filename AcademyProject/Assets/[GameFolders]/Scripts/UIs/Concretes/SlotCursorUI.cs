@@ -27,7 +27,7 @@ namespace AcademyProject.UIs
             {
                 if (_input.Slots[i])
                 {
-                    transform.position = slots[i].gameObject.transform.position + new Vector3(0, 50, 0);
+                    transform.position = slots[i].gameObject.transform.position + new Vector3(65, 125, 0);
                    
                     foreach (var s in slots)
                         s.imSelected = false;
@@ -35,7 +35,7 @@ namespace AcademyProject.UIs
                     slots[i].imSelected = true;
                 }
                 else if(i == slots.Length) 
-                    transform.position = slots[5].gameObject.transform.position + new Vector3(-65, 50, 0);
+                    transform.position = slots[5].gameObject.transform.position + new Vector3(-65, 125, 0);
             }
         }
     }

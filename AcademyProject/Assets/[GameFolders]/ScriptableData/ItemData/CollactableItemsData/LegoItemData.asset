@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LegoItemData
   m_EditorClassIdentifier: 
   itemName: Lego
-  itemTexture: {fileID: 21300000, guid: bc2758f37ecd21248b4b0857fab4e0ca, type: 3}
+  itemTexture: {fileID: 21300000, guid: c25047acef10bc44e829a5b23720c013, type: 3}
   stackCount: 3
   itemDescription: I miss my childhood
   isWeapon: 0

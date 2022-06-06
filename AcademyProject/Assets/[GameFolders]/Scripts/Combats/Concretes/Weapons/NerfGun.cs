@@ -1,3 +1,4 @@
+using AcademyProject.Managers;
 using UnityEngine;
 
 namespace AcademyProject.Combats
@@ -38,12 +39,10 @@ namespace AcademyProject.Combats
             
             if (!_alreadyAttack)
             {
-                var qut = Quaternion.Euler(_targetCollider.transform.rotation.x - 20.0f,
-                    _targetCollider.transform.rotation.y, _targetCollider.transform.rotation.z);
-                
-                var obj = Instantiate(bullet, spawnPoint.position,  qut);
+                var obj = Instantiate(bullet, spawnPoint.position,  spawnPoint.transform.rotation);
                 if(obj == null) return;
                 
+                AudioManager.Instance.PlayNerfGunSound();
                 obj.GetComponent<Rigidbody>().AddForce(transform.forward * 25f,ForceMode.Impulse);
                 obj.GetComponent<Rigidbody>().AddForce(transform.up * 7f, ForceMode.Impulse);
 

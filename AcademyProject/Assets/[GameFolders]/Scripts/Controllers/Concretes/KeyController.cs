@@ -1,3 +1,5 @@
+using System;
+using AcademyProject.Managers;
 using UnityEngine;
 
 namespace AcademyProject.Controllers
@@ -5,6 +7,13 @@ namespace AcademyProject.Controllers
     public class KeyController : MonoBehaviour
     {
         [SerializeField] private DoorController[] whichDoors;
+        private bool _isCollected;
+
+        public bool IsCollected
+        {
+            get => _isCollected;
+            set => _isCollected = value;
+        }
       
 
         private void Start()
@@ -13,6 +22,11 @@ namespace AcademyProject.Controllers
                 whichDoors[i].OnKeyCollected += HandleOnKeyCollected;
             
             gameObject.SetActive(false);
+        }
+
+        private void Update()
+        {
+            if(_isCollected) gameObject.SetActive(false);
         }
 
         private void HandleOnKeyCollected()
@@ -29,7 +43,9 @@ namespace AcademyProject.Controllers
                 
                 for (int i = 0; i < whichDoors.Length; i++)
                     whichDoors[i].CollectKey();
-                
+
+                _isCollected = true;
+                AudioManager.Instance.PlayDoorOpenSound();
                 gameObject.SetActive(false);
             }                
         }
