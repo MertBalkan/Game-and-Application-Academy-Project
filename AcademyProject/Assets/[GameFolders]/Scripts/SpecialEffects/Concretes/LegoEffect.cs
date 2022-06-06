@@ -1,6 +1,7 @@
 using AcademyProject.Combats;
 using AcademyProject.Controllers;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace AcademyProject.SpecialEffects
 {
@@ -24,7 +25,7 @@ namespace AcademyProject.SpecialEffects
         {
             var enemy = collision.gameObject.GetComponent<EnemyController>();
             if(enemy == null) return;
-            enemy.GetComponent<IHealth>().TakeDamage(20);
+            enemy.GetComponent<NavMeshAgent>().speed = 2.5f;
         }
     }
 }
